@@ -1,10 +1,10 @@
 /**
  * Forum Habiter Ensemble — script.js
- * Intègre les meilleures pratiques de Modern Web Guidance :
- * - Validation accessible conforme (:user-invalid / aria-invalid sync / polite live-region)
- * - Navigation mobile réactive avec aria-expanded
+ * - Plan architectural interactif (coupe A-A')
+ * - Navigation mobile réactive (aria-expanded + Escape)
  * - Bascule bilingue dynamique (FR / EN)
- * - Gestionnaire de soumission de formulaire d'intérêt avec récapitulatif & transmission
+ * - Validation accessible (:user-invalid / aria-invalid sync / polite live-region)
+ * - Génération de fiche d'intérêt (courriel, copie presse-papiers, Google Form)
  */
 
 (function () {
@@ -27,17 +27,15 @@
       }
     });
 
-    // Fermer le menu lors d'un clic sur un lien
-    navMenu.querySelectorAll('.nav-links a').forEach((link) => {
+    navMenu.querySelectorAll('.nav-links a, .btn').forEach((link) => {
       link.addEventListener('click', () => {
-        if (window.innerWidth <= 920) {
+        if (window.innerWidth <= 960) {
           navToggle.setAttribute('aria-expanded', 'false');
           navMenu.setAttribute('hidden', '');
         }
       });
     });
 
-    // Fermer le menu avec Escape et redonner le focus au bouton
     document.addEventListener('keydown', (event) => {
       if (event.key === 'Escape' && navToggle.getAttribute('aria-expanded') === 'true') {
         navToggle.setAttribute('aria-expanded', 'false');
@@ -48,7 +46,30 @@
   }
 
   /* ==========================================================================
-     2. Bascule Bilingue (FR / EN)
+     2. Plan Architectural Interactif (Hero Blueprint)
+     ========================================================================== */
+  const blueprintStatus = document.getElementById('blueprint-status');
+  const planZones = document.querySelectorAll('.plan-zone');
+
+  if (blueprintStatus && planZones.length) {
+    const restoreDefaultCaption = () => {
+      const lang = document.documentElement.lang || 'fr';
+      const fallback = blueprintStatus.getAttribute(`data-${lang}`);
+      if (fallback) blueprintStatus.textContent = fallback;
+    };
+
+    planZones.forEach((zone) => {
+      zone.addEventListener('mouseenter', () => {
+        const lang = document.documentElement.lang || 'fr';
+        const desc = zone.getAttribute(`data-zone-${lang}`);
+        if (desc) blueprintStatus.textContent = desc;
+      });
+      zone.addEventListener('mouseleave', restoreDefaultCaption);
+    });
+  }
+
+  /* ==========================================================================
+     3. Bascule Bilingue (FR / EN)
      ========================================================================== */
   const langButtons = document.querySelectorAll('.lang-btn');
   const i18nElements = document.querySelectorAll('[data-fr][data-en]');
@@ -72,7 +93,6 @@
       }
     });
 
-    // Mettre à jour placeholders et aria-labels traduisibles
     document.querySelectorAll('[data-placeholder-fr][data-placeholder-en]').forEach((el) => {
       const placeholder = el.getAttribute(`data-placeholder-${lang}`);
       if (placeholder) el.placeholder = placeholder;
@@ -81,7 +101,7 @@
     try {
       localStorage.setItem('forum_lang', lang);
     } catch (e) {
-      /* ignore quota or private mode */
+      /* ignore storage restrictions */
     }
   }
 
@@ -92,7 +112,6 @@
     });
   });
 
-  // Restaurer la langue préférée si existante
   try {
     const savedLang = localStorage.getItem('forum_lang');
     if (savedLang === 'en' || savedLang === 'fr') {
@@ -101,10 +120,8 @@
   } catch (e) {}
 
   /* ==========================================================================
-     3. Modern Web Guidance : Accessibilité du Formulaire & Validation
+     4. Accessibilité du Formulaire & Validation après interaction
      ========================================================================== */
-
-  // Région live polie pour annonce des erreurs au lecteur d'écran
   const announcer = document.createElement('div');
   announcer.setAttribute('aria-live', 'polite');
   announcer.classList.add('visually-hidden');
@@ -151,7 +168,6 @@
   const syncAria = (el, announce = false) => {
     if (!el || !el.matches?.('input, select, textarea')) return;
 
-    // Détection via :user-invalid ou fallback de validité
     let isInvalid = false;
     try {
       isInvalid = el.matches(':user-invalid');
@@ -179,7 +195,6 @@
     }
   };
 
-  // Initialisation à aria-invalid="false"
   document.querySelectorAll('input, select, textarea').forEach((el) => {
     if (!el.hasAttribute('aria-invalid')) {
       el.setAttribute('aria-invalid', 'false');
@@ -212,44 +227,41 @@
   );
 
   /* ==========================================================================
-     4. Soumission du Formulaire d'Intérêt
+     5. Traitement de la Fiche d'Intérêt
      ========================================================================== */
   const interestForm = document.getElementById('interest-form');
   const errorSummary = document.getElementById('form-error-summary');
   const confirmationPanel = document.getElementById('submission-confirmation');
   const summaryBox = document.getElementById('submission-summary');
   const mailtoBtn = document.getElementById('btn-send-email');
-  const googleFormBtn = document.getElementById('btn-open-gform');
+  const copyBtn = document.getElementById('btn-copy-summary');
 
   if (interestForm) {
     interestForm.addEventListener('submit', (event) => {
       event.preventDefault();
 
-      // Vérification native des contraintes
       if (!interestForm.checkValidity()) {
         const firstInvalid = interestForm.querySelector(':invalid');
         if (errorSummary) {
           const currentLang = document.documentElement.lang || 'fr';
           errorSummary.textContent =
             currentLang === 'en'
-              ? 'Please correct the highlighted fields before submitting.'
-              : 'Veuillez corriger les champs en surbrillance avant de soumettre.';
+              ? '[!] Please complete the required fields highlighted below.'
+              : '[!] Veuillez compléter les champs requis indiqués ci-dessous.';
           errorSummary.removeAttribute('hidden');
-          errorSummary.focus();
         }
         if (firstInvalid) {
+          firstInvalid.setAttribute('aria-invalid', 'true');
+          linkError(firstInvalid, true);
           firstInvalid.focus();
-          syncAria(firstInvalid, true);
         }
         return;
       }
 
-      // Masquer le résumé d'erreur si valide
       if (errorSummary) {
         errorSummary.setAttribute('hidden', '');
       }
 
-      // Extraction des données du formulaire
       const formData = new FormData(interestForm);
       const data = {
         name: formData.get('name') || '',
@@ -258,68 +270,64 @@
         profile: formData.get('profile') || '',
         interests: formData.getAll('interests'),
         message: formData.get('message') || '',
-        submittedAt: new Date().toLocaleString(),
+        submittedAt: new Date().toISOString().slice(0, 10),
       };
 
       const currentLang = document.documentElement.lang || 'fr';
 
-      // Construction du résumé texte
       const summaryText =
         currentLang === 'en'
-          ? `Interest Declaration — Forum Habiter Ensemble
+          ? `DOSSIER REF. FHE-2027 — FORUM HABITER ENSEMBLE
+==================================================
+Name         : ${data.name}
+Email        : ${data.email}
+Organization : ${data.org || 'Not specified'}
+Profile      : ${data.profile}
+Tracks       : ${data.interests.length ? data.interests.join(' | ') : 'General interest'}
 --------------------------------------------------
-Name: ${data.name}
-Email: ${data.email}
-Organization: ${data.org || 'Not specified'}
-Profile: ${data.profile || 'General'}
-Areas of Interest: ${data.interests.length ? data.interests.join(', ') : 'All topics'}
-Message / Intent:
-${data.message || '(None provided)'}
-Timestamp: ${data.submittedAt}`
-          : `Manifestation d'intérêt — Forum Habiter Ensemble
---------------------------------------------------
-Nom : ${data.name}
-Courriel : ${data.email}
+Notes / Proposal:
+${data.message || '(None)'}
+Date         : ${data.submittedAt}`
+          : `FICHE RÉF. FHE-2027 — FORUM HABITER ENSEMBLE
+==================================================
+Nom          : ${data.name}
+Courriel     : ${data.email}
 Organisation : ${data.org || 'Non précisée'}
-Profil : ${data.profile || 'Général'}
-Intérêts / Axes : ${data.interests.length ? data.interests.join(', ') : 'Tous les axes'}
-Message / Intention :
-${data.message || '(Aucun message)'}
-Date : ${data.submittedAt}`;
+Profil       : ${data.profile}
+Chantiers    : ${data.interests.length ? data.interests.join(' | ') : 'Intérêt général'}
+--------------------------------------------------
+Attentes / Proposition :
+${data.message || '(Aucune note)'}
+Date         : ${data.submittedAt}`;
 
       if (summaryBox) {
         summaryBox.textContent = summaryText;
       }
 
-      // Préparation du lien mailto avec encodage URI
       const subject = encodeURIComponent(
-        `[Forum Habiter Ensemble] Intérêt de ${data.name} (${data.org || data.profile})`
+        `[Forum Habiter Ensemble 2027] Fiche d'intérêt — ${data.name} (${data.org || data.profile})`
       );
       const body = encodeURIComponent(summaryText);
       if (mailtoBtn) {
         mailtoBtn.href = `mailto:joindre@cohabitat.cc?subject=${subject}&body=${body}`;
       }
 
-      // Lien vers le formulaire Google officiel
-      const gformUrl =
-        'https://docs.google.com/forms/d/e/1FAIpQLSeCC7mERRTYUYdhuAnY_ibB_ZfhlLiTbYmZ530u58NxoYLm1Q/viewform';
-      if (googleFormBtn) {
-        googleFormBtn.href = gformUrl;
-      }
-
-      // Afficher le panneau de confirmation
       if (confirmationPanel) {
         confirmationPanel.removeAttribute('hidden');
-        confirmationPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        confirmationPanel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         confirmationPanel.focus?.();
       }
+    });
+  }
 
-      // Désactiver le bouton de soumission pour éviter les doubles clics
-      const submitBtn = interestForm.querySelector('button[type="submit"]');
-      if (submitBtn) {
-        submitBtn.disabled = true;
-        submitBtn.textContent =
-          currentLang === 'en' ? 'Interest Registered ✓' : 'Intérêt Enregistré ✓';
+  if (copyBtn && summaryBox) {
+    copyBtn.addEventListener('click', async () => {
+      const lang = document.documentElement.lang || 'fr';
+      try {
+        await navigator.clipboard.writeText(summaryBox.textContent || '');
+        copyBtn.textContent = lang === 'en' ? 'Copied to clipboard [OK]' : 'Copié dans le presse-papiers [OK]';
+      } catch (e) {
+        copyBtn.textContent = lang === 'en' ? 'Select text above to copy' : 'Sélectionnez le texte ci-dessus';
       }
     });
   }

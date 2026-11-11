@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Forum Habiter Ensemble — Coliving, habitat partagé et communautés intentionnelles (Montréal, Avril 2027)</title>
-  <meta name="description" content="Événement hybride et bilingue dédié au coliving, à l'habitat partagé et aux communautés intentionnelles au Québec. Structurer la communauté de pratique, lever les freins réglementaires et co-créer des solutions hors marché.">
+  <meta name="description" content="Rencontre inter-organisationnelle et chantier ouvert sur le coliving, l'habitat partagé et les communautés intentionnelles au Québec. Zonage municipal, finance solidaire, fiducies foncières et assurances.">
   <link rel="canonical" href="https://forum.cohabitat.cc/">
 
-  <!-- Open Graph / Facebook / LinkedIn -->
+  <!-- Open Graph / LinkedIn -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://forum.cohabitat.cc/">
-  <meta property="og:title" content="Forum Habiter Ensemble : Coliving, habitat partagé et communautés intentionnelles">
-  <meta property="og:description" content="Rejoignez porteurs de projets, urbanistes, juristes, banquiers et citoyens pour faire du coliving et de l'habitat partagé une option résidentielle crédible et normalisée à Montréal et au Québec.">
+  <meta property="og:title" content="Forum Habiter Ensemble — Coliving, habitat partagé et communautés intentionnelles">
+  <meta property="og:description" content="Avril 2027 à Montréal & en ligne. Deux jours de concertation institutionnelle et de forum ouvert co-initiés par Lykkå Cohabitation, Nomad Coliving, Maillon Vert / Oasis et cohabitat.cc.">
   <meta property="og:image" content="https://forum.cohabitat.cc/assets/images/og-forum-habiter-ensemble.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="627">
@@ -21,17 +21,17 @@
 
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Forum Habiter Ensemble : Coliving & Habitat Partagé">
-  <meta name="twitter:description" content="Avril 2027 à Montréal • Deux jours de concertation, d'ateliers Unconference et de décloisonnement institutionnel.">
+  <meta name="twitter:title" content="Forum Habiter Ensemble — Montréal, Avril 2027">
+  <meta name="twitter:description" content="Coliving, habitat partagé et communautés intentionnelles : sortir de la zone grise réglementaire, financière et assurantielle.">
   <meta name="twitter:image" content="https://forum.cohabitat.cc/assets/images/og-forum-habiter-ensemble.jpg">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts : Space Grotesk + Instrument Serif + Plus Jakarta Sans + IBM Plex Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
@@ -49,7 +49,7 @@
     "eventStatus": "https://schema.org/EventScheduled",
     "location": {
       "@type": "Place",
-      "name": "Maison de la santé durable / Montréal",
+      "name": "Montréal (Maison de la santé durable / Maison du développement durable — à confirmer)",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Montréal",
@@ -63,11 +63,6 @@
     "organizer": [
       {
         "@type": "Organization",
-        "name": "cohabitat.cc",
-        "url": "https://cohabitat.cc"
-      },
-      {
-        "@type": "Organization",
         "name": "Lykkå Cohabitation",
         "url": "https://www.lykka.org/"
       },
@@ -75,6 +70,11 @@
         "@type": "Organization",
         "name": "Nomad Coliving",
         "url": "https://www.nomadcoliving.com/"
+      },
+      {
+        "@type": "Organization",
+        "name": "cohabitat.cc",
+        "url": "https://cohabitat.cc"
       }
     ],
     "inLanguage": ["fr", "en"]
@@ -83,20 +83,28 @@
 </head>
 <body>
 
-  <!-- Skip Link for Accessibility -->
   <a href="#contenu-principal" class="skip-link" data-fr="Passer au contenu principal" data-en="Skip to main content">Passer au contenu principal</a>
 
-  <!-- Header & Navigation -->
+  <!-- Bandeau technique supérieur -->
+  <div class="tech-bar" role="region" aria-label="Métadonnées de l'événement">
+    <div class="tech-bar-inner">
+      <span><strong>45°30′N 73°34′W</strong> — MONTRÉAL, QUÉBEC + DIFFUSION HYBRIDE</span>
+      <span data-fr="ÉDITION FONDATRICE // <strong>AVRIL 2027</strong> (2 JOURS)" data-en="FOUNDING EDITION // <strong>APRIL 2027</strong> (2 DAYS)">ÉDITION FONDATRICE // <strong>AVRIL 2027</strong> (2 JOURS)</span>
+      <span data-fr="DÉMARCHE BILINGUE : <strong>FRANÇAIS &amp; ANGLAIS</strong>" data-en="BILINGUAL FORUM: <strong>FRENCH &amp; ENGLISH</strong>">DÉMARCHE BILINGUE : <strong>FRANÇAIS &amp; ANGLAIS</strong></span>
+    </div>
+  </div>
+
+  <!-- En-tête & Navigation -->
   <header class="site-header">
-    <div class="container header-inner">
+    <div class="header-inner">
       <a href="/" class="brand-link" aria-label="Forum Habiter Ensemble — Accueil">
-        <svg class="brand-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="36" height="36" role="img" aria-hidden="true">
-          <rect width="64" height="64" rx="14" fill="#064E3B"/>
-          <path d="M14 30L32 15L50 30V50H38V37H26V50H14V30Z" fill="#F5F5F4"/>
-          <circle cx="32" cy="26" r="4" fill="#C2410C"/>
-          <rect x="29" y="40" width="6" height="10" rx="1" fill="#34D399"/>
-        </svg>
-        <span>Forum Habiter Ensemble</span>
+        <div class="brand-mark" aria-hidden="true">
+          <span></span><span></span><span></span><span></span>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title" data-fr="Forum Habiter Ensemble" data-en="Living Together Forum">Forum Habiter Ensemble</span>
+          <span class="brand-sub" data-fr="COLIVING • HABITAT PARTAGÉ • COMMUNAUTÉS" data-en="COLIVING • SHARED HOUSING • COMMUNITIES">COLIVING • HABITAT PARTAGÉ • COMMUNAUTÉS</span>
+        </div>
       </a>
 
       <div class="header-controls">
@@ -109,736 +117,896 @@
           Menu
         </button>
 
-        <nav id="nav-menu" class="nav-menu" hidden aria-label="Menu principal">
+        <nav id="nav-menu" class="nav-menu" hidden aria-label="Navigation principale">
           <ul class="nav-links">
-            <li><a href="#vision" data-fr="Vision & Enjeux" data-en="Vision & Issues">Vision & Enjeux</a></li>
-            <li><a href="#axes" data-fr="Les 4 Grands Axes" data-en="The 4 Key Pillars">Les 4 Grands Axes</a></li>
-            <li><a href="#format" data-fr="Programme" data-en="Program">Programme</a></li>
-            <li><a href="#partenaires" data-fr="Partenaires" data-en="Partners">Partenaires</a></li>
-            <li><a href="#faq" data-fr="FAQ" data-en="FAQ">FAQ</a></li>
+            <li><a href="#diagnostic" data-fr="01. Constat" data-en="01. Diagnosis">01. Constat</a></li>
+            <li><a href="#chantiers" data-fr="02. Chantiers" data-en="02. Tracks">02. Chantiers</a></li>
+            <li><a href="#programme" data-fr="03. Programme" data-en="03. Schedule">03. Programme</a></li>
+            <li><a href="#coalition" data-fr="04. Coalition" data-en="04. Coalition">04. Coalition</a></li>
+            <li><a href="#precisions" data-fr="06. Précisions" data-en="06. FAQ">06. Précisions</a></li>
           </ul>
-          <a href="#interet" class="btn btn-sm btn-accent" data-fr="Exprimer mon intérêt" data-en="Register Interest">Exprimer mon intérêt</a>
+          <a href="#interet" class="btn btn-sm btn-primary" data-fr="05. Dossier d'intérêt →" data-en="05. Interest Form →">05. Dossier d'intérêt →</a>
         </nav>
       </div>
     </div>
   </header>
 
-  <main id="contenu-principal">
+  <main id="contenu-principal" class="shell">
 
-    <!-- Hero Section -->
+    <!-- HERO : Affiche Typographique + Plan Architectural Interactif -->
     <section class="hero" aria-labelledby="hero-title">
-      <div class="container hero-grid">
-        <div class="hero-content">
-          <div class="hero-badges">
-            <span class="pill-badge">
-              <span aria-hidden="true">📅</span>
-              <strong data-fr="Avril 2027" data-en="April 2027">Avril 2027</strong>
-            </span>
-            <span class="pill-badge">
-              <span aria-hidden="true">📍</span>
-              <span data-fr="Montréal & Hybride (Virtuel)" data-en="Montreal & Hybrid (Virtual)">Montréal & Hybride (Virtuel)</span>
-            </span>
-            <span class="pill-badge pill-badge--accent">
-              <span aria-hidden="true">🌐</span>
-              <span data-fr="Bilingue (FR / EN)" data-en="Bilingual (FR / EN)">Bilingue (FR / EN)</span>
-            </span>
+      <div class="hero-top-grid">
+        <div class="hero-editorial">
+          <div>
+            <div class="hero-kicker" data-fr="CONVERGENCE INTER-ORGANISATIONNELLE // MONTRÉAL, AVRIL 2027" data-en="MULTI-ORGANIZATION CONVERGENCE // MONTREAL, APRIL 2027">
+              CONVERGENCE INTER-ORGANISATIONNELLE // MONTRÉAL, AVRIL 2027
+            </div>
+
+            <h1 id="hero-title" data-fr="Forum Habiter <em>Ensemble</em>" data-en="Living <em>Together</em> Forum">
+              Forum Habiter <em>Ensemble</em>
+            </h1>
+
+            <p class="hero-subtitle" data-fr="Coliving, habitat partagé et communautés intentionnelles : sortir de la zone grise pour bâtir une filière résidentielle reconnue." data-en="Coliving, shared housing, and intentional communities: stepping out of the regulatory grey zone to build a recognized housing sector.">
+              Coliving, habitat partagé et communautés intentionnelles : sortir de la zone grise pour bâtir une filière résidentielle reconnue.
+            </p>
+
+            <p class="hero-description" data-fr="Pendant deux jours à Montréal et en ligne, praticiens de terrain, résidents, urbanistes municipaux, bailleurs de l'économie sociale, juristes et assureurs se réunissent autour d'une table commune. Objectif : lever les blocages normatifs (fin de l'assimilation automatique aux maisons de chambres), structurer des montages financiers hors marché et outiller les projets d'aujourd'hui et de demain." data-en="Over two days in Montreal and online, field operators, residents, municipal planners, social-economy lenders, legal scholars, and insurers gather around a common blueprint. Goal: lift regulatory bottlenecks (ending automatic rooming-house classification), structure non-market financing, and equip current and emerging projects.">
+              Pendant deux jours à Montréal et en ligne, praticiens de terrain, résidents, urbanistes municipaux, bailleurs de l'économie sociale, juristes et assureurs se réunissent autour d'une table commune. Objectif : lever les blocages normatifs (fin de l'assimilation automatique aux maisons de chambres), structurer des montages financiers hors marché et outiller les projets d'aujourd'hui et de demain.
+            </p>
           </div>
-
-          <h1 id="hero-title">
-            <span data-fr="Forum Habiter Ensemble" data-en="Living Together Forum">Forum Habiter Ensemble</span>
-          </h1>
-
-          <p class="hero-subtitle" data-fr="Coliving, habitat partagé et communautés intentionnelles" data-en="Coliving, Shared Housing, and Intentional Communities">
-            Coliving, habitat partagé et communautés intentionnelles
-          </p>
-
-          <p class="hero-description" data-fr="Faire du coliving et de l'habitat partagé une option résidentielle crédible, normalisée et accessible au Québec et au-delà. Deux jours d'échanges institutionnels et d'ateliers collaboratifs pour décloisonner le zonage municipal, débloquer le financement solidaire et protéger le logement de la spéculation." data-en="Making coliving and shared housing a credible, standardized, and accessible residential choice across Quebec and beyond. Two days of institutional concertation and open-space workshops to reform zoning, unlock community finance, and insulate homes from real estate speculation.">
-            Faire du coliving et de l'habitat partagé une option résidentielle crédible, normalisée et accessible au Québec et au-delà. Deux jours d'échanges institutionnels et d'ateliers collaboratifs pour décloisonner le zonage municipal, débloquer le financement solidaire et protéger le logement de la spéculation.
-          </p>
 
           <div class="hero-actions">
-            <a href="#interet" class="btn btn-primary" data-fr="Exprimer son intérêt / Partenariat" data-en="Register Interest / Partner Up">Exprimer son intérêt / Partenariat</a>
-            <a href="#format" class="btn btn-outline" data-fr="Découvrir le programme" data-en="Explore the Program">Découvrir le programme</a>
-          </div>
-
-          <dl class="hero-meta-grid">
-            <div class="hero-meta-item">
-              <dt data-fr="Publics cibles" data-en="Target Audience">Publics cibles</dt>
-              <dd data-fr="Porteurs, Villes, Bailleurs, Juristes, Citoyens" data-en="Initiators, Cities, Lenders, Jurists, Citizens">Porteurs, Villes, Bailleurs, Juristes, Citoyens</dd>
-            </div>
-            <div class="hero-meta-item">
-              <dt data-fr="Formule" data-en="Format">Formule</dt>
-              <dd data-fr="Conférences + Forum ouvert (Unconference)" data-en="Keynotes + Open Unconference">Conférences + Forum ouvert (Unconference)</dd>
-            </div>
-            <div class="hero-meta-item">
-              <dt data-fr="Initiative" data-en="Initiative">Initiative</dt>
-              <dd data-fr="cohabitat.cc, Lykkå, Nomad Coliving" data-en="cohabitat.cc, Lykkå, Nomad Coliving">cohabitat.cc, Lykkå, Nomad Coliving</dd>
-            </div>
-          </dl>
-        </div>
-
-        <div class="hero-media">
-          <figure class="hero-figure">
-            <img src="assets/images/hero-forum.jpg" alt="Illustration de la communauté réunie dans un espace partagé lumineux en bois et brique à Montréal" width="1200" height="675" loading="eager">
-            <figcaption data-fr="Co-construire les espaces de vie mutualisés de demain : écologie, mixité sociale et gouvernance partagée." data-en="Co-building tomorrow's shared living spaces: ecology, social diversity, and collective governance.">
-              Co-construire les espaces de vie mutualisés de demain : écologie, mixité sociale et gouvernance partagée.
-            </figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- Vision & Enjeux -->
-    <section id="vision" class="section section--surface" aria-labelledby="vision-title">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-eyebrow" data-fr="Contexte & Diagnostic" data-en="Context & Diagnosis">Contexte & Diagnostic</span>
-          <h2 id="vision-title" data-fr="Sortir de la zone grise et normaliser l'habitat partagé" data-en="Stepping Out of the Grey Zone to Standardize Shared Living">
-            Sortir de la zone grise et normaliser l'habitat partagé
-          </h2>
-          <p class="section-lead" data-fr="Face à la crise du logement, à l'isolement social et aux dérèglements climatiques, les porteurs de projets d'habitats partagés se heurtent encore à des verrous administratifs, bancaires et assurantiels obsolètes." data-en="Amid acute housing shortages, social isolation, and climate disruptions, shared housing innovators still face obsolete zoning, banking, and insurance bottlenecks.">
-            Face à la crise du logement, à l'isolement social et aux dérèglements climatiques, les porteurs de projets d'habitats partagés se heurtent encore à des verrous administratifs, bancaires et assurantiels obsolètes.
-          </p>
-        </div>
-
-        <div class="callout-quote">
-          <p data-fr="« En raison de réglementations municipales mal adaptées qui assimilent trop souvent ces initiatives à des maisons de chambres, et de la difficulté d'obtenir du financement pour des structures de propriété non traditionnelles, les porteurs de projets évoluent fréquemment dans une zone grise avec de lourdes conséquences sur la viabilité de leurs initiatives. »" data-en="“Due to ill-adapted municipal bylaws that frequently pigeonhole these initiatives into traditional rooming houses, and the uphill battle to secure banking for non-traditional ownership structures, project builders operate in a regulatory grey zone that threatens their survival.”">
-            « En raison de réglementations municipales mal adaptées qui assimilent trop souvent ces initiatives à des maisons de chambres, et de la difficulté d'obtenir du financement pour des structures de propriété non traditionnelles, les porteurs de projets évoluent fréquemment dans une zone grise avec de lourdes conséquences sur la viabilité de leurs initiatives. »
-          </p>
-        </div>
-
-        <div class="card-grid">
-          <div class="card">
-            <div class="card-icon" aria-hidden="true">🏛️</div>
-            <h3 class="card-title" data-fr="Décloisonnement réglementaire" data-en="Regulatory Unlocking">Décloisonnement réglementaire</h3>
-            <p class="card-text" data-fr="Faire évoluer le cadre normatif municipal pour adapter le zonage urbain et sortir de la classification automatique en maison de chambres qui bloque les permis et paralyse les projets." data-en="Modernize municipal planning frameworks to tailor urban zoning and eliminate the reflex classification as single-room occupancies that stalls building permits.">
-              Faire évoluer le cadre normatif municipal pour adapter le zonage urbain et sortir de la classification automatique en maison de chambres qui bloque les permis et paralyse les projets.
-            </p>
-            <div class="card-meta" data-fr="Objectif : Cadres d'urbanisme adaptés" data-en="Goal: Modernized urban bylaws">Objectif : Cadres d'urbanisme adaptés</div>
-          </div>
-
-          <div class="card">
-            <div class="card-icon" aria-hidden="true">🌱</div>
-            <h3 class="card-title" data-fr="Finance solidaire & Hors marché" data-en="Solidarity & Non-Market Finance">Finance solidaire & Hors marché</h3>
-            <p class="card-text" data-fr="Structurer des mécanismes de capitalisation pérennes : obligations communautaires, garanties d'emprunt solidaire et fonds d'acquisition d'immeubles avec nos partenaires de l'économie sociale." data-en="Structure patient capital solutions: community bonds, loan guarantees, and non-market real estate acquisition funds with social economy partners.">
-              Structurer des mécanismes de capitalisation pérennes : obligations communautaires, garanties d'emprunt solidaire et fonds d'acquisition d'immeubles avec nos partenaires de l'économie sociale.
-            </p>
-            <div class="card-meta" data-fr="Partenaires : Caisses, UTILE, ACHAT" data-en="Partners: Credit unions, UTILE, ACHAT">Partenaires : Caisses, UTILE, ACHAT</div>
-          </div>
-
-          <div class="card">
-            <div class="card-icon" aria-hidden="true">🔒</div>
-            <h3 class="card-title" data-fr="Verrou anti-spéculation" data-en="Anti-Speculation Safeguards">Verrou anti-spéculation</h3>
-            <p class="card-text" data-fr="Mobiliser les juristes et notaires autour des montages juridiques protecteurs : fiducies d'utilité sociale (FUS), baux emphytéotiques et coopératives hybrides pour déspéculer le foncier à perpétuité." data-en="Rally jurists and notaries around protective ownership frameworks: community land trusts, emphyteutic ground leases, and hybrid co-ops to lock affordability forever.">
-              Mobiliser les juristes et notaires autour des montages juridiques protecteurs : fiducies d'utilité sociale (FUS), baux emphytéotiques et coopératives hybrides pour déspéculer le foncier à perpétuité.
-            </p>
-            <div class="card-meta" data-fr="Mécanisme : FUS et droit d'emphytéose" data-en="Mechanism: CLT & ground leases">Mécanisme : FUS et droit d'emphytéose</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Les 4 Grands Axes -->
-    <section id="axes" class="section" aria-labelledby="axes-title">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-eyebrow" data-fr="Programmation Thématique" data-en="Thematic Tracks">Programmation Thématique</span>
-          <h2 id="axes-title" data-fr="Les 4 grands axes d'action et d'intervention" data-en="The 4 Action Pillars">
-            Les 4 grands axes d'action et d'intervention
-          </h2>
-          <p class="section-lead" data-fr="Chaque axe rassemble des intervenants institutionnels de premier plan et des praticiens de terrain pour dépasser les constats et livrer des guides pratiques." data-en="Each pillar brings top-tier institutional stakeholders and field practitioners together to move beyond diagnoses and deliver actionable playbooks.">
-            Chaque axe rassemble des intervenants institutionnels de premier plan et des praticiens de terrain pour dépasser les constats et livrer des guides pratiques.
-          </p>
-        </div>
-
-        <div class="card-grid card-grid--4">
-          <article class="card">
-            <div class="card-icon" aria-hidden="true">📋</div>
-            <h3 class="card-title" data-fr="1. Réglementation & Zonage" data-en="1. Regulation & Zoning">1. Réglementation & Zonage</h3>
-            <p class="card-text" data-fr="Dialogue avec la Ville de Montréal et les urbanistes : révision de la qualification d'usage, allègement des contraintes de stationnement automobile et création d'une désignation officielle pour la colocation collaborative." data-en="Dialogue with the City of Montreal and urban planners: revising use categories, dropping solo-car parking quotas, and creating a formal classification for collaborative living.">
-              Dialogue avec la Ville de Montréal et les urbanistes : révision de la qualification d'usage, allègement des contraintes de stationnement automobile et création d'une désignation officielle pour la colocation collaborative.
-            </p>
-            <div class="card-meta" data-fr="Intervenants : Ville de Montréal, Urbanistes" data-en="Panel: City of Montreal, Planners">Intervenants : Ville de Montréal, Urbanistes</div>
-          </article>
-
-          <article class="card">
-            <div class="card-icon" aria-hidden="true">💰</div>
-            <h3 class="card-title" data-fr="2. Financement & Prêts" data-en="2. Financing & Capital">2. Financement & Prêts</h3>
-            <p class="card-text" data-fr="Collaboration avec la Caisse d'économie solidaire Desjardins, l'ACHAT et UTILE : émission d'obligations communautaires, modèles de fonds de roulement et garanties collectives pour l'acquisition d'immeubles." data-en="Collaboration with Caisse d'économie solidaire Desjardins, ACHAT, and UTILE: community bond issuances, patient capital structures, and collective equity guarantees for building acquisitions.">
-              Collaboration avec la Caisse d'économie solidaire Desjardins, l'ACHAT et UTILE : émission d'obligations communautaires, modèles de fonds de roulement et garanties collectives pour l'acquisition d'immeubles.
-            </p>
-            <div class="card-meta" data-fr="Intervenants : Desjardins, UTILE, ACHAT" data-en="Panel: Desjardins, UTILE, ACHAT">Intervenants : Desjardins, UTILE, ACHAT</div>
-          </article>
-
-          <article class="card">
-            <div class="card-icon" aria-hidden="true">⚖️</div>
-            <h3 class="card-title" data-fr="3. Droit, Notariat & FUS" data-en="3. Legal, Notary & Trusts">3. Droit, Notariat & FUS</h3>
-            <p class="card-text" data-fr="Notaires et juristes spécialisés : baux emphytéotiques, fiducies d'utilité sociale (FUS) foncières, conciliation des règlements d'immeuble et cohabitation harmonieuse de plusieurs entités morales (OBNL, coopérative, copropriété)." data-en="Specialized notaries and jurists: long-term ground leases, community land trusts (FUS), customized internal agreements, and hybrid corporate co-existence (non-profits, co-ops, condos).">
-              Notaires et juristes spécialisés : baux emphytéotiques, fiducies d'utilité sociale (FUS) foncières, conciliation des règlements d'immeuble et cohabitation harmonieuse de plusieurs entités morales (OBNL, coopérative, copropriété).
-            </p>
-            <div class="card-meta" data-fr="Intervenants : Notaires, Chercheurs en droit" data-en="Panel: Notaries, Legal Scholars">Intervenants : Notaires, Chercheurs en droit</div>
-          </article>
-
-          <article class="card">
-            <div class="card-icon" aria-hidden="true">🛡️</div>
-            <h3 class="card-title" data-fr="4. Assurances & Risques" data-en="4. Insurance & Risks">4. Assurances & Risques</h3>
-            <p class="card-text" data-fr="Courtiers et assureurs commerciaux : adapter les polices d'assurance collective aux espaces partagés (cuisines mutualisées, ateliers de réparation vélo, fablabs) et lever les refus de couverture arbitraires." data-en="Brokers and commercial underwriters: tailoring multi-peril insurance to shared spaces (communal kitchens, bike shops, fablabs) and removing arbitrary denial barriers.">
-              Courtiers et assureurs commerciaux : adapter les polices d'assurance collective aux espaces partagés (cuisines mutualisées, ateliers de réparation vélo, fablabs) et lever les refus de couverture arbitraires.
-            </p>
-            <div class="card-meta" data-fr="Intervenants : Courtiers & Assureurs collectifs" data-en="Panel: Brokers & Underwriters">Intervenants : Courtiers & Assureurs collectifs</div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Format sur 2 Jours -->
-    <section id="format" class="section section--forest" aria-labelledby="format-title">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-eyebrow" data-fr="Déroulement Dynamique" data-en="Event Architecture">Déroulement Dynamique</span>
-          <h2 id="format-title" data-fr="Deux jours d'immersion : Institutionnel & Forum ouvert" data-en="Two Days of Action: Institutional & Open Unconference">
-            Deux jours d'immersion : Institutionnel & Forum ouvert
-          </h2>
-          <p class="section-lead" data-fr="Une formule hybride (présentiel à Montréal + virtuel) et bilingue (français/anglais) combinant cadrage institutionnel et intelligence collective auto-gérée." data-en="A hybrid (Montreal in-person + online) and bilingual (French/English) structure merging formal panels with self-directed collective intelligence.">
-            Une formule hybride (présentiel à Montréal + virtuel) et bilingue (français/anglais) combinant cadrage institutionnel et intelligence collective auto-gérée.
-          </p>
-        </div>
-
-        <div class="schedule-grid">
-          <div class="day-card">
-            <span class="day-label" data-fr="Vendredi • Jour 1" data-en="Friday • Day 1">Vendredi • Jour 1</span>
-            <h3 data-fr="Structuré & Institutionnel" data-en="Structured & Institutional">Structuré & Institutionnel</h3>
-            <ul class="timeline-list">
-              <li class="timeline-item">
-                <strong data-fr="09:00 — 12:00 • État des lieux & Témoignages" data-en="09:00 — 12:00 • Status Report & Case Studies">09:00 — 12:00 • État des lieux & Témoignages</strong>
-                <p data-fr="Retours d'expérience concrets d'initiatives en activité au Québec et à l'international (Lykkå, Nomad Coliving, Oasis coliving, cohabitat.cc)." data-en="In-depth learnings from active initiatives in Quebec and abroad (Lykkå, Nomad Coliving, Oasis, cohabitat.cc).">
-                  Retours d'expérience concrets d'initiatives en activité au Québec et à l'international (Lykkå, Nomad Coliving, Oasis coliving, cohabitat.cc).
-                </p>
-              </li>
-              <li class="timeline-item">
-                <strong data-fr="13:30 — 17:00 • Panels d'experts & Bailleurs" data-en="13:30 — 17:00 • Expert Panels & Lenders">13:30 — 17:00 • Panels d'experts & Bailleurs</strong>
-                <p data-fr="Tables rondes ciblées : zonage municipal avec les urbanistes, montage d'obligations d'impact avec Desjardins et verrouillage foncier FUS." data-en="Targeted roundtables: municipal zoning with city officials, impact bonds with Desjardins, and legal land locks.">
-                  Tables rondes ciblées : zonage municipal avec les urbanistes, montage d'obligations d'impact avec Desjardins et verrouillage foncier FUS.
-                </p>
-              </li>
-              <li class="timeline-item">
-                <strong data-fr="17:30 — 20:00 • 5 à 7 de réseautage immersif" data-en="17:30 — 20:00 • Immersive Networking Mixer">17:30 — 20:00 • 5 à 7 de réseautage immersif</strong>
-                <p data-fr="Réseautage informel sur le site d'un espace de coliving ou d'une colocation collaborative existante à Montréal." data-en="Casual drinks and networking hosted directly on-site at an operating Montreal coliving or collaborative living space.">
-                  Réseautage informel sur le site d'un espace de coliving ou d'une colocation collaborative existante à Montréal.
-                </p>
-              </li>
-            </ul>
-          </div>
-
-          <div class="day-card">
-            <span class="day-label" data-fr="Samedi • Jour 2" data-en="Saturday • Day 2">Samedi • Jour 2</span>
-            <h3 data-fr="Forum Ouvert (Unconference)" data-en="Open Space Unconference">Forum Ouvert (Unconference)</h3>
-            <ul class="timeline-list">
-              <li class="timeline-item">
-                <strong data-fr="09:30 — 10:30 • Co-construction de l'ordre du jour" data-en="09:30 — 10:30 • Collective Agenda Building">09:30 — 10:30 • Co-construction de l'ordre du jour</strong>
-                <p data-fr="Les participants proposent et votent sur place pour les sujets prioritaires à approfondir : gouvernance humaine, plans d'affaires, charte de vie collective." data-en="Participants propose and vote on topics live: interpersonal governance, pro-forma models, living agreements.">
-                  Les participants proposent et votent sur place pour les sujets prioritaires à approfondir : gouvernance humaine, plans d'affaires, charte de vie collective.
-                </p>
-              </li>
-              <li class="timeline-item">
-                <strong data-fr="10:30 — 16:30 • Tables de travail auto-gérées" data-en="10:30 — 16:30 • Self-Organized Breakout Labs">10:30 — 16:30 • Tables de travail auto-gérées</strong>
-                <p data-fr="Sessions collaboratives dynamiques, rédaction de fiches de solutions et prototypage d'outils ouverts pour la communauté de pratique." data-en="Dynamic peer-to-peer workgroups producing open templates, shared spreadsheets, and policy briefs.">
-                  Sessions collaboratives dynamiques, rédaction de fiches de solutions et prototypage d'outils ouverts pour la communauté de pratique.
-                </p>
-              </li>
-              <li class="timeline-item">
-                <strong data-fr="16:30 — 19:30 • Restitution & 5 à 7 festif" data-en="16:30 — 19:30 • Plenary Debrief & Closing Mixer">16:30 — 19:30 • Restitution & 5 à 7 festif</strong>
-                <p data-fr="Partage des livrables en plénière, célébration collective et consolidation des liens durables pour la suite du mouvement." data-en="Sharing outputs in plenary, celebrating collaborative breakthroughs, and locking next steps.">
-                  Partage des livrables en plénière, célébration collective et consolidation des liens durables pour la suite du mouvement.
-                </p>
-              </li>
-            </ul>
+            <a href="#interet" class="btn btn-primary" data-fr="Remplir la fiche d'intérêt / partenariat →" data-en="Complete Interest / Partner Form →">Remplir la fiche d'intérêt / partenariat →</a>
+            <a href="#chantiers" class="btn btn-outline" data-fr="Explorer les 4 chantiers" data-en="Explore the 4 Working Tracks">Explorer les 4 chantiers</a>
           </div>
         </div>
 
-        <div class="venue-banner">
-          <strong data-fr="📍 Emplacements ciblés à Montréal :" data-en="📍 Prospective Montreal Venues:">📍 Emplacements ciblés à Montréal :</strong>
-          <p data-fr="Options en cours de confirmation : Maison de la santé durable / ASPQ (rue De Gaspé, Montréal) ou Maison du développement durable (MDD). Formule hybride assurée en diffusion interactive pour les participants régionaux et internationaux." data-en="Venues under evaluation: Maison de la santé durable / ASPQ (De Gaspé Ave, Montreal) or Maison du développement durable (MDD). Interactive livestreaming guaranteed for remote regional and global participants.">
-            Options en cours de confirmation : Maison de la santé durable / ASPQ (rue De Gaspé, Montréal) ou Maison du développement durable (MDD). Formule hybride assurée en diffusion interactive pour les participants régionaux et internationaux.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Partenaires & Équipe -->
-    <section id="partenaires" class="section section--surface" aria-labelledby="partners-title">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-eyebrow" data-fr="Gouvernance & Partenaires" data-en="Governance & Partners">Gouvernance & Partenaires</span>
-          <h2 id="partners-title" data-fr="Les organisations et visages initiateurs" data-en="Initiating Organizations & Leadership">
-            Les organisations et visages initiateurs
-          </h2>
-          <p class="section-lead" data-fr="Un événement indépendant co-porté par des pionniers du coliving, de l'habitat partagé et des communs urbains au Québec." data-en="An independent event spearheaded by recognized pioneers of coliving, shared housing, and civic commons in Quebec.">
-            Un événement indépendant co-porté par des pionniers du coliving, de l'habitat partagé et des communs urbains au Québec.
-          </p>
-        </div>
-
-        <!-- Organisations Initiatrices -->
-        <div class="initiators-grid">
-          <div class="partner-card">
-            <span class="partner-tag" data-fr="OBNL & Communs" data-en="Non-Profit & Commons">OBNL & Communs</span>
-            <h3>cohabitat.cc</h3>
-            <p data-fr="OBNL d'ingénierie civique et pré-développement dédiée aux habitats écologiques partagés, à la déspéculation foncière et à la mobilité active zéro auto." data-en="Civic engineering non-profit dedicated to shared ecological habitats, permanent land despeculation, and zero-car active mobility.">
-              OBNL d'ingénierie civique et pré-développement dédiée aux habitats écologiques partagés, à la déspéculation foncière et à la mobilité active zéro auto.
-            </p>
-            <a href="https://cohabitat.cc" target="_blank" rel="noopener noreferrer" class="partner-link">Visiter cohabitat.cc &rarr;</a>
+        <!-- Colonne droite : Coupe architecturale vectorielle interactive -->
+        <div class="hero-blueprint" aria-label="Schéma architectural des 4 chantiers du Forum">
+          <div class="blueprint-header">
+            <span data-fr="PLAN DE CONCERTATION — COUPE A-A'" data-en="CONCERTATION BLUEPRINT — SECTION A-A'">PLAN DE CONCERTATION — COUPE A-A'</span>
+            <span>ÉCH. 1:100 // QC-2027</span>
           </div>
 
-          <div class="partner-card">
-            <span class="partner-tag" data-fr="Habitat Participatif" data-en="Cohousing Pioneer">Habitat Participatif</span>
-            <h3>Lykkå Cohabitation</h3>
-            <p data-fr="Pionnier de la cohabitation et de la facilitation participative au Québec, dédié à la création d'espaces de vie partagés fondés sur l'entraide et la gouvernance collégiale." data-en="Quebec pioneer in cohabitation facilitation, dedicated to fostering shared living environments grounded in mutual aid and sociocratic governance.">
-              Pionnier de la cohabitation et de la facilitation participative au Québec, dédié à la création d'espaces de vie partagés fondés sur l'entraide et la gouvernance collégiale.
-            </p>
-            <a href="https://www.lykka.org/" target="_blank" rel="noopener noreferrer" class="partner-link">Visiter lykka.org &rarr;</a>
-          </div>
+          <div class="blueprint-svg-wrap">
+            <svg class="blueprint-svg" viewBox="0 0 520 390" role="img" aria-labelledby="svg-plan-title svg-plan-desc">
+              <title id="svg-plan-title">Plan architectural du Forum Habiter Ensemble</title>
+              <desc id="svg-plan-desc">Diagramme en plan montrant quatre ailes thématiques convergeant vers un atrium central d'espaces mutualisés : Zonage municipal, Finance solidaire, Droit et FUS, et Assurances.</desc>
 
-          <div class="partner-card">
-            <span class="partner-tag" data-fr="Coliving Nomade" data-en="Nomad Coliving">Coliving Nomade</span>
-            <h3>Nomad Coliving</h3>
-            <p data-fr="Premier espace de coliving pour nomades numériques et professionnels flexibles au Canada, laboratoire d'hospitalité partagée et de vie collective à Montréal." data-en="First dedicated coliving space for remote workers and digital nomads in Canada, leading the charge on community hospitality in Montreal.">
-              Premier espace de coliving pour nomades numériques et professionnels flexibles au Canada, laboratoire d'hospitalité partagée et de vie collective à Montréal.
-            </p>
-            <a href="https://www.nomadcoliving.com/" target="_blank" rel="noopener noreferrer" class="partner-link">Visiter nomadcoliving.com &rarr;</a>
-          </div>
+              <!-- Axes de cote et lignes de construction -->
+              <g stroke="rgba(255,255,255,0.28)" stroke-width="1" stroke-dasharray="4 4">
+                <line x1="260" y1="10" x2="260" y2="380"/>
+                <line x1="15" y1="195" x2="505" y2="195"/>
+              </g>
 
-          <div class="partner-card">
-            <span class="partner-tag" data-fr="Développement Durable" data-en="Sustainability">Développement Durable</span>
-            <h3>Maillon Vert & Oasis</h3>
-            <p data-fr="Conseil stratégique en développement durable pour les organisations, et porteur du projet innovant d'habitat écologique Oasis coliving à Montréal." data-en="Strategic sustainability consulting for organizations and founder of the innovative Oasis coliving ecological living model in Montreal.">
-              Conseil stratégique en développement durable pour les organisations, et porteur du projet innovant d'habitat écologique Oasis coliving à Montréal.
-            </p>
-            <a href="https://www.linkedin.com/in/thomas-marin" target="_blank" rel="noopener noreferrer" class="partner-link">Profil Thomas Marin &rarr;</a>
-          </div>
-        </div>
+              <!-- Cadre extérieur du bâtiment -->
+              <rect x="36" y="28" width="448" height="334" fill="rgba(12, 28, 48, 0.55)" stroke="#F4F6F9" stroke-width="2.5"/>
 
-        <!-- Porteurs et Visages de l'équipe -->
-        <h3 style="margin-block-end: 1.25rem;" data-fr="Comité initiateur" data-en="Initiating Committee">Comité initiateur</h3>
-        <div class="people-grid">
-          <div class="person-card">
-            <div class="person-header">
-              <img src="assets/images/members/rngadam.png" alt="Photo de Ricky Ng-Adam" class="person-avatar" width="56" height="56" loading="lazy">
-              <div>
-                <h4 class="person-name">Ricky Ng-Adam</h4>
-                <p class="person-role">cohabitat.cc</p>
-              </div>
-            </div>
-            <p class="person-bio" data-fr="Architecte de systèmes civiques chez HABILE.ca, fondateur de Coderbunker, ex-Google. Spécialisé en modélisation financière et open source pour le logement hors marché." data-en="Civic systems architect at HABILE.ca, Coderbunker founder, ex-Google. Specializing in financial modeling and open platforms for non-market housing.">
-              Architecte de systèmes civiques chez HABILE.ca, fondateur de Coderbunker, ex-Google. Spécialisé en modélisation financière et open source pour le logement hors marché.
-            </p>
-            <a href="https://www.linkedin.com/in/rngadam" target="_blank" rel="noopener noreferrer" class="partner-link">LinkedIn &rarr;</a>
-          </div>
-
-          <div class="person-card">
-            <div class="person-header">
-              <div class="person-initials" aria-hidden="true">TM</div>
-              <div>
-                <h4 class="person-name">Thomas Marin</h4>
-                <p class="person-role">Maillon Vert & Oasis Coliving</p>
-              </div>
-            </div>
-            <p class="person-bio" data-fr="Consultant en développement durable chez Maillon Vert et entrepreneur social. Initiateur du projet Oasis coliving à Montréal, alliant écoresponsabilité et inclusion." data-en="Sustainability consultant at Maillon Vert and social entrepreneur. Founder of the Oasis coliving venture in Montreal, bridging ecology and inclusion.">
-              Consultant en développement durable chez Maillon Vert et entrepreneur social. Initiateur du projet Oasis coliving à Montréal, alliant écoresponsabilité et inclusion.
-            </p>
-            <a href="https://www.linkedin.com/in/thomas-marin" target="_blank" rel="noopener noreferrer" class="partner-link">LinkedIn &rarr;</a>
-          </div>
-
-          <div class="person-card">
-            <div class="person-header">
-              <div class="person-initials" aria-hidden="true">TV</div>
-              <div>
-                <h4 class="person-name">Trine Veiss Mikkelsen</h4>
-                <p class="person-role">Lykkå Cohabitation</p>
-              </div>
-            </div>
-            <p class="person-bio" data-fr="Fondatrice de Lykkå et vice-présidente de Lykkå Cohabitation. Plus de 25 ans d'expertise en facilitation de communautés et gouvernance participative." data-en="Founder of Lykkå and VP of Lykkå Cohabitation. 25+ years expertise in community facilitation and shared participatory governance.">
-              Fondatrice de Lykkå et vice-présidente de Lykkå Cohabitation. Plus de 25 ans d'expertise en facilitation de communautés et gouvernance participative.
-            </p>
-            <a href="https://www.linkedin.com/in/trine-veiss-mikkelsen-she-her-6b05701a0" target="_blank" rel="noopener noreferrer" class="partner-link">LinkedIn &rarr;</a>
-          </div>
-
-          <div class="person-card">
-            <div class="person-header">
-              <div class="person-initials" aria-hidden="true">MK</div>
-              <div>
-                <h4 class="person-name">Maria Kinoshita</h4>
-                <p class="person-role">Nomad Coliving & Octo D</p>
-              </div>
-            </div>
-            <p class="person-bio" data-fr="Co-fondatrice de Nomad Coliving (1er coliving nomades au Canada) et fondatrice d'Octo D. Consultante en ingénierie pédagogique et expérience utilisateur." data-en="Co-founder of Nomad Coliving (first nomad coliving in Canada) and founder of Octo D. Instructional designer and community experience specialist.">
-              Co-fondatrice de Nomad Coliving (1er coliving nomades au Canada) et fondatrice d'Octo D. Consultante en ingénierie pédagogique et expérience utilisateur.
-            </p>
-            <a href="https://www.linkedin.com/in/maria-kinoshita-25872338" target="_blank" rel="noopener noreferrer" class="partner-link">LinkedIn &rarr;</a>
-          </div>
-        </div>
-
-        <!-- Écosystème & Collaborations Ciblées -->
-        <div class="ecosystem-box">
-          <h3 data-fr="Écosystème et organisations invitées à la co-construction" data-en="Ecosystem & Invited Partners in Co-Design">Écosystème et organisations invitées à la co-construction</h3>
-          <p data-fr="Nous mobilisons activement les acteurs clés du logement social, des fiducies foncières, de la recherche et de la transition urbaine :" data-en="We actively collaborate with key social housing institutions, community land trusts, research labs, and civic leaders:">
-            Nous mobilisons activement les acteurs clés du logement social, des fiducies foncières, de la recherche et de la transition urbaine :
-          </p>
-          <ul class="pill-list">
-            <li>Caisse d'économie solidaire Desjardins</li>
-            <li>UTILE (Logement étudiant solidaire)</li>
-            <li>ACHAT (Coopératives d'habitation)</li>
-            <li>Village Urbain</li>
-            <li>Brique par Brique</li>
-            <li>Maison du développement durable (MDD)</li>
-            <li>ASPQ / Maison de la santé durable</li>
-            <li>Happy Cities / Happy Living</li>
-            <li>Podcast « Raconte-moi un commun »</li>
-            <li>Ville de Montréal (Urbanisme & Habitation)</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Formulaire d'Intérêt & Partenariat -->
-    <section id="interet" class="section" aria-labelledby="form-heading">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-eyebrow" data-fr="Participer & Co-Construire" data-en="Join & Co-Design">Participer & Co-Construire</span>
-          <h2 id="form-heading" data-fr="Formulaire d'intérêt et de partenariat" data-en="Partner & Participant Interest Form">
-            Formulaire d'intérêt et de partenariat
-          </h2>
-          <p class="section-lead" data-fr="Que vous soyez porteur de projet, élu municipal, bailleur de fonds, juriste ou futur résident, faites entendre votre voix et contribuez à définir l'ordre du jour du forum." data-en="Whether you are a project initiator, municipal leader, lender, jurist, or prospective resident, make your voice heard and help craft the forum agenda.">
-            Que vous soyez porteur de projet, élu municipal, bailleur de fonds, juriste ou futur résident, faites entendre votre voix et contribuez à définir l'ordre du jour du forum.
-          </p>
-        </div>
-
-        <div class="form-wrapper">
-          <!-- Sidebar contextuelle -->
-          <aside class="form-aside">
-            <h3 data-fr="Pourquoi vous inscrire dès aujourd'hui ?" data-en="Why Pre-Register Today?">Pourquoi vous inscrire dès aujourd'hui ?</h3>
-            <ul class="aside-list">
-              <li data-fr="<strong>Priorité d'inscription :</strong> Les places en présentiel seront limitées selon la capacité du lieu retenu à Montréal." data-en="<strong>Priority Access:</strong> In-person capacity will be capped according to venue limits in Montreal.">
-                <strong>Priorité d'inscription :</strong> Les places en présentiel seront limitées selon la capacité du lieu retenu à Montréal.
-              </li>
-              <li data-fr="<strong>Co-construction du programme :</strong> Proposez vos sujets et ateliers en amont pour l'Unconference du Samedi." data-en="<strong>Co-Design the Agenda:</strong> Submit your topics and lightning talks for Saturday's Unconference.">
-                <strong>Co-construction du programme :</strong> Proposez vos sujets et ateliers en amont pour l'Unconference du Samedi.
-              </li>
-              <li data-fr="<strong>Appariement partenarial :</strong> Mise en relation ciblée avec des mentors, banquiers et notaires spécialisés." data-en="<strong>Matchmaking:</strong> Targeted introductions to lenders, legal experts, and peer projects.">
-                <strong>Appariement partenarial :</strong> Mise en relation ciblée avec des mentors, banquiers et notaires spécialisés.
-              </li>
-              <li data-fr="<strong>Documentation libre :</strong> Recevez en primeur les fiches de synthèse, modèles de baux et guides juridiques." data-en="<strong>Open Documentation:</strong> First access to synthesis reports, lease templates, and policy guides.">
-                <strong>Documentation libre :</strong> Recevez en primeur les fiches de synthèse, modèles de baux et guides juridiques.
-              </li>
-            </ul>
-
-            <div class="alt-channel-box">
-              <p data-fr="Vous préférez remplir le questionnaire détaillé directement dans Google Forms ?" data-en="Prefer answering the full questionnaire directly in Google Forms?">
-                Vous préférez remplir le questionnaire détaillé directement dans Google Forms ?
-              </p>
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSeCC7mERRTYUYdhuAnY_ibB_ZfhlLiTbYmZ530u58NxoYLm1Q/viewform" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline" style="inline-size: 100%;" data-fr="Ouvrir le Google Form officiel &rarr;" data-en="Open Official Google Form &rarr;">
-                Ouvrir le Google Form officiel &rarr;
+              <!-- Aile 01 : Zonage & Urbanisme (Haut Gauche) -->
+              <a href="#chantiers">
+                <g class="plan-zone" data-zone-fr="CHANTIER 01 — ZONAGE MUNICIPAL : Sortir de la catégorie « maison de chambres » et reconnaître la colocation collaborative." data-zone-en="TRACK 01 — MUNICIPAL ZONING: Move beyond 'rooming house' bylaws and formally recognize collaborative housing." fill="rgba(255,255,255,0.04)">
+                  <rect x="44" y="36" width="208" height="151" stroke="#F4F6F9" stroke-width="1.5"/>
+                  <line x1="44" y1="74" x2="252" y2="74" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+                  <text x="56" y="59" fill="#C88A1E" font-family="IBM Plex Mono, monospace" font-size="11" font-weight="600">[01] ZONAGE &amp; VILLE</text>
+                  <text x="56" y="102" fill="#F4F6F9" font-family="Space Grotesk, sans-serif" font-size="14" font-weight="700">Cadre normatif urbain</text>
+                  <text x="56" y="124" fill="rgba(244,246,249,0.75)" font-family="IBM Plex Mono, monospace" font-size="10">Qualification d'usage</text>
+                  <text x="56" y="140" fill="rgba(244,246,249,0.75)" font-family="IBM Plex Mono, monospace" font-size="10">Permis &amp; densité douce</text>
+                </g>
               </a>
-            </div>
-          </aside>
 
-          <!-- Formulaire accessible -->
-          <form id="interest-form" class="interest-form" novalidate aria-labelledby="form-heading">
-            <div id="form-error-summary" class="form-error-summary" tabindex="-1" hidden>
-              <!-- Annonce dynamique d'erreurs -->
+              <!-- Aile 02 : Finance Solidaire (Haut Droite) -->
+              <a href="#chantiers">
+                <g class="plan-zone" data-zone-fr="CHANTIER 02 — FINANCE SOLIDAIRE : Obligations communautaires, garanties de prêt et fonds d'acquisition hors marché." data-zone-en="TRACK 02 — SOLIDARITY FINANCE: Community bonds, loan guarantees, and non-market acquisition funds." fill="rgba(255,255,255,0.04)">
+                  <rect x="268" y="36" width="208" height="151" stroke="#F4F6F9" stroke-width="1.5"/>
+                  <line x1="268" y1="74" x2="476" y2="74" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+                  <text x="280" y="59" fill="#C88A1E" font-family="IBM Plex Mono, monospace" font-size="11" font-weight="600">[02] CAPITAL PATIENT</text>
+                  <text x="280" y="102" fill="#F4F6F9" font-family="Space Grotesk, sans-serif" font-size="14" font-weight="700">Montages financiers</text>
+                  <text x="280" y="124" fill="rgba(244,246,249,0.75)" font-family="IBM Plex Mono, monospace" font-size="10">Obligations communautaires</text>
+                  <text x="280" y="140" fill="rgba(244,246,249,0.75)" font-family="IBM Plex Mono, monospace" font-size="10">Caisses, UTILE, ACHAT</text>
+                </g>
+              </a>
+
+              <!-- Aile 03 : Droit, Notariat & FUS (Bas Gauche) -->
+              <a href="#chantiers">
+                <g class="plan-zone" data-zone-fr="CHANTIER 03 — DROIT &amp; FIDUCIES : Fiducies d'utilité sociale (FUS), baux emphytéotiques et structures hybrides." data-zone-en="TRACK 03 — LAW &amp; LAND TRUSTS: Social utility trusts (FUS), emphyteutic leases, and hybrid legal models." fill="rgba(255,255,255,0.04)">
+                  <rect x="44" y="203" width="208" height="151" stroke="#F4F6F9" stroke-width="1.5"/>
+                  <line x1="44" y1="241" x2="252" y2="241" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+                  <text x="56" y="226" fill="#C88A1E" font-family="IBM Plex Mono, monospace" font-size="11" font-weight="600">[03] DROIT &amp; FIDUCIE</text>
+                  <text x="56" y="269" fill="#F4F6F9" font-family="Space Grotesk, sans-serif" font-size="14" font-weight="700">Propriété hors marché</text>
+                  <text x="56" y="291" fill="rgba(244,246,249,0.75)" font-family="IBM Plex Mono, monospace" font-size="10">FUS &amp; emphytéose</text>
+                  <text x="56" y="307" fill="rgba(244,246,249,0.75)" font-family="IBM Plex Mono, monospace" font-size="10">Coop / OBNL / Copropriété</text>
+                </g>
+              </a>
+
+              <!-- Aile 04 : Assurances & Risques (Bas Droite) -->
+              <a href="#chantiers">
+                <g class="plan-zone" data-zone-fr="CHANTIER 04 — ASSURANCES : Couverture adaptée aux cuisines collectives, ateliers partagés et baux multiples." data-zone-en="TRACK 04 — INSURANCE: Tailored underwriting for shared kitchens, workshops, and multi-household buildings." fill="rgba(255,255,255,0.04)">
+                  <rect x="268" y="203" width="208" height="151" stroke="#F4F6F9" stroke-width="1.5"/>
+                  <line x1="268" y1="241" x2="476" y2="241" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+                  <text x="280" y="226" fill="#C88A1E" font-family="IBM Plex Mono, monospace" font-size="11" font-weight="600">[04] ASSURANCES</text>
+                  <text x="280" y="269" fill="#F4F6F9" font-family="Space Grotesk, sans-serif" font-size="14" font-weight="700">Mutualisation &amp; risques</text>
+                  <text x="280" y="291" fill="rgba(244,246,249,0.75)" font-family="IBM Plex Mono, monospace" font-size="10">Polices collectives</text>
+                  <text x="280" y="307" fill="rgba(244,246,249,0.75)" font-family="IBM Plex Mono, monospace" font-size="10">Espaces &amp; outils partagés</text>
+                </g>
+              </a>
+
+              <!-- Atrium central : Forum Habiter Ensemble -->
+              <rect x="182" y="148" width="156" height="94" fill="#D6361F" stroke="#F4F6F9" stroke-width="2"/>
+              <text x="260" y="185" text-anchor="middle" fill="#FFFFFF" font-family="IBM Plex Mono, monospace" font-size="10" font-weight="600" letter-spacing="1">COEUR COMMUN</text>
+              <text x="260" y="206" text-anchor="middle" fill="#FFFFFF" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="700">FORUM OUVERT</text>
+              <text x="260" y="224" text-anchor="middle" fill="rgba(255,255,255,0.88)" font-family="IBM Plex Mono, monospace" font-size="9">PRATIQUE &amp; ALLIANCES</text>
+
+              <!-- Cotes architecturales -->
+              <text x="260" y="20" text-anchor="middle" fill="rgba(244,246,249,0.65)" font-family="IBM Plex Mono, monospace" font-size="9">← 4 ENTITÉS INITIATRICES × ÉCOSYSTÈME QUÉBÉCOIS →</text>
+            </svg>
+          </div>
+
+          <div class="blueprint-caption">
+            <span id="blueprint-status" data-fr="Survolez ou sélectionnez une aile du plan pour inspecter les 4 chantiers du Forum." data-en="Hover or select a wing of the floorplan to inspect the Forum's 4 working tracks.">
+              Survolez ou sélectionnez une aile du plan pour inspecter les 4 chantiers du Forum.
+            </span>
+            <span>FIG. 01</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bandeau de spécifications -->
+      <dl class="hero-specs">
+        <div class="spec-cell">
+          <dt data-fr="Période ciblée" data-en="Target Date">Période ciblée</dt>
+          <dd data-fr="Avril 2027 (Vendredi + Samedi)" data-en="April 2027 (Friday + Saturday)">Avril 2027 (Vendredi + Samedi)</dd>
+        </div>
+        <div class="spec-cell">
+          <dt data-fr="Lieux pressentis (Montréal)" data-en="Prospective Venues (Montreal)">Lieux pressentis (Montréal)</dt>
+          <dd data-fr="Maison de la santé durable / MDD" data-en="Maison de la santé durable / MDD">Maison de la santé durable / MDD</dd>
+        </div>
+        <div class="spec-cell">
+          <dt data-fr="Architecture de l'événement" data-en="Event Format">Architecture de l'événement</dt>
+          <dd data-fr="Jour 1 Institutionnel + Jour 2 Unconference" data-en="Day 1 Institutional + Day 2 Unconference">Jour 1 Institutionnel + Jour 2 Unconference</dd>
+        </div>
+        <div class="spec-cell">
+          <dt data-fr="Réseautage terrain" data-en="Field Networking">Réseautage terrain</dt>
+          <dd data-fr="Deux 5 à 7 dans des colocations existantes" data-en="Two 5-to-7 mixers inside active colivings">Deux 5 à 7 dans des colocations existantes</dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- Ruban de convergence des organisations initiatrices -->
+    <div class="convergence-bar" role="region" aria-label="Organisations initiatrices">
+      <div class="convergence-inner">
+        <span class="convergence-label" data-fr="Initiative co-portée à parts égales :" data-en="Jointly spearheaded by:">Initiative co-portée à parts égales :</span>
+        <ul class="convergence-orgs">
+          <li>Lykkå Cohabitation</li>
+          <li>Nomad Coliving</li>
+          <li>Maillon Vert / Oasis Coliving</li>
+          <li>cohabitat.cc</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- CHAPITRE 01 : DIAGNOSTIC & VISION -->
+    <section id="diagnostic" class="chapter" aria-labelledby="ch01-title">
+      <div class="chapter-grid">
+        <aside class="chapter-rail">
+          <div class="chapter-rail-sticky">
+            <span class="chapter-num">01 / DIAGNOSTIC</span>
+            <h2 id="ch01-title" class="chapter-title" data-fr="Pourquoi ce Forum maintenant ?" data-en="Why This Forum Now?">Pourquoi ce Forum maintenant ?</h2>
+            <p class="chapter-lead" data-fr="Transformer des projets isolés évoluant en zone grise en une filière résidentielle comprise, assurable et finançable." data-en="Transforming isolated initiatives operating in a grey zone into a clear, insurable, and bankable housing sector.">
+              Transformer des projets isolés évoluant en zone grise en une filière résidentielle comprise, assurable et finançable.
+            </p>
+          </div>
+        </aside>
+
+        <div class="chapter-body chapter-body--flush">
+          <div class="manifesto-lead">
+            <blockquote class="manifesto-quote" data-fr="« Trop souvent assimilés à tort à des maisons de chambres par les règlements municipaux, ou refusés par les banques et assureurs faute de cases existantes, les projets de coliving et d'habitat partagé paient le prix d'un angle mort institutionnel. »" data-en="“Too often misclassified as rooming houses by municipal bylaws, or turned away by banks and insurers for not fitting standard boxes, coliving and shared housing initiatives pay the price of an institutional blind spot.”">
+              « Trop souvent assimilés à tort à des maisons de chambres par les règlements municipaux, ou refusés par les banques et assureurs faute de cases existantes, les projets de coliving et d'habitat partagé paient le prix d'un angle mort institutionnel. »
+            </blockquote>
+            <p class="manifesto-sub" data-fr="Les expériences récentes sur le terrain — tant dans les espaces de coliving montréalais que dans les coopératives et projets d'habitats participatifs régionaux — démontrent aussi l'importance d'une pédagogie rigoureuse auprès du public et des médias afin de distinguer clairement la cohabitation choisie et mutualisée des formes précaires d'hébergement." data-en="Recent field experiences across Montreal coliving spaces and regional cohousing initiatives also underscore the need for clear public and media literacy—distinguishing intentional, resource-sharing households from precarious rooming arrangements.">
+              Les expériences récentes sur le terrain — tant dans les espaces de coliving montréalais que dans les coopératives et projets d'habitats participatifs régionaux — démontrent aussi l'importance d'une pédagogie rigoureuse auprès du public et des médias afin de distinguer clairement la cohabitation choisie et mutualisée des formes précaires d'hébergement.
+            </p>
+          </div>
+
+          <div class="matrix-3">
+            <article class="matrix-cell">
+              <div>
+                <div class="cell-index">OBJECTIF 01.A</div>
+                <h3 data-fr="Sortir du carcan « maison de chambres »" data-en="Break Out of the 'Rooming House' Box">Sortir du carcan « maison de chambres »</h3>
+                <p data-fr="Outiller les services d'urbanisme et les élus municipaux pour reconnaître la colocation collaborative, les ménages élargis et les espaces communs mutualisés comme une typologie résidentielle à part entière." data-en="Equip urban planning departments and municipal officials to recognize collaborative living, extended households, and shared amenities as a legitimate residential typology.">
+                  Outiller les services d'urbanisme et les élus municipaux pour reconnaître la colocation collaborative, les ménages élargis et les espaces communs mutualisés comme une typologie résidentielle à part entière.
+                </p>
+              </div>
+              <span class="cell-tag" data-fr="CIBLE : ZONAGE &amp; URBANISME" data-en="TARGET: ZONING &amp; PLANNING">CIBLE : ZONAGE &amp; URBANISME</span>
+            </article>
+
+            <article class="matrix-cell">
+              <div>
+                <div class="cell-index">OBJECTIF 01.B</div>
+                <h3 data-fr="Rapprocher praticiens et institutions" data-en="Bridge Practitioners &amp; Institutions">Rapprocher praticiens et institutions</h3>
+                <p data-fr="Mettre dans la même pièce porteurs de projets, caisses d'économie solidaire, courtiers d'assurance, notaires et chercheurs afin de traduire les obstacles vécus en protocoles reproductibles." data-en="Put project builders, social-economy credit unions, insurance brokers, notaries, and researchers in the same room to translate field obstacles into replicable protocols.">
+                  Mettre dans la même pièce porteurs de projets, caisses d'économie solidaire, courtiers d'assurance, notaires et chercheurs afin de traduire les obstacles vécus en protocoles reproductibles.
+                </p>
+              </div>
+              <span class="cell-tag" data-fr="CIBLE : CONCERTATION DIRECTE" data-en="TARGET: DIRECT CONCERTATION">CIBLE : CONCERTATION DIRECTE</span>
+            </article>
+
+            <article class="matrix-cell">
+              <div>
+                <div class="cell-index">OBJECTIF 01.C</div>
+                <h3 data-fr="Documenter et mailler les régions" data-en="Document &amp; Connect Regions">Documenter et mailler les régions</h3>
+                <p data-fr="Co-créer une documentation ouverte (modèles juridiques, grilles financières, arguments médiatiques) et faciliter le recrutement de membres pour les projets à Montréal et à travers le Québec." data-en="Co-produce open documentation (legal templates, financial pro-formas, media briefs) and facilitate member recruitment across Montreal and Quebec regions.">
+                  Co-créer une documentation ouverte (modèles juridiques, grilles financières, arguments médiatiques) et faciliter le recrutement de membres pour les projets à Montréal et à travers le Québec.
+                </p>
+              </div>
+              <span class="cell-tag" data-fr="CIBLE : COMMUNAUTÉ DE PRATIQUE" data-en="TARGET: COMMUNITY OF PRACTICE">CIBLE : COMMUNAUTÉ DE PRATIQUE</span>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPITRE 02 : LES 4 CHANTIERS D'INTERVENTION -->
+    <section id="chantiers" class="chapter" aria-labelledby="ch02-title">
+      <div class="chapter-grid">
+        <aside class="chapter-rail">
+          <div class="chapter-rail-sticky">
+            <span class="chapter-num">02 / CHANTIERS</span>
+            <h2 id="ch02-title" class="chapter-title" data-fr="Quatre tables techniques et institutionnelles" data-en="Four Technical &amp; Institutional Tracks">Quatre tables techniques et institutionnelles</h2>
+            <p class="chapter-lead" data-fr="Pas de panels théoriques abstraits : quatre chantiers ciblés sur les verrous opérationnels qui freinent aujourd'hui les projets." data-en="No abstract theoretical panels: four tracks laser-focused on the operational locks currently holding projects back.">
+              Pas de panels théoriques abstraits : quatre chantiers ciblés sur les verrous opérationnels qui freinent aujourd'hui les projets.
+            </p>
+          </div>
+        </aside>
+
+        <div class="chapter-body chapter-body--flush">
+          <div class="tracks-table">
+            <article class="track-box">
+              <div>
+                <div class="track-header">
+                  <span class="track-code">CHANTIER [01]</span>
+                  <span class="track-stakeholders" data-fr="Ville de Montréal • Urbanistes" data-en="City of Montreal • Planners">Ville de Montréal • Urbanistes</span>
+                </div>
+                <h3 data-fr="Réglementation et zonage municipal" data-en="Municipal Regulation &amp; Zoning">Réglementation et zonage municipal</h3>
+                <p data-fr="Révision de la qualification des projets d'habitat partagé afin d'éviter la classification automatique en « maison de chambres » et élaboration de cadres réglementaires adaptés à la colocation collaborative et aux espaces communs partagés." data-en="Revising how shared housing is classified to prevent automatic 'rooming house' designation, and drafting zoning frameworks tailored to collaborative coliving and shared communal facilities.">
+                  Révision de la qualification des projets d'habitat partagé afin d'éviter la classification automatique en « maison de chambres » et élaboration de cadres réglementaires adaptés à la colocation collaborative et aux espaces communs partagés.
+                </p>
+              </div>
+              <div class="track-deliverable" data-fr="LIVRABLE VISÉ → Cahier de recommandations réglementaires municipales" data-en="TARGET OUTPUT → Municipal regulatory policy brief">
+                LIVRABLE VISÉ → Cahier de recommandations réglementaires municipales
+              </div>
+            </article>
+
+            <article class="track-box">
+              <div>
+                <div class="track-header">
+                  <span class="track-code">CHANTIER [02]</span>
+                  <span class="track-stakeholders" data-fr="Caisse d'économie solidaire • ACHAT • UTILE" data-en="Desjardins Solidarity • ACHAT • UTILE">Caisse d'économie solidaire • ACHAT • UTILE</span>
+                </div>
+                <h3 data-fr="Financement et montages hors marché" data-en="Financing &amp; Non-Market Capital">Financement et montages hors marché</h3>
+                <p data-fr="Émissions d'obligations communautaires, garanties de prêt, apports en capital patient et création de fonds solidaires hors marché permettant l'acquisition et la rénovation d'immeubles collectifs." data-en="Community bond issuances, loan guarantees, patient capital, and dedicated non-market solidarity funds enabling collective building acquisition and retrofit.">
+                  Émissions d'obligations communautaires, garanties de prêt, apports en capital patient et création de fonds solidaires hors marché permettant l'acquisition et la rénovation d'immeubles collectifs.
+                </p>
+              </div>
+              <div class="track-deliverable" data-fr="LIVRABLE VISÉ → Comparatif des véhicules de financement solidaire" data-en="TARGET OUTPUT → Comparative matrix of solidarity financing vehicles">
+                LIVRABLE VISÉ → Comparatif des véhicules de financement solidaire
+              </div>
+            </article>
+
+            <article class="track-box">
+              <div>
+                <div class="track-header">
+                  <span class="track-code">CHANTIER [03]</span>
+                  <span class="track-stakeholders" data-fr="Notaires spécialisés • Juristes" data-en="Specialized Notaries • Legal Scholars">Notaires spécialisés • Juristes</span>
+                </div>
+                <h3 data-fr="Cadre juridique, fiduciaire et notarial" data-en="Legal, Trust &amp; Notarial Frameworks">Cadre juridique, fiduciaire et notarial</h3>
+                <p data-fr="Structures juridiques hybrides (coopératives, OBNL, syndicats de copropriété, conventions d'indivision), baux emphytéotiques et constitution de fiducies d'utilité sociale (FUS) pour bloquer la spéculation foncière." data-en="Hybrid legal architectures (co-ops, non-profits, condominiums, undivided co-ownership), emphyteutic leases, and social utility trusts (FUS) to lock out land speculation.">
+                  Structures juridiques hybrides (coopératives, OBNL, syndicats de copropriété, conventions d'indivision), baux emphytéotiques et constitution de fiducies d'utilité sociale (FUS) pour bloquer la spéculation foncière.
+                </p>
+              </div>
+              <div class="track-deliverable" data-fr="LIVRABLE VISÉ → Arbre de décision des montages juridiques québécois" data-en="TARGET OUTPUT → Decision tree of Quebec legal structures">
+                LIVRABLE VISÉ → Arbre de décision des montages juridiques québécois
+              </div>
+            </article>
+
+            <article class="track-box">
+              <div>
+                <div class="track-header">
+                  <span class="track-code">CHANTIER [04]</span>
+                  <span class="track-stakeholders" data-fr="Courtiers • Assureurs commerciaux" data-en="Brokers • Commercial Underwriters">Courtiers • Assureurs commerciaux</span>
+                </div>
+                <h3 data-fr="Assurances et gestion des risques" data-en="Insurance &amp; Risk Management">Assurances et gestion des risques</h3>
+                <p data-fr="Adaptation des contrats d'assurance habitation et commerciale aux modèles de propriété partagée, à la cohabitation de plusieurs ménages et à la couverture des équipements mutualisés (cuisines, ateliers, vélos-cargos)." data-en="Adapting residential and commercial insurance underwriting to shared ownership models, multi-household living, and shared equipment (communal kitchens, workshops, cargo bikes).">
+                  Adaptation des contrats d'assurance habitation et commerciale aux modèles de propriété partagée, à la cohabitation de plusieurs ménages et à la couverture des équipements mutualisés (cuisines, ateliers, vélos-cargos).
+                </p>
+              </div>
+              <div class="track-deliverable" data-fr="LIVRABLE VISÉ → Grille de souscription et bonnes pratiques d'assurabilité" data-en="TARGET OUTPUT → Underwriting checklist &amp; insurability best practices">
+                LIVRABLE VISÉ → Grille de souscription et bonnes pratiques d'assurabilité
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPITRE 03 : PROGRAMME & DÉROULEMENT SUR 2 JOURS -->
+    <section id="programme" class="chapter" aria-labelledby="ch03-title">
+      <div class="chapter-grid">
+        <aside class="chapter-rail">
+          <div class="chapter-rail-sticky">
+            <span class="chapter-num">03 / HORAIRE</span>
+            <h2 id="ch03-title" class="chapter-title" data-fr="Deux jours, deux dynamiques complémentaires" data-en="Two Days, Two Complementary Dynamics">Deux jours, deux dynamiques complémentaires</h2>
+            <p class="chapter-lead" data-fr="Allier la rigueur du dialogue institutionnel (vendredi) à l'agilité d'un forum ouvert auto-organisé par les participants (samedi)." data-en="Combining structured institutional dialogue (Friday) with the agility of a participant-driven unconference (Saturday).">
+              Allier la rigueur du dialogue institutionnel (vendredi) à l'agilité d'un forum ouvert auto-organisé par les participants (samedi).
+            </p>
+          </div>
+        </aside>
+
+        <div class="chapter-body chapter-body--flush">
+          <div class="schedule-split">
+            <!-- Jour 1 -->
+            <div class="day-column">
+              <div class="day-banner">
+                <span class="day-tag" data-fr="JOUR 01 // VENDREDI (AVRIL 2027)" data-en="DAY 01 // FRIDAY (APRIL 2027)">JOUR 01 // VENDREDI (AVRIL 2027)</span>
+                <h3 data-fr="Volet structuré &amp; institutionnel" data-en="Structured &amp; Institutional Symposium">Volet structuré &amp; institutionnel</h3>
+              </div>
+              <ul class="slot-list">
+                <li class="slot-item">
+                  <span class="slot-time">MATINÉE // 09:00 — 12:00</span>
+                  <span class="slot-title" data-fr="États des lieux &amp; retours de terrain" data-en="Field Reports &amp; Case Studies">États des lieux &amp; retours de terrain</span>
+                  <p class="slot-desc" data-fr="Présentation sans filtre des réussites et des écueils vécus par les gestionnaires de coliving, coopératives et communautés intentionnelles au Québec." data-en="Unfiltered breakdown of breakthroughs and roadblocks experienced by coliving operators, housing co-ops, and intentional communities in Quebec.">
+                    Présentation sans filtre des réussites et des écueils vécus par les gestionnaires de coliving, coopératives et communautés intentionnelles au Québec.
+                  </p>
+                </li>
+                <li class="slot-item">
+                  <span class="slot-time">APRÈS-MIDI // 13:30 — 17:00</span>
+                  <span class="slot-title" data-fr="Tables rondes institutionnelles (Chantiers 01 à 04)" data-en="Institutional Roundtables (Tracks 01 to 04)">Tables rondes institutionnelles (Chantiers 01 à 04)</span>
+                  <p class="slot-desc" data-fr="Sessions de travail avec urbanistes municipaux, experts de la Caisse d'économie solidaire, de l'ACHAT et d'UTILE, notaires et courtiers d'assurance." data-en="Working sessions with municipal planners, experts from Caisse d'économie solidaire, ACHAT, and UTILE, specialized notaries, and insurance brokers.">
+                    Sessions de travail avec urbanistes municipaux, experts de la Caisse d'économie solidaire, de l'ACHAT et d'UTILE, notaires et courtiers d'assurance.
+                  </p>
+                </li>
+                <li class="slot-item">
+                  <span class="slot-time">SOIRÉE // 17:00 — 19:30</span>
+                  <span class="slot-title" data-fr="5 à 7 in situ dans une colocation collaborative" data-en="On-Site 5-to-7 Mixer in an Active Shared House">5 à 7 in situ dans une colocation collaborative</span>
+                  <p class="slot-desc" data-fr="Réseautage informel directement sur le site d'un habitat partagé montréalais existant pour observer concrètement l'aménagement des espaces." data-en="Informal networking hosted inside an operating Montreal shared living space to experience its spatial and community design firsthand.">
+                    Réseautage informel directement sur le site d'un habitat partagé montréalais existant pour observer concrètement l'aménagement des espaces.
+                  </p>
+                </li>
+              </ul>
             </div>
 
-            <div class="form-row-2">
+            <!-- Jour 2 -->
+            <div class="day-column day-column--alt">
+              <div class="day-banner">
+                <span class="day-tag" data-fr="JOUR 02 // SAMEDI (AVRIL 2027)" data-en="DAY 02 // SATURDAY (APRIL 2027)">JOUR 02 // SAMEDI (AVRIL 2027)</span>
+                <h3 data-fr="Forum ouvert (Unconference)" data-en="Open Space Unconference">Forum ouvert (Unconference)</h3>
+              </div>
+              <ul class="slot-list">
+                <li class="slot-item">
+                  <span class="slot-time">OUVERTURE // 09:30 — 10:30</span>
+                  <span class="slot-title" data-fr="Place du marché &amp; construction de l'ordre du jour" data-en="Marketplace &amp; Live Agenda Co-Creation">Place du marché &amp; construction de l'ordre du jour</span>
+                  <p class="slot-desc" data-fr="L'ordre du jour est construit sur place par les participants : chacun peut proposer un sujet d'atelier, un problème concret à résoudre ou un projet en recrutement." data-en="The agenda is built live by attendees: anyone can pitch a workshop topic, a concrete bottleneck to solve, or a project recruiting co-founders.">
+                    L'ordre du jour est construit sur place par les participants : chacun peut proposer un sujet d'atelier, un problème concret à résoudre ou un projet en recrutement.
+                  </p>
+                </li>
+                <li class="slot-item">
+                  <span class="slot-time">CHANTIERS // 10:30 — 16:30</span>
+                  <span class="slot-title" data-fr="Ateliers collaboratifs &amp; tables auto-gérées" data-en="Self-Organized Breakout Labs">Ateliers collaboratifs &amp; tables auto-gérées</span>
+                  <p class="slot-desc" data-fr="Cycles d'ateliers simultanés (présentiel et salles virtuelles bilingues) : gouvernance interne, prévention des conflits, maillage régional, revues de plans financiers." data-en="Parallel workshop cycles (in-person and bilingual virtual rooms): internal governance, conflict resolution, regional networking, financial pro-forma clinics.">
+                    Cycles d'ateliers simultanés (présentiel et salles virtuelles bilingues) : gouvernance interne, prévention des conflits, maillage régional, revues de plans financiers.
+                  </p>
+                </li>
+                <li class="slot-item">
+                  <span class="slot-time">CLÔTURE // 16:30 — 19:30</span>
+                  <span class="slot-title" data-fr="Synthèse collective &amp; second 5 à 7 sur le terrain" data-en="Plenary Synthesis &amp; Second On-Site 5-to-7">Synthèse collective &amp; second 5 à 7 sur le terrain</span>
+                  <p class="slot-desc" data-fr="Mise en commun des engagements suivie d'un second 5 à 7 convivial sur le site d'une colocation collaborative montréalaise." data-en="Plenary harvesting of commitments followed by a second informal 5-to-7 hosted at a Montreal collaborative coliving space.">
+                    Mise en commun des engagements suivie d'un second 5 à 7 convivial sur le site d'une colocation collaborative montréalaise.
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="venue-strip">
+            <span data-fr="<strong>LIEUX EN ÉVALUATION À MONTRÉAL :</strong> Maison de la santé durable / ASPQ (rue De Gaspé) • Maison du développement durable (MDD)" data-en="<strong>MONTREAL VENUES UNDER EVALUATION:</strong> Maison de la santé durable / ASPQ (De Gaspé St.) • Maison du développement durable (MDD)">
+              <strong>LIEUX EN ÉVALUATION À MONTRÉAL :</strong> Maison de la santé durable / ASPQ (rue De Gaspé) • Maison du développement durable (MDD)
+            </span>
+            <span data-fr="ACCESSIBILITÉ : PRÉSENTIEL + VIRTUEL SYNCHRONE (FR / EN)" data-en="ACCESS: IN-PERSON + SYNCHRONOUS VIRTUAL (FR / EN)">ACCESSIBILITÉ : PRÉSENTIEL + VIRTUEL SYNCHRONE (FR / EN)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPITRE 04 : COALITION & ORGANISATIONS IMPLIQUÉES -->
+    <section id="coalition" class="chapter" aria-labelledby="ch04-title">
+      <div class="chapter-grid">
+        <aside class="chapter-rail">
+          <div class="chapter-rail-sticky">
+            <span class="chapter-num">04 / COALITION</span>
+            <h2 id="ch04-title" class="chapter-title" data-fr="Une plateforme autonome et plurielle" data-en="An Independent, Pluralistic Platform">Une plateforme autonome et plurielle</h2>
+            <p class="chapter-lead" data-fr="Le Forum Habiter Ensemble porte sa propre identité afin de fédérer l'ensemble des approches : coliving urbain, cohabitat écologique, fiducies et coopératives." data-en="The Living Together Forum carries its own independent identity to unite diverse models: urban coliving, ecological cohousing, land trusts, and co-ops.">
+              Le Forum Habiter Ensemble porte sa propre identité afin de fédérer l'ensemble des approches : coliving urbain, cohabitat écologique, fiducies et coopératives.
+            </p>
+          </div>
+        </aside>
+
+        <div class="chapter-body chapter-body--flush">
+          <div class="coalition-intro">
+            <p data-fr="L'événement est actuellement en phase de co-construction ouverte. Les organisations initiatrices unissent leurs réseaux complémentaires — de l'accueil de nomades numériques à la facilitation participative, du conseil en développement durable à l'ingénierie civique hors marché — et invitent les partenaires institutionnels et communautaires à co-signer la programmation." data-en="The event is currently in an open co-design phase. The initiating organizations pool their complementary networks—spanning digital nomad coliving, participatory facilitation, sustainability consulting, and non-market civic engineering—and invite institutional and community partners to co-shape the program.">
+              L'événement est actuellement en phase de co-construction ouverte. Les organisations initiatrices unissent leurs réseaux complémentaires — de l'accueil de nomades numériques à la facilitation participative, du conseil en développement durable à l'ingénierie civique hors marché — et invitent les partenaires institutionnels et communautaires à co-signer la programmation.
+            </p>
+          </div>
+
+          <!-- Les 4 pôles initiateurs -->
+          <div class="orgs-grid">
+            <article class="org-tile">
+              <div>
+                <span class="org-role" data-fr="CO-INITIATEUR // FACILITATION &amp; COMMUNAUTÉS" data-en="CO-INITIATOR // FACILITATION &amp; COHOUSING">CO-INITIATEUR // FACILITATION &amp; COMMUNAUTÉS</span>
+                <h3>Lykkå Cohabitation</h3>
+                <p data-fr="Organisation dédiée au développement communautaire, à la gouvernance participative et à l'accompagnement d'espaces de vie partagés centrés sur le bien-être collectif." data-en="Organization dedicated to community development, participatory governance, and guiding shared living spaces centered on collective well-being.">
+                  Organisation dédiée au développement communautaire, à la gouvernance participative et à l'accompagnement d'espaces de vie partagés centrés sur le bien-être collectif.
+                </p>
+              </div>
+              <a href="https://www.lykka.org/" target="_blank" rel="noopener noreferrer" class="org-link">lykka.org ↗</a>
+            </article>
+
+            <article class="org-tile">
+              <div>
+                <span class="org-role" data-fr="CO-INITIATEUR // COLIVING &amp; EXPÉRIENCE" data-en="CO-INITIATOR // COLIVING &amp; EXPERIENCE">CO-INITIATEUR // COLIVING &amp; EXPÉRIENCE</span>
+                <h3>Nomad Coliving</h3>
+                <p data-fr="Premier espace de coliving pour nomades numériques et télétravailleurs au Canada, pionnier de l'hospitalité communautaire et de la colocation structurée à Montréal." data-en="Canada's first coliving space for digital nomads and remote professionals, pioneering community hospitality and structured shared housing in Montreal.">
+                  Premier espace de coliving pour nomades numériques et télétravailleurs au Canada, pionnier de l'hospitalité communautaire et de la colocation structurée à Montréal.
+                </p>
+              </div>
+              <a href="https://www.nomadcoliving.com/" target="_blank" rel="noopener noreferrer" class="org-link">nomadcoliving.com ↗</a>
+            </article>
+
+            <article class="org-tile">
+              <div>
+                <span class="org-role" data-fr="CO-INITIATEUR // DURABILITÉ &amp; PROJET OASIS" data-en="CO-INITIATOR // SUSTAINABILITY &amp; OASIS">CO-INITIATEUR // DURABILITÉ &amp; PROJET OASIS</span>
+                <h3>Maillon Vert &amp; Oasis</h3>
+                <p data-fr="Accompagnement des organisations dans la transition écoresponsable avec Maillon Vert et développement du projet Oasis coliving à Montréal pour un mode de vie écologique et inclusif." data-en="Guiding organizations in eco-responsible transition with Maillon Vert alongside launching the Oasis coliving project in Montreal for inclusive ecological living.">
+                  Accompagnement des organisations dans la transition écoresponsable avec Maillon Vert et développement du projet Oasis coliving à Montréal pour un mode de vie écologique et inclusif.
+                </p>
+              </div>
+              <a href="https://www.linkedin.com/in/thomas-marin" target="_blank" rel="noopener noreferrer" class="org-link">Thomas Marin ↗</a>
+            </article>
+
+            <article class="org-tile">
+              <div>
+                <span class="org-role" data-fr="CO-INITIATEUR // SYSTÈMES CIVIQUES &amp; COMMUNS" data-en="CO-INITIATOR // CIVIC SYSTEMS &amp; COMMONS">CO-INITIATEUR // SYSTÈMES CIVIQUES &amp; COMMUNS</span>
+                <h3>cohabitat.cc</h3>
+                <p data-fr="OBNL (requête de lettres patentes en cours au REQ) concevant des modèles financiers ouverts et des infrastructures mutualisées hors marché axées sur la mobilité active." data-en="Non-profit (incorporation pending with REQ) developing open financial models and non-market shared housing infrastructure built around active mobility.">
+                  OBNL (requête de lettres patentes en cours au REQ) concevant des modèles financiers ouverts et des infrastructures mutualisées hors marché axées sur la mobilité active.
+                </p>
+              </div>
+              <a href="https://cohabitat.cc" target="_blank" rel="noopener noreferrer" class="org-link">cohabitat.cc ↗</a>
+            </article>
+          </div>
+
+          <!-- Comité de coordination -->
+          <div class="people-roster">
+            <article class="person-cell">
+              <div>
+                <div class="person-top">
+                  <span class="person-monogram" aria-hidden="true">TM</span>
+                  <div>
+                    <h4 class="person-name">Thomas Marin</h4>
+                    <p class="person-affil">Maillon Vert / Oasis coliving</p>
+                  </div>
+                </div>
+                <p class="person-bio" data-fr="Consultant en développement durable chez Maillon Vert et entrepreneur social. Initiateur du projet Oasis coliving à Montréal." data-en="Sustainability consultant at Maillon Vert and social entrepreneur. Initiator of the Oasis coliving project in Montreal.">
+                  Consultant en développement durable chez Maillon Vert et entrepreneur social. Initiateur du projet Oasis coliving à Montréal.
+                </p>
+              </div>
+              <a href="https://www.linkedin.com/in/thomas-marin" target="_blank" rel="noopener noreferrer" class="org-link">LinkedIn ↗</a>
+            </article>
+
+            <article class="person-cell">
+              <div>
+                <div class="person-top">
+                  <span class="person-monogram" aria-hidden="true">TV</span>
+                  <div>
+                    <h4 class="person-name">Trine Veiss Mikkelsen</h4>
+                    <p class="person-affil">Lykkå Cohabitation</p>
+                  </div>
+                </div>
+                <p class="person-bio" data-fr="Fondatrice de Lykkå et vice-présidente du CA de Lykkå Cohabitation, forte de plus de 25 ans d'expérience en facilitation et gouvernance participative." data-en="Founder of Lykkå and Vice-Chair of Lykkå Cohabitation, with over 25 years of experience in facilitation and participatory governance.">
+                  Fondatrice de Lykkå et vice-présidente du CA de Lykkå Cohabitation, forte de plus de 25 ans d'expérience en facilitation et gouvernance participative.
+                </p>
+              </div>
+              <a href="https://www.linkedin.com/in/trine-veiss-mikkelsen-she-her-6b05701a0" target="_blank" rel="noopener noreferrer" class="org-link">LinkedIn ↗</a>
+            </article>
+
+            <article class="person-cell">
+              <div>
+                <div class="person-top">
+                  <span class="person-monogram" aria-hidden="true">MK</span>
+                  <div>
+                    <h4 class="person-name">Maria Kinoshita</h4>
+                    <p class="person-affil">Nomad Coliving / Octo D</p>
+                  </div>
+                </div>
+                <p class="person-bio" data-fr="Co-fondatrice de Nomad Coliving et fondatrice d'Octo D, consultante en ingénierie pédagogique et conception d'expériences d'apprentissage." data-en="Co-founder of Nomad Coliving and founder of Octo D, instructional design consultant and learning experience architect.">
+                  Co-fondatrice de Nomad Coliving et fondatrice d'Octo D, consultante en ingénierie pédagogique et conception d'expériences d'apprentissage.
+                </p>
+              </div>
+              <a href="https://www.linkedin.com/in/maria-kinoshita-25872338" target="_blank" rel="noopener noreferrer" class="org-link">LinkedIn ↗</a>
+            </article>
+
+            <article class="person-cell">
+              <div>
+                <div class="person-top">
+                  <span class="person-monogram" aria-hidden="true">RN</span>
+                  <div>
+                    <h4 class="person-name">Ricky Ng-Adam</h4>
+                    <p class="person-affil">cohabitat.cc / HABILE.ca</p>
+                  </div>
+                </div>
+                <p class="person-bio" data-fr="Fondateur de cohabitat.cc et architecte de systèmes civiques, spécialisé en modélisation financière et technologies ouvertes pour le pré-développement d'habitats hors marché." data-en="Founder of cohabitat.cc and civic systems architect specializing in financial modeling and open technologies for non-market housing pre-development.">
+                  Fondateur de cohabitat.cc et architecte de systèmes civiques, spécialisé en modélisation financière et technologies ouvertes pour le pré-développement d'habitats hors marché.
+                </p>
+              </div>
+              <a href="https://www.linkedin.com/in/rngadam" target="_blank" rel="noopener noreferrer" class="org-link">LinkedIn ↗</a>
+            </article>
+          </div>
+
+          <!-- Écosystème pressenti -->
+          <div class="ecosystem-ledger">
+            <h3 data-fr="Organisations, chercheurs et partenaires sollicités pour la co-construction :" data-en="Organizations, researchers, and partners invited to co-build the Forum:">
+              Organisations, chercheurs et partenaires sollicités pour la co-construction :
+            </h3>
+            <ul class="tag-cloud">
+              <li>Village Urbain</li>
+              <li>Brique par Brique</li>
+              <li>UTILE</li>
+              <li>ACHAT</li>
+              <li>Caisse d'économie solidaire Desjardins</li>
+              <li>Isabelle Côté (Recherche habitat &amp; cohabitation)</li>
+              <li>Happy Cities / Happy Living (Ashley Proctor)</li>
+              <li>Podcast « Raconte-moi un commun » (Stella Warnier)</li>
+              <li>Maison de la santé durable / ASPQ</li>
+              <li>Maison du développement durable</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPITRE 05 : DOSSIER D'INTÉRÊT & PARTENARIAT -->
+    <section id="interet" class="chapter" aria-labelledby="form-heading">
+      <div class="chapter-grid">
+        <aside class="chapter-rail">
+          <div class="chapter-rail-sticky">
+            <span class="chapter-num">05 / INSCRIPTION</span>
+            <h2 id="form-heading" class="chapter-title" data-fr="Fiche d'intérêt &amp; de partenariat" data-en="Partner &amp; Participant Interest Dossier">Fiche d'intérêt &amp; de partenariat</h2>
+            <p class="chapter-lead" data-fr="Manifestez votre intérêt pour co-construire la programmation, intervenir sur un chantier, devenir partenaire ou participer aux deux journées d'avril 2027." data-en="Register your interest to co-shape the agenda, speak on a technical track, partner up, or attend the two-day gathering in April 2027.">
+              Manifestez votre intérêt pour co-construire la programmation, intervenir sur un chantier, devenir partenaire ou participer aux deux journées d'avril 2027.
+            </p>
+          </div>
+        </aside>
+
+        <div class="chapter-body chapter-body--flush">
+          <div class="dossier-header">
+            <span data-fr="FORMULAIRE DE MOBILISATION // RÉF. FHE-2027-MTL" data-en="MOBILIZATION DOSSIER // REF. FHE-2027-MTL">FORMULAIRE DE MOBILISATION // RÉF. FHE-2027-MTL</span>
+            <span data-fr="STATUT : APPEL À MANIFESTATION D'INTÉRÊT OUVERT" data-en="STATUS: OPEN CALL FOR EXPRESSIONS OF INTEREST">STATUT : APPEL À MANIFESTATION D'INTÉRÊT OUVERT</span>
+          </div>
+
+          <div class="dossier-grid">
+            <form id="interest-form" class="interest-form" novalidate aria-labelledby="form-heading">
+              <div id="form-error-summary" class="form-error-summary" tabindex="-1" hidden></div>
+
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label for="field-name">
+                    <span data-fr="Nom complet" data-en="Full Name">Nom complet</span>
+                    <span class="required-mark" aria-hidden="true">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="field-name"
+                    name="name"
+                    class="form-control"
+                    required
+                    autocomplete="name"
+                    data-placeholder-fr="Prénom et nom"
+                    data-placeholder-en="First and last name"
+                    placeholder="Prénom et nom"
+                    data-error="error-name"
+                  >
+                  <div id="error-name" class="field-error" data-fr="<span role='img' aria-label='Erreur'>[!]</span> Veuillez indiquer votre nom complet." data-en="<span role='img' aria-label='Error'>[!]</span> Please provide your full name.">
+                    <span role="img" aria-label="Erreur">[!]</span> Veuillez indiquer votre nom complet.
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="field-email">
+                    <span data-fr="Adresse courriel" data-en="Email Address">Adresse courriel</span>
+                    <span class="required-mark" aria-hidden="true">*</span>
+                  </label>
+                  <span id="hint-email" class="field-hint" data-fr="Format : nom@organisation.org" data-en="Format: name@organization.org">Format : nom@organisation.org</span>
+                  <input
+                    type="email"
+                    id="field-email"
+                    name="email"
+                    class="form-control"
+                    required
+                    autocomplete="email"
+                    inputmode="email"
+                    autocorrect="off"
+                    autocapitalize="none"
+                    spellcheck="false"
+                    aria-describedby="hint-email"
+                    data-placeholder-fr="nom@organisation.org"
+                    data-placeholder-en="name@organization.org"
+                    placeholder="nom@organisation.org"
+                    data-error="error-email"
+                  >
+                  <div id="error-email" class="field-error" data-fr="<span role='img' aria-label='Erreur'>[!]</span> Veuillez saisir une adresse courriel valide (nom@domaine.com)." data-en="<span role='img' aria-label='Error'>[!]</span> Please enter a valid email address (name@domain.com).">
+                    <span role="img" aria-label="Erreur">[!]</span> Veuillez saisir une adresse courriel valide (nom@domaine.com).
+                  </div>
+                </div>
+              </div>
+
               <div class="form-group">
-                <label for="field-name">
-                  <span data-fr="Votre nom complet" data-en="Your Full Name">Votre nom complet</span>
-                  <span class="required-mark" aria-hidden="true">*</span>
+                <label for="field-org">
+                  <span data-fr="Organisation, collectif, municipalité ou projet (optionnel)" data-en="Organization, collective, municipality, or project (optional)">Organisation, collectif, municipalité ou projet (optionnel)</span>
                 </label>
                 <input
                   type="text"
-                  id="field-name"
-                  name="name"
+                  id="field-org"
+                  name="organization"
                   class="form-control"
-                  required
-                  autocomplete="name"
-                  data-placeholder-fr="ex. Ricky Ng-Adam"
-                  data-placeholder-en="e.g. Ricky Ng-Adam"
-                  placeholder="ex. Ricky Ng-Adam"
-                  data-error="error-name"
+                  autocomplete="organization"
+                  data-placeholder-fr="ex. Coopérative, OBNL, Service d'urbanisme, Caisse, Citoyen..."
+                  data-placeholder-en="e.g. Housing Co-op, Non-Profit, City Planning, Credit Union, Citizen..."
+                  placeholder="ex. Coopérative, OBNL, Service d'urbanisme, Caisse, Citoyen..."
                 >
-                <div id="error-name" class="field-error" data-fr="<span role='img' aria-label='Erreur'>❌</span> Veuillez renseigner votre nom complet." data-en="<span role='img' aria-label='Error'>❌</span> Please provide your full name.">
-                  <span role="img" aria-label="Erreur">❌</span> Veuillez renseigner votre nom complet.
-                </div>
               </div>
+
+              <!-- Profil principal -->
+              <fieldset class="form-fieldset">
+                <legend data-fr="01. Votre profil principal" data-en="01. Your Primary Profile">01. Votre profil principal</legend>
+                <div class="choice-grid choice-grid--2col">
+                  <div class="choice-item">
+                    <input type="radio" id="prof-porteur" name="profile" value="Porteur de projet / Gestionnaire d'habitat" checked>
+                    <label for="prof-porteur" data-fr="Porteur·se de projet / Gestionnaire de coliving ou cohabitat" data-en="Project Initiator / Coliving or Cohousing Operator">
+                      Porteur·se de projet / Gestionnaire de coliving ou cohabitat
+                    </label>
+                  </div>
+                  <div class="choice-item">
+                    <input type="radio" id="prof-institution" name="profile" value="Municipalité / Urbaniste / Décideur public">
+                    <label for="prof-institution" data-fr="Municipalité / Urbaniste / Décideur public" data-en="Municipality / Urban Planner / Public Policy">
+                      Municipalité / Urbaniste / Décideur public
+                    </label>
+                  </div>
+                  <div class="choice-item">
+                    <input type="radio" id="prof-expert" name="profile" value="Finance solidaire / Juriste / Notaire / Assureur">
+                    <label for="prof-expert" data-fr="Finance solidaire / Juriste / Notaire / Assureur" data-en="Solidarity Lender / Legal / Notary / Insurer">
+                      Finance solidaire / Juriste / Notaire / Assureur
+                    </label>
+                  </div>
+                  <div class="choice-item">
+                    <input type="radio" id="prof-participant" name="profile" value="Résident / Chercheur / Citoyen intéressé">
+                    <label for="prof-participant" data-fr="Résident·e / Chercheur·se / Futur·e habitant·e" data-en="Resident / Researcher / Prospective Member">
+                      Résident·e / Chercheur·se / Futur·e habitant·e
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+
+              <!-- Chantiers et modes de contribution -->
+              <fieldset class="form-fieldset">
+                <legend data-fr="02. Chantiers &amp; modes de contribution souhaités" data-en="02. Tracks &amp; Ways You Wish to Contribute">02. Chantiers &amp; modes de contribution souhaités</legend>
+                <div class="choice-grid choice-grid--2col">
+                  <div class="choice-item">
+                    <input type="checkbox" id="int-zonage" name="interests" value="Chantier 01 : Réglementation et zonage municipal">
+                    <label for="int-zonage" data-fr="[01] Réglementation &amp; zonage municipal" data-en="[01] Municipal bylaws &amp; zoning">[01] Réglementation &amp; zonage municipal</label>
+                  </div>
+                  <div class="choice-item">
+                    <input type="checkbox" id="int-finance" name="interests" value="Chantier 02 : Financement solidaire et obligations communautaires">
+                    <label for="int-finance" data-fr="[02] Financement &amp; obligations communautaires" data-en="[02] Solidarity finance &amp; community bonds">[02] Financement &amp; obligations communautaires</label>
+                  </div>
+                  <div class="choice-item">
+                    <input type="checkbox" id="int-juridique" name="interests" value="Chantier 03 : Fiducies foncières (FUS) et baux emphytéotiques">
+                    <label for="int-juridique" data-fr="[03] Fiducies (FUS), emphytéose &amp; droit" data-en="[03] Land trusts (FUS), ground leases &amp; law">[03] Fiducies (FUS), emphytéose &amp; droit</label>
+                  </div>
+                  <div class="choice-item">
+                    <input type="checkbox" id="int-assurance" name="interests" value="Chantier 04 : Assurances et gestion des risques">
+                    <label for="int-assurance" data-fr="[04] Assurances &amp; espaces mutualisés" data-en="[04] Insurance &amp; shared facilities">[04] Assurances &amp; espaces mutualisés</label>
+                  </div>
+                  <div class="choice-item">
+                    <input type="checkbox" id="int-unconf" name="interests" value="Proposer un atelier ou témoignage (Unconference)">
+                    <label for="int-unconf" data-fr="Animer un atelier / présenter un cas" data-en="Facilitate a workshop / present a case">Animer un atelier / présenter un cas</label>
+                  </div>
+                  <div class="choice-item">
+                    <input type="checkbox" id="int-sponsor" name="interests" value="Partenariat organisationnel, lieu ou accueil 5 à 7">
+                    <label for="int-sponsor" data-fr="Devenir organisation partenaire / accueillir un 5 à 7" data-en="Become a partner organization / host a 5-to-7">Devenir organisation partenaire / accueillir un 5 à 7</label>
+                  </div>
+                </div>
+              </fieldset>
 
               <div class="form-group">
-                <label for="field-email">
-                  <span data-fr="Adresse courriel professionnelle ou personnelle" data-en="Work or Personal Email">Adresse courriel professionnelle ou personnelle</span>
-                  <span class="required-mark" aria-hidden="true">*</span>
+                <label for="field-message">
+                  <span data-fr="Attentes, obstacles rencontrés ou proposition de contribution" data-en="Expectations, obstacles faced, or proposed contribution">Attentes, obstacles rencontrés ou proposition de contribution</span>
                 </label>
-                <span id="hint-email" class="field-hint" data-fr="Format attendu : nom@exemple.com" data-en="Expected format: name@example.com">Format attendu : nom@exemple.com</span>
-                <input
-                  type="email"
-                  id="field-email"
-                  name="email"
+                <textarea
+                  id="field-message"
+                  name="message"
                   class="form-control"
-                  required
-                  autocomplete="email"
-                  inputmode="email"
-                  autocorrect="off"
-                  autocapitalize="none"
-                  spellcheck="false"
-                  aria-describedby="hint-email"
-                  data-placeholder-fr="vous@organisation.org"
-                  data-placeholder-en="you@organization.org"
-                  placeholder="vous@organisation.org"
-                  data-error="error-email"
-                >
-                <div id="error-email" class="field-error" data-fr="<span role='img' aria-label='Erreur'>❌</span> Veuillez saisir une adresse courriel valide (nom@exemple.com)." data-en="<span role='img' aria-label='Error'>❌</span> Please enter a valid email address (name@example.com).">
-                  <span role="img" aria-label="Erreur">❌</span> Veuillez saisir une adresse courriel valide (nom@exemple.com).
+                  data-placeholder-fr="Précisez les enjeux que vous souhaitez voir abordés ou la façon dont votre organisation aimerait s'impliquer..."
+                  data-placeholder-en="Share the specific challenges you want addressed or how your organization would like to get involved..."
+                  placeholder="Précisez les enjeux que vous souhaitez voir abordés ou la façon dont votre organisation aimerait s'impliquer..."
+                ></textarea>
+              </div>
+
+              <div class="form-submit-row">
+                <button type="submit" class="btn btn-primary" data-fr="Générer &amp; transmettre ma fiche d'intérêt →" data-en="Generate &amp; Submit Interest Dossier →">
+                  Générer &amp; transmettre ma fiche d'intérêt →
+                </button>
+                <p class="form-note" data-fr="CONFIDENTIALITÉ : Aucun partage commercial. Destiné exclusivement au comité de coordination du Forum." data-en="PRIVACY: Zero commercial sharing. Used exclusively by the Forum coordinating committee.">
+                  CONFIDENTIALITÉ : Aucun partage commercial. Destiné exclusivement au comité de coordination du Forum.
+                </p>
+              </div>
+
+              <!-- Panneau de confirmation accessible -->
+              <div id="submission-confirmation" class="submission-panel" hidden tabindex="-1" role="region" aria-label="Confirmation de la fiche d'intérêt">
+                <h3 data-fr="Fiche d'intérêt prête à transmettre" data-en="Interest Dossier Ready to Send">Fiche d'intérêt prête à transmettre</h3>
+                <p data-fr="Votre fiche est formatée ci-dessous. Choisissez votre mode de transmission préféré pour l'envoyer au comité organisateur :" data-en="Your dossier is formatted below. Choose your preferred channel to send it to the organizing committee:">
+                  Votre fiche est formatée ci-dessous. Choisissez votre mode de transmission préféré pour l'envoyer au comité organisateur :
+                </p>
+                <pre id="submission-summary" class="submission-summary"></pre>
+                <div class="submission-actions">
+                  <a id="btn-send-email" href="#" class="btn btn-primary" data-fr="Envoyer par courriel au comité →" data-en="Send via Email to Committee →">
+                    Envoyer par courriel au comité →
+                  </a>
+                  <button type="button" id="btn-copy-summary" class="btn btn-outline" data-fr="Copier le texte de ma fiche" data-en="Copy Dossier Text">
+                    Copier le texte de ma fiche
+                  </button>
+                  <a id="btn-open-gform" href="https://docs.google.com/forms/d/e/1FAIpQLSeCC7mERRTYUYdhuAnY_ibB_ZfhlLiTbYmZ530u58NxoYLm1Q/viewform" target="_blank" rel="noopener noreferrer" class="btn btn-outline" data-fr="Ouvrir le Google Form ↗" data-en="Open Google Form ↗">
+                    Ouvrir le Google Form ↗
+                  </a>
                 </div>
               </div>
-            </div>
+            </form>
 
-            <div class="form-group">
-              <label for="field-org">
-                <span data-fr="Organisation, projet ou collectivité" data-en="Organization, Project, or Municipality">Organisation, projet ou collectivité</span>
-              </label>
-              <input
-                type="text"
-                id="field-org"
-                name="organization"
-                class="form-control"
-                autocomplete="organization"
-                data-placeholder-fr="ex. Lykkå Cohabitation, Ville de Montréal, Indépendant..."
-                data-placeholder-en="e.g. Lykkå, City of Montreal, Independent..."
-                placeholder="ex. Lykkå Cohabitation, Ville de Montréal, Indépendant..."
-              >
-            </div>
-
-            <!-- Profil de contribution (Radio buttons visibles 2-5 choix) -->
-            <fieldset class="form-fieldset">
-              <legend data-fr="Votre profil principal pour le Forum :" data-en="Your primary role for the Forum:">Votre profil principal pour le Forum :</legend>
-              <div class="choice-grid choice-grid--2col">
-                <div class="choice-item">
-                  <input type="radio" id="prof-porteur" name="profile" value="porteur" checked>
-                  <label for="prof-porteur" data-fr="Porteur·se de projet / Gestionnaire d'habitat" data-en="Project Initiator / Housing Manager">
-                    Porteur·se de projet / Gestionnaire d'habitat
-                  </label>
-                </div>
-                <div class="choice-item">
-                  <input type="radio" id="prof-institution" name="profile" value="institution">
-                  <label for="prof-institution" data-fr="Élu·e / Urbaniste / Représentant municipal" data-en="Elected Official / Urban Planner / City Staff">
-                    Élu·e / Urbaniste / Représentant municipal
-                  </label>
-                </div>
-                <div class="choice-item">
-                  <input type="radio" id="prof-finance" name="profile" value="finance">
-                  <label for="prof-finance" data-fr="Bailleur solidaire / Assureur / Juriste" data-en="Social Lender / Underwriter / Legal Expert">
-                    Bailleur solidaire / Assureur / Juriste
-                  </label>
-                </div>
-                <div class="choice-item">
-                  <input type="radio" id="prof-citoyen" name="profile" value="citoyen">
-                  <label for="prof-citoyen" data-fr="Résident·e / Chercheur·se / Citoyen·ne intéressé·e" data-en="Resident / Researcher / Engaged Citizen">
-                    Résident·e / Chercheur·se / Citoyen·ne intéressé·e
-                  </label>
-                </div>
+            <!-- Colonne latérale du dossier -->
+            <aside class="form-aside">
+              <div class="aside-block">
+                <h3 data-fr="Pourquoi rejoindre la démarche dès maintenant ?" data-en="Why Join the Process Early?">Pourquoi rejoindre la démarche dès maintenant ?</h3>
+                <ul class="aside-list">
+                  <li data-fr="<strong>Co-construction de l'agenda :</strong> Les partenaires inscrits en amont participent au cadrage des 4 tables institutionnelles du vendredi." data-en="<strong>Co-Shaping the Agenda:</strong> Early partners help frame Friday's 4 institutional roundtables.">
+                    <strong>Co-construction de l'agenda :</strong> Les partenaires inscrits en amont participent au cadrage des 4 tables institutionnelles du vendredi.
+                  </li>
+                  <li data-fr="<strong>Études de cas réelles :</strong> Soumettez votre projet de coliving ou d'habitat partagé pour qu'il serve de cas pratique aux juristes, urbanistes et financiers." data-en="<strong>Live Case Clinics:</strong> Submit your coliving or shared housing project to be analyzed as a live case study by legal, zoning, and finance experts.">
+                    <strong>Études de cas réelles :</strong> Soumettez votre projet de coliving ou d'habitat partagé pour qu'il serve de cas pratique aux juristes, urbanistes et financiers.
+                  </li>
+                  <li data-fr="<strong>Priorité d'accès :</strong> Jauge limitée en présentiel à Montréal et accès direct aux deux 5 à 7 hébergés dans des colocations collaboratives." data-en="<strong>Priority Access:</strong> Limited in-person capacity in Montreal and direct invitations to both on-site coliving 5-to-7 mixers.">
+                    <strong>Priorité d'accès :</strong> Jauge limitée en présentiel à Montréal et accès direct aux deux 5 à 7 hébergés dans des colocations collaboratives.
+                  </li>
+                </ul>
               </div>
-            </fieldset>
 
-            <!-- Thématiques d'intérêt prioritaires -->
-            <fieldset class="form-fieldset">
-              <legend data-fr="Quels axes thématiques vous interpellent le plus ? (Plusieurs choix possibles)" data-en="Which thematic tracks matter most to you? (Multi-select)">Quels axes thématiques vous interpellent le plus ? (Plusieurs choix possibles)</legend>
-              <div class="choice-grid choice-grid--2col">
-                <div class="choice-item">
-                  <input type="checkbox" id="int-zonage" name="interests" value="Réglementation et zonage municipal">
-                  <label for="int-zonage" data-fr="Réglementation & Zonage municipal" data-en="Bylaws & Municipal Zoning">Réglementation & Zonage municipal</label>
-                </div>
-                <div class="choice-item">
-                  <input type="checkbox" id="int-finance" name="interests" value="Financement solidaire et obligations d'impact">
-                  <label for="int-finance" data-fr="Financement solidaire & Prêts hors marché" data-en="Solidarity Lending & Non-Market Capital">Financement solidaire & Prêts hors marché</label>
-                </div>
-                <div class="choice-item">
-                  <input type="checkbox" id="int-juridique" name="interests" value="Fiducies d'utilité sociale (FUS) et baux emphytéotiques">
-                  <label for="int-juridique" data-fr="Fiducies foncières (FUS) & Baux emphytéotiques" data-en="Community Land Trusts & Ground Leases">Fiducies foncières (FUS) & Baux emphytéotiques</label>
-                </div>
-                <div class="choice-item">
-                  <input type="checkbox" id="int-assurance" name="interests" value="Assurance commerciale et mutualisation">
-                  <label for="int-assurance" data-fr="Assurances collectives des espaces partagés" data-en="Shared Facilities Commercial Insurance">Assurances collectives des espaces partagés</label>
-                </div>
-                <div class="choice-item">
-                  <input type="checkbox" id="int-unconf" name="interests" value="Animation d'un atelier au Forum ouvert (Unconference)">
-                  <label for="int-unconf" data-fr="Animation d'un atelier en Unconference" data-en="Facilitating an Unconference Workshop">Animation d'un atelier en Unconference</label>
-                </div>
-                <div class="choice-item">
-                  <input type="checkbox" id="int-sponsor" name="interests" value="Partenariat organisationnel ou commandite">
-                  <label for="int-sponsor" data-fr="Partenariat institutionnel / Soutien financier" data-en="Institutional Partnership / Sponsorship">Partenariat institutionnel / Soutien financier</label>
-                </div>
-              </div>
-            </fieldset>
-
-            <div class="form-group">
-              <label for="field-message">
-                <span data-fr="Votre projet, vos attentes ou une question pour le Forum :" data-en="Your project, expectations, or a question for the Forum:">Votre projet, vos attentes ou une question pour le Forum :</span>
-              </label>
-              <textarea
-                id="field-message"
-                name="message"
-                class="form-control"
-                data-placeholder-fr="Décrivez brièvement votre projet ou le défi réglementaire/financier auquel vous faites face..."
-                data-placeholder-en="Briefly describe your initiative or the specific regulatory/financing bottleneck you face..."
-                placeholder="Décrivez brièvement votre projet ou le défi réglementaire/financier auquel vous faites face..."
-              ></textarea>
-            </div>
-
-            <div class="form-submit-row">
-              <button type="submit" class="btn btn-accent" data-fr="Transmettre ma manifestation d'intérêt" data-en="Submit Expression of Interest">
-                Transmettre ma manifestation d'intérêt
-              </button>
-              <p class="form-note" data-fr="🔒 Vos données ne seront jamais cédées ni partagées à des tiers commerciaux." data-en="🔒 Your contact details will strictly remain confidential to the coordinating committee.">
-                🔒 Vos données ne seront jamais cédées ni partagées à des tiers commerciaux.
-              </p>
-            </div>
-
-            <!-- Panneau de confirmation dynamique -->
-            <div id="submission-confirmation" class="submission-panel" hidden tabindex="-1" role="region" aria-label="Confirmation de soumission">
-              <h3 data-fr="Merci ! Votre manifestation d'intérêt a bien été préparée." data-en="Thank you! Your interest has been recorded.">Merci ! Votre manifestation d'intérêt a bien été préparée.</h3>
-              <p data-fr="Voici le récapitulatif structuré de vos réponses. Pour accélérer son traitement par Ricky et Thomas, vous pouvez envoyer directement ce courriel ou finaliser dans le Google Form :" data-en="Here is your structured response summary. To accelerate review with Ricky and Thomas, you can directly send this pre-filled email or finish in Google Forms:">
-                Voici le récapitulatif structuré de vos réponses. Pour accélérer son traitement par Ricky et Thomas, vous pouvez envoyer directement ce courriel ou finaliser dans le Google Form :
-              </p>
-              <pre id="submission-summary" class="submission-summary"></pre>
-              <div class="submission-actions">
-                <a id="btn-send-email" href="#" class="btn btn-primary" data-fr="✉️ Envoyer par courriel au comité (joindre@cohabitat.cc)" data-en="✉️ Send Email to Committee (joindre@cohabitat.cc)">
-                  ✉️ Envoyer par courriel au comité (joindre@cohabitat.cc)
-                </a>
-                <a id="btn-open-gform" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-outline" data-fr="📋 Compléter le Google Form officiel" data-en="📋 Complete in Official Google Form">
-                  📋 Compléter le Google Form officiel
+              <div class="gform-callout">
+                <p data-fr="<strong>Questionnaire Google Forms :</strong> Vous pouvez également remplir directement le formulaire de recensement des partenaires et participants sur Google Forms." data-en="<strong>Google Forms Questionnaire:</strong> You can also directly complete the partner and participant survey on Google Forms.">
+                  <strong>Questionnaire Google Forms :</strong> Vous pouvez également remplir directement le formulaire de recensement des partenaires et participants sur Google Forms.
+                </p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeCC7mERRTYUYdhuAnY_ibB_ZfhlLiTbYmZ530u58NxoYLm1Q/viewform" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline" style="inline-size: 100%;" data-fr="Accéder au formulaire Google externe ↗" data-en="Open External Google Form ↗">
+                  Accéder au formulaire Google externe ↗
                 </a>
               </div>
-            </div>
-          </form>
+            </aside>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Foire Aux Questions (FAQ) -->
-    <section id="faq" class="section section--surface" aria-labelledby="faq-title">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-eyebrow" data-fr="Questions Fréquentes" data-en="Frequently Asked Questions">Questions Fréquentes</span>
-          <h2 id="faq-title" data-fr="Tout savoir sur le Forum Habiter Ensemble" data-en="Everything You Need to Know">
-            Tout savoir sur le Forum Habiter Ensemble
-          </h2>
-          <p class="section-lead" data-fr="Des réponses claires sur le positionnement, les modalités d'accès et l'esprit de co-construction." data-en="Clear answers regarding the forum scope, participation modalities, and co-construction ethos.">
-            Des réponses claires sur le positionnement, les modalités d'accès et l'esprit de co-construction.
-          </p>
+    <!-- CHAPITRE 06 : PRÉCISIONS & FAQ -->
+    <section id="precisions" class="chapter" aria-labelledby="ch06-title">
+      <div class="chapter-grid">
+        <aside class="chapter-rail">
+          <div class="chapter-rail-sticky">
+            <span class="chapter-num">06 / PRÉCISIONS</span>
+            <h2 id="ch06-title" class="chapter-title" data-fr="Questions fréquentes" data-en="Key Clarifications">Questions fréquentes</h2>
+            <p class="chapter-lead" data-fr="Modalités pratiques, indépendance éditoriale et fonctionnement du Forum Habiter Ensemble." data-en="Practical modalities, editorial independence, and how the Living Together Forum operates.">
+              Modalités pratiques, indépendance éditoriale et fonctionnement du Forum Habiter Ensemble.
+            </p>
+          </div>
+        </aside>
+
+        <div class="chapter-body chapter-body--flush">
+          <section class="faq-list" aria-label="Questions fréquentes sur le Forum">
+            <details class="faq-item" name="faq-forum" open>
+              <summary data-fr="Quelle est la différence entre le Forum Habiter Ensemble et les organisations qui l'initient ?" data-en="How is the Forum distinct from its initiating organizations?">
+                Quelle est la différence entre le Forum Habiter Ensemble et les organisations qui l'initient ?
+              </summary>
+              <div class="faq-answer">
+                <p data-fr="Le Forum Habiter Ensemble possède son identité propre et neutre. Lykkå Cohabitation, Nomad Coliving, Maillon Vert / Oasis coliving et cohabitat.cc agissent comme partenaires co-initiateurs pour mettre leurs ressources au service de tout l'écosystème québécois, sans imposer un modèle unique de propriété ou de gouvernance." data-en="The Living Together Forum holds its own neutral, standalone identity. Lykkå Cohabitation, Nomad Coliving, Maillon Vert / Oasis coliving, and cohabitat.cc serve as co-initiating partners pooling their networks for the entire Quebec ecosystem, without imposing a single ownership or governance template.">
+                  Le Forum Habiter Ensemble possède son identité propre et neutre. Lykkå Cohabitation, Nomad Coliving, Maillon Vert / Oasis coliving et cohabitat.cc agissent comme partenaires co-initiateurs pour mettre leurs ressources au service de tout l'écosystème québécois, sans imposer un modèle unique de propriété ou de gouvernance.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item" name="faq-forum">
+              <summary data-fr="Pourquoi insister sur la distinction avec les maisons de chambres ?" data-en="Why emphasize the distinction from traditional rooming houses?">
+                Pourquoi insister sur la distinction avec les maisons de chambres ?
+              </summary>
+              <div class="faq-answer">
+                <p data-fr="Dans plusieurs municipalités, dès qu'un bâtiment regroupe des adultes sans lien familial partageant des espaces de vie, il risque d'être classé par défaut comme « maison de chambres » — déclenchant des interdictions de zonage, des normes inadaptées ou des incompréhensions médiatiques. Le Forum vise à définir des critères objectifs pour la colocation collaborative et l'habitat partagé." data-en="In many municipalities, whenever unrelated adults share living facilities under one roof, bylaws default to classifying the building as a 'rooming house'—triggering zoning bans, ill-suited code requirements, or media misunderstandings. The Forum works to establish clear, objective criteria for collaborative coliving and shared housing.">
+                  Dans plusieurs municipalités, dès qu'un bâtiment regroupe des adultes sans lien familial partageant des espaces de vie, il risque d'être classé par défaut comme « maison de chambres » — déclenchant des interdictions de zonage, des normes inadaptées ou des incompréhensions médiatiques. Le Forum vise à définir des critères objectifs pour la colocation collaborative et l'habitat partagé.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item" name="faq-forum">
+              <summary data-fr="Comment fonctionne la journée en Forum ouvert (Unconference) du samedi ?" data-en="How does Saturday's Open Space Unconference work?">
+                Comment fonctionne la journée en Forum ouvert (Unconference) du samedi ?
+              </summary>
+              <div class="faq-answer">
+                <p data-fr="Le samedi matin, les participants construisent ensemble la grille horaire des tables de travail. Qu'il s'agisse de rédiger une convention d'indivision, de comparer des logiciels de gestion collective, de recruter des co-fondateurs en région ou d'élaborer une charte relationnelle, chaque table produit une fiche synthétique versée aux biens communs du Forum." data-en="On Saturday morning, attendees collectively build the breakout schedule. Whether drafting a co-ownership agreement, comparing collective management tools, recruiting regional co-founders, or designing a community living charter, each table produces a synthesis sheet shared in the Forum commons.">
+                  Le samedi matin, les participants construisent ensemble la grille horaire des tables de travail. Qu'il s'agisse de rédiger une convention d'indivision, de comparer des logiciels de gestion collective, de recruter des co-fondateurs en région ou d'élaborer une charte relationnelle, chaque table produit une fiche synthétique versée aux biens communs du Forum.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item" name="faq-forum">
+              <summary data-fr="Comment participer à distance ou en anglais ?" data-en="How do remote and English-speaking participants take part?">
+                Comment participer à distance ou en anglais ?
+              </summary>
+              <div class="faq-answer">
+                <p data-fr="L'événement est conçu dès le départ en formule hybride (présentiel à Montréal + participation virtuelle interactive) et bilingue (français et anglais), afin d'intégrer les porteurs de projets des régions du Québec ainsi que les réseaux canadiens et internationaux." data-en="The event is designed from the ground up as a hybrid (in-person in Montreal + interactive virtual participation) and bilingual (French and English) gathering, connecting project builders across Quebec regions with Canadian and international peers.">
+                  L'événement est conçu dès le départ en formule hybride (présentiel à Montréal + participation virtuelle interactive) et bilingue (français et anglais), afin d'intégrer les porteurs de projets des régions du Québec ainsi que les réseaux canadiens et internationaux.
+                </p>
+              </div>
+            </details>
+          </section>
         </div>
-
-        <section class="faq-list" aria-label="Questions fréquentes sur l'événement">
-          <details class="faq-item" name="faq-forum">
-            <summary data-fr="Pourquoi le coliving est-il souvent confondu avec les maisons de chambres ?" data-en="Why is coliving often mischaracterized as rooming houses?">
-              Pourquoi le coliving est-il souvent confondu avec les maisons de chambres ?
-            </summary>
-            <div class="faq-answer">
-              <p data-fr="Les règlements municipaux québécois ont été pensés pour un découpage binaire : le logement unifamilial traditionnel ou la maison de chambres à baux individuels. Le coliving moderne et l'habitat partagé reposent au contraire sur des baux collectifs, une gouvernance partagée, de vastes espaces de vie mutualisés (cuisines, ateliers, espaces de cotravail) et une forte dimension communautaire. Le Forum vise précisément à expliquer ces nuances aux législateurs et à créer des catégories d'urbanisme adaptées." data-en="Quebec municipal zoning was historically designed around a binary: single-family units vs. rooming houses with individual leases. Modern coliving and shared housing rely instead on joint leases, shared governance, extensive collective amenities (shared kitchens, repair shops, coworking), and rich community bonds. The Forum aims precisely to educate decision-makers and build tailored zoning designations.">
-                Les règlements municipaux québécois ont été pensés pour un découpage binaire : le logement unifamilial traditionnel ou la maison de chambres à baux individuels. Le coliving moderne et l'habitat partagé reposent au contraire sur des baux collectifs, une gouvernance partagée, de vastes espaces de vie mutualisés (cuisines, ateliers, espaces de cotravail) et une forte dimension communautaire. Le Forum vise précisément à expliquer ces nuances aux législateurs et à créer des catégories d'urbanisme adaptées.
-              </p>
-            </div>
-          </details>
-
-          <details class="faq-item" name="faq-forum">
-            <summary data-fr="Qui peut participer à l'événement ?" data-en="Who is eligible to participate in the event?">
-              Qui peut participer à l'événement ?
-            </summary>
-            <div class="faq-answer">
-              <p data-fr="Le forum est ouvert à toute personne ou organisation intéressée par l'innovation en habitat : porteurs de projets émergents, résidents actuels de colocations, urbanistes, promoteurs sans but lucratif, conseillers municipaux, notaires, assureurs, banquiers et citoyens curieux. Une attention particulière est portée à la diversité des profils et des régions." data-en="The forum welcomes anyone invested in housing innovation: emerging project leads, current residents, urban planners, non-profit developers, city officials, notaries, underwriters, lenders, and interested citizens. We prioritize diverse regional and multidisciplinary perspectives.">
-                Le forum est ouvert à toute personne ou organisation intéressée par l'innovation en habitat : porteurs de projets émergents, résidents actuels de colocations, urbanistes, promoteurs sans but lucratif, conseillers municipaux, notaires, assureurs, banquiers et citoyens curieux. Une attention particulière est portée à la diversité des profils et des régions.
-              </p>
-            </div>
-          </details>
-
-          <details class="faq-item" name="faq-forum">
-            <summary data-fr="Comment fonctionne la formule Unconference (Forum ouvert) du samedi ?" data-en="How does the Saturday Unconference format work?">
-              Comment fonctionne la formule Unconference (Forum ouvert) du samedi ?
-            </summary>
-            <div class="faq-answer">
-              <p data-fr="Contrairement aux conférences classiques descendantes, l'Unconference permet aux participants de co-créer l'ordre du jour le matin même. Chacun peut proposer un atelier pratique, une étude de cas ou une table ronde. Les participants se répartissent librement selon la « loi des deux pieds » pour maximiser l'apprentissage et la production d'outils concrets." data-en="Unlike top-down traditional conferences, an Unconference empowers attendees to co-create the agenda live on Saturday morning. Anyone can propose a workshop, case study, or problem-solving lab. Attendees circulate freely using the 'law of two feet' to maximize actionable outcomes.">
-                Contrairement aux conférences classiques descendantes, l'Unconference permet aux participants de co-créer l'ordre du jour le matin même. Chacun peut proposer un atelier pratique, une étude de cas ou une table ronde. Les participants se répartissent librement selon la « loi des deux pieds » pour maximiser l'apprentissage et la production d'outils concrets.
-              </p>
-            </div>
-          </details>
-
-          <details class="faq-item" name="faq-forum">
-            <summary data-fr="L'événement est-il accessible aux personnes non francophones ?" data-en="Is the event accessible to English speakers?">
-              L'événement est-il accessible aux personnes non francophones ?
-            </summary>
-            <div class="faq-answer">
-              <p data-fr="Oui, le Forum Habiter Ensemble adopte une formule résolument inclusive et bilingue. Les plénières et les ateliers accueilleront des interventions en français et en anglais avec support visuel bilingue pour faciliter les échanges avec nos partenaires pancanadiens et internationaux." data-en="Yes, the Forum embraces an inclusive bilingual format. Plenary sessions and breakout workshops will feature contributions in both French and English, with bilingual visual documentation to welcome pan-Canadian and international partners.">
-                Oui, le Forum Habiter Ensemble adopte une formule résolument inclusive et bilingue. Les plénières et les ateliers accueilleront des interventions en français et en anglais avec support visuel bilingue pour faciliter les échanges avec nos partenaires pancanadiens et internationaux.
-              </p>
-            </div>
-          </details>
-
-          <details class="faq-item" name="faq-forum">
-            <summary data-fr="Comment notre organisation peut-elle devenir partenaire officiel ?" data-en="How can our organization become an official sponsor or partner?">
-              Comment notre organisation peut-elle devenir partenaire officiel ?
-            </summary>
-            <div class="faq-answer">
-              <p data-fr="Remplissez le formulaire d'intérêt en cochant « Partenariat institutionnel / Soutien financier » ou écrivez directement à joindre@cohabitat.cc. Nous serons ravis de planifier un appel d'arrimage pour explorer ensemble les modalités de collaboration et de visibilité." data-en="Fill out the interest form selecting 'Institutional Partnership / Sponsorship' or email us directly at joindre@cohabitat.cc. We will coordinate a partnership meeting to explore alignment and co-branding opportunities.">
-                Remplissez le formulaire d'intérêt en cochant « Partenariat institutionnel / Soutien financier » ou écrivez directement à joindre@cohabitat.cc. Nous serons ravis de planifier un appel d'arrimage pour explorer ensemble les modalités de collaboration et de visibilité.
-              </p>
-            </div>
-          </details>
-        </section>
       </div>
     </section>
 
   </main>
 
-  <!-- Footer -->
+  <!-- Pied de page / Colophon -->
   <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <p class="footer-brand">Forum Habiter Ensemble</p>
-          <p style="font-size: 0.925rem; color: rgba(245, 245, 244, 0.84); margin-block: 0 1rem;" data-fr="Initiative conjointe pour normaliser et outiller le coliving, l'habitat partagé et les communautés intentionnelles au Québec." data-en="A joint civic initiative to standardize and empower coliving, shared housing, and intentional communities in Quebec.">
-            Initiative conjointe pour normaliser et outiller le coliving, l'habitat partagé et les communautés intentionnelles au Québec.
-          </p>
-          <p style="font-size: 0.85rem; color: rgba(245, 245, 244, 0.72); margin: 0;">
-            Avril 2027 • Montréal, Québec & Virtuel
-          </p>
-        </div>
-
-        <div>
-          <h4 data-fr="Navigation" data-en="Navigation">Navigation</h4>
-          <ul class="footer-links">
-            <li><a href="#vision" data-fr="Vision & Enjeux" data-en="Vision & Issues">Vision & Enjeux</a></li>
-            <li><a href="#axes" data-fr="Les 4 Grands Axes" data-en="The 4 Action Pillars">Les 4 Grands Axes</a></li>
-            <li><a href="#format" data-fr="Programme 2 Jours" data-en="2-Day Program">Programme 2 Jours</a></li>
-            <li><a href="#partenaires" data-fr="Partenaires & Équipe" data-en="Partners & Team">Partenaires & Équipe</a></li>
-            <li><a href="#interet" data-fr="Formulaire d'intérêt" data-en="Interest Form">Formulaire d'intérêt</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 data-fr="Partenaires Initiateurs" data-en="Initiating Partners">Partenaires Initiateurs</h4>
-          <ul class="footer-links">
-            <li><a href="https://cohabitat.cc" target="_blank" rel="noopener noreferrer">cohabitat.cc</a></li>
-            <li><a href="https://www.lykka.org/" target="_blank" rel="noopener noreferrer">Lykkå Cohabitation</a></li>
-            <li><a href="https://www.nomadcoliving.com/" target="_blank" rel="noopener noreferrer">Nomad Coliving</a></li>
-            <li><a href="mailto:joindre@cohabitat.cc">joindre@cohabitat.cc</a></li>
-          </ul>
-        </div>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <p class="footer-brand">Forum Habiter Ensemble</p>
+        <p style="margin: 0 0 1rem; font-size: 0.9rem; color: rgba(242, 239, 233, 0.8);" data-fr="Coliving, habitat partagé et communautés intentionnelles. Événement indépendant en co-construction — Avril 2027, Montréal &amp; en ligne." data-en="Coliving, shared housing, and intentional communities. Independent co-constructed gathering — April 2027, Montreal &amp; online.">
+          Coliving, habitat partagé et communautés intentionnelles. Événement indépendant en co-construction — Avril 2027, Montréal &amp; en ligne.
+        </p>
+        <p style="margin: 0; font-family: var(--font-mono); font-size: 0.76rem; color: var(--ochre);">
+          DOMAINE // FORUM.COHABITAT.CC
+        </p>
       </div>
 
-      <div class="footer-bottom">
-        <p>&copy; 2026-2027 <strong>Forum Habiter Ensemble</strong>. Diffusé sous licences ouvertes et valeurs de biens communs.</p>
-        <p data-fr="Site hébergé sous forum.cohabitat.cc" data-en="Hosted under forum.cohabitat.cc">Site hébergé sous forum.cohabitat.cc</p>
+      <div class="footer-col">
+        <h4 data-fr="Sommaire du dossier" data-en="Dossier Index">Sommaire du dossier</h4>
+        <ul class="footer-links">
+          <li><a href="#diagnostic" data-fr="01. Diagnostic &amp; Vision" data-en="01. Diagnosis &amp; Vision">01. Diagnostic &amp; Vision</a></li>
+          <li><a href="#chantiers" data-fr="02. Les 4 Chantiers" data-en="02. The 4 Working Tracks">02. Les 4 Chantiers</a></li>
+          <li><a href="#programme" data-fr="03. Programme 2 Jours" data-en="03. Two-Day Schedule">03. Programme 2 Jours</a></li>
+          <li><a href="#coalition" data-fr="04. Coalition &amp; Équipe" data-en="04. Coalition &amp; Team">04. Coalition &amp; Équipe</a></li>
+          <li><a href="#interet" data-fr="05. Fiche d'intérêt" data-en="05. Interest Dossier">05. Fiche d'intérêt</a></li>
+        </ul>
       </div>
+
+      <div class="footer-col">
+        <h4 data-fr="Partenaires Initiateurs" data-en="Initiating Partners">Partenaires Initiateurs</h4>
+        <ul class="footer-links">
+          <li><a href="https://www.lykka.org/" target="_blank" rel="noopener noreferrer">Lykkå Cohabitation ↗</a></li>
+          <li><a href="https://www.nomadcoliving.com/" target="_blank" rel="noopener noreferrer">Nomad Coliving ↗</a></li>
+          <li><a href="https://www.linkedin.com/in/thomas-marin" target="_blank" rel="noopener noreferrer">Maillon Vert / Oasis ↗</a></li>
+          <li><a href="https://cohabitat.cc" target="_blank" rel="noopener noreferrer">cohabitat.cc ↗</a></li>
+          <li><a href="mailto:joindre@cohabitat.cc">joindre@cohabitat.cc</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-colophon">
+      <span data-fr="DOCUMENT DE MOBILISATION OUVERTE — LICENCE CREATIVE COMMONS BY-SA 4.0" data-en="OPEN MOBILIZATION DOCUMENT — CREATIVE COMMONS BY-SA 4.0">DOCUMENT DE MOBILISATION OUVERTE — LICENCE CREATIVE COMMONS BY-SA 4.0</span>
+      <span>MONTRÉAL // AVRIL 2027</span>
     </div>
   </footer>
 
-  <!-- Main JavaScript File -->
   <script src="script.js" defer></script>
 </body>
 </html>
