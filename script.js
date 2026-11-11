@@ -68,6 +68,13 @@
     });
   }
 
+  document.querySelectorAll('.plan-link[data-track-checkbox]').forEach((link) => {
+    link.addEventListener('click', () => {
+      const box = document.getElementById(link.dataset.trackCheckbox);
+      if (box) box.checked = true;
+    });
+  });
+
   /* ==========================================================================
      3. Bascule Bilingue (FR / EN)
      ========================================================================== */
