@@ -28,10 +28,10 @@
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 
-  <!-- Google Fonts : Space Grotesk + Instrument Serif + Plus Jakarta Sans + IBM Plex Mono -->
+  <!-- Google Fonts : Fraunces + Public Sans + IBM Plex Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,600&family=IBM+Plex+Mono:wght@400;500;600;700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
@@ -107,6 +107,19 @@
         </div>
       </a>
 
+      <!-- Motif architectural montréalais : Escalier extérieur en fer forgé & corniche -->
+      <div class="mtl-stair-motif" aria-hidden="true">
+        <svg width="38" height="34" viewBox="0 0 38 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Corniche de triplex -->
+          <path d="M2 4H36M4 7H34" stroke="#181816" stroke-width="1.5"/>
+          <!-- Escalier tournant montréalais en fer forgé -->
+          <path d="M8 31C8 21 18 20 20 14C22 8 30 9 30 9" stroke="#181816" stroke-width="1.75"/>
+          <path d="M6 27H13M9 23H16M13 19H20M17 15H24M22 11H30" stroke="#C24B32" stroke-width="1.5"/>
+          <line x1="20" y1="7" x2="20" y2="32" stroke="#181816" stroke-width="1.5"/>
+        </svg>
+        <span>ÉDITION<br>MONTRÉAL</span>
+      </div>
+
       <div class="header-controls">
         <div class="lang-switch" role="group" aria-label="Sélection de langue / Language selector">
           <button type="button" class="lang-btn" data-lang="fr" aria-pressed="true">FR</button>
@@ -171,73 +184,85 @@
           <div class="blueprint-svg-wrap">
             <svg class="blueprint-svg" viewBox="0 0 520 390" role="img" aria-labelledby="svg-plan-title svg-plan-desc">
               <title id="svg-plan-title">Plan architectural du Forum Habiter Ensemble</title>
-              <desc id="svg-plan-desc">Diagramme en plan montrant quatre ailes thématiques convergeant vers un atrium central d'espaces mutualisés : Zonage municipal, Finance solidaire, Droit et FUS, et Assurances.</desc>
+              <desc id="svg-plan-desc">Diagramme en plan façon gravure risographique montrant quatre ailes thématiques convergeant vers un atrium central d'espaces mutualisés : Zonage municipal, Finance solidaire, Droit et FUS, et Assurances.</desc>
 
-              <!-- Axes de cote et lignes de construction -->
-              <g stroke="rgba(255,255,255,0.28)" stroke-width="1" stroke-dasharray="4 4">
+              <defs>
+                <!-- Trame risographique hachurée (halftone crosshatch) -->
+                <pattern id="riso-hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+                  <line x1="0" y1="0" x2="0" y2="8" stroke="rgba(24,24,22,0.12)" stroke-width="1"/>
+                </pattern>
+              </defs>
+
+              <!-- Fond papier tramé -->
+              <rect x="0" y="0" width="520" height="390" fill="#F3EFE6"/>
+              <rect x="18" y="18" width="484" height="354" fill="url(#riso-hatch)" stroke="#181816" stroke-width="1" stroke-dasharray="3 3"/>
+
+              <!-- Axes de coupe à l'encre -->
+              <g stroke="#181816" stroke-width="1" stroke-dasharray="4 4" opacity="0.45">
                 <line x1="260" y1="10" x2="260" y2="380"/>
                 <line x1="15" y1="195" x2="505" y2="195"/>
               </g>
 
-              <!-- Cadre extérieur du bâtiment -->
-              <rect x="36" y="28" width="448" height="334" fill="rgba(12, 28, 48, 0.55)" stroke="#F4F6F9" stroke-width="2.5"/>
+              <!-- Cadre extérieur du bâtiment imprimé au trait fort -->
+              <rect x="36" y="28" width="448" height="334" fill="#E8E2D5" stroke="#181816" stroke-width="2.5"/>
 
-              <!-- Aile 01 : Zonage & Urbanisme (Haut Gauche) -->
-              <a href="#chantiers">
-                <g class="plan-zone" data-zone-fr="CHANTIER 01 — ZONAGE MUNICIPAL : Sortir de la catégorie « maison de chambres » et reconnaître la colocation collaborative." data-zone-en="TRACK 01 — MUNICIPAL ZONING: Move beyond 'rooming house' bylaws and formally recognize collaborative housing." fill="rgba(255,255,255,0.04)">
-                  <rect x="44" y="36" width="208" height="151" stroke="#F4F6F9" stroke-width="1.5"/>
-                  <line x1="44" y1="74" x2="252" y2="74" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
-                  <text x="56" y="59" fill="#C88A1E" font-family="IBM Plex Mono, monospace" font-size="11" font-weight="600">[01] ZONAGE &amp; VILLE</text>
-                  <text x="56" y="102" fill="#F4F6F9" font-family="Space Grotesk, sans-serif" font-size="14" font-weight="700">Cadre normatif urbain</text>
-                  <text x="56" y="124" fill="rgba(244,246,249,0.75)" font-family="IBM Plex Mono, monospace" font-size="10">Qualification d'usage</text>
-                  <text x="56" y="140" fill="rgba(244,246,249,0.75)" font-family="IBM Plex Mono, monospace" font-size="10">Permis &amp; densité douce</text>
+              <!-- Aile 01 : Zonage & Urbanisme (Haut Gauche — Terracotta) -->
+              <a href="#track-01" class="plan-link" data-track-checkbox="int-zonage">
+                <g class="plan-zone plan-zone--terracotta" data-zone-fr="CHANTIER 01 — ZONAGE MUNICIPAL : Sortir de la catégorie « maison de chambres » et reconnaître la colocation collaborative." data-zone-en="TRACK 01 — MUNICIPAL ZONING: Move beyond 'rooming house' bylaws and formally recognize collaborative housing.">
+                  <rect x="44" y="36" width="208" height="151" stroke="#181816" stroke-width="2"/>
+                  <rect x="44" y="36" width="208" height="34" fill="#C24B32" stroke="#181816" stroke-width="1.5"/>
+                  <text x="54" y="58" fill="#F3EFE6" font-family="IBM Plex Mono, monospace" font-size="11" font-weight="700" data-fr="[01] ZONAGE &amp; VILLE" data-en="[01] ZONING &amp; CITY">[01] ZONAGE &amp; VILLE</text>
+                  <text x="54" y="98" fill="#181816" font-family="Fraunces, Georgia, serif" font-size="15" font-weight="700" data-fr="Cadre normatif urbain" data-en="Urban zoning bylaws">Cadre normatif urbain</text>
+                  <text x="54" y="122" fill="#4A4843" font-family="IBM Plex Mono, monospace" font-size="10" data-fr="Qualification d'usage" data-en="Use classification">Qualification d'usage</text>
+                  <text x="54" y="138" fill="#4A4843" font-family="IBM Plex Mono, monospace" font-size="10" data-fr="Permis &amp; densité douce" data-en="Permits &amp; gentle density">Permis &amp; densité douce</text>
                 </g>
               </a>
 
-              <!-- Aile 02 : Finance Solidaire (Haut Droite) -->
-              <a href="#chantiers">
-                <g class="plan-zone" data-zone-fr="CHANTIER 02 — FINANCE SOLIDAIRE : Obligations communautaires, garanties de prêt et fonds d'acquisition hors marché." data-zone-en="TRACK 02 — SOLIDARITY FINANCE: Community bonds, loan guarantees, and non-market acquisition funds." fill="rgba(255,255,255,0.04)">
-                  <rect x="268" y="36" width="208" height="151" stroke="#F4F6F9" stroke-width="1.5"/>
-                  <line x1="268" y1="74" x2="476" y2="74" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
-                  <text x="280" y="59" fill="#C88A1E" font-family="IBM Plex Mono, monospace" font-size="11" font-weight="600">[02] CAPITAL PATIENT</text>
-                  <text x="280" y="102" fill="#F4F6F9" font-family="Space Grotesk, sans-serif" font-size="14" font-weight="700">Montages financiers</text>
-                  <text x="280" y="124" fill="rgba(244,246,249,0.75)" font-family="IBM Plex Mono, monospace" font-size="10">Obligations communautaires</text>
-                  <text x="280" y="140" fill="rgba(244,246,249,0.75)" font-family="IBM Plex Mono, monospace" font-size="10">Caisses, UTILE, ACHAT</text>
+              <!-- Aile 02 : Finance Solidaire (Haut Droite — Ruelle Verte) -->
+              <a href="#track-02" class="plan-link" data-track-checkbox="int-finance">
+                <g class="plan-zone plan-zone--ruelle" data-zone-fr="CHANTIER 02 — FINANCE SOLIDAIRE : Obligations communautaires, garanties de prêt et fonds d'acquisition hors marché." data-zone-en="TRACK 02 — SOLIDARITY FINANCE: Community bonds, loan guarantees, and non-market acquisition funds.">
+                  <rect x="268" y="36" width="208" height="151" stroke="#181816" stroke-width="2"/>
+                  <rect x="268" y="36" width="208" height="34" fill="#2B5B44" stroke="#181816" stroke-width="1.5"/>
+                  <text x="278" y="58" fill="#F3EFE6" font-family="IBM Plex Mono, monospace" font-size="11" font-weight="700" data-fr="[02] CAPITAL PATIENT" data-en="[02] PATIENT CAPITAL">[02] CAPITAL PATIENT</text>
+                  <text x="278" y="98" fill="#181816" font-family="Fraunces, Georgia, serif" font-size="15" font-weight="700" data-fr="Montages financiers" data-en="Financial structures">Montages financiers</text>
+                  <text x="278" y="122" fill="#4A4843" font-family="IBM Plex Mono, monospace" font-size="10" data-fr="Obligations communautaires" data-en="Community bonds">Obligations communautaires</text>
+                  <text x="278" y="138" fill="#4A4843" font-family="IBM Plex Mono, monospace" font-size="10" data-fr="Caisses, UTILE, ACHAT" data-en="Credit unions, UTILE, ACHAT">Caisses, UTILE, ACHAT</text>
                 </g>
               </a>
 
-              <!-- Aile 03 : Droit, Notariat & FUS (Bas Gauche) -->
-              <a href="#chantiers">
-                <g class="plan-zone" data-zone-fr="CHANTIER 03 — DROIT &amp; FIDUCIES : Fiducies d'utilité sociale (FUS), baux emphytéotiques et structures hybrides." data-zone-en="TRACK 03 — LAW &amp; LAND TRUSTS: Social utility trusts (FUS), emphyteutic leases, and hybrid legal models." fill="rgba(255,255,255,0.04)">
-                  <rect x="44" y="203" width="208" height="151" stroke="#F4F6F9" stroke-width="1.5"/>
-                  <line x1="44" y1="241" x2="252" y2="241" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
-                  <text x="56" y="226" fill="#C88A1E" font-family="IBM Plex Mono, monospace" font-size="11" font-weight="600">[03] DROIT &amp; FIDUCIE</text>
-                  <text x="56" y="269" fill="#F4F6F9" font-family="Space Grotesk, sans-serif" font-size="14" font-weight="700">Propriété hors marché</text>
-                  <text x="56" y="291" fill="rgba(244,246,249,0.75)" font-family="IBM Plex Mono, monospace" font-size="10">FUS &amp; emphytéose</text>
-                  <text x="56" y="307" fill="rgba(244,246,249,0.75)" font-family="IBM Plex Mono, monospace" font-size="10">Coop / OBNL / Copropriété</text>
+              <!-- Aile 03 : Droit, Notariat & FUS (Bas Gauche — Jaune Dépanneur) -->
+              <a href="#track-03" class="plan-link" data-track-checkbox="int-juridique">
+                <g class="plan-zone plan-zone--yellow" data-zone-fr="CHANTIER 03 — DROIT &amp; FIDUCIES : Fiducies d'utilité sociale (FUS), baux emphytéotiques et structures hybrides." data-zone-en="TRACK 03 — LAW &amp; LAND TRUSTS: Social utility trusts (FUS), emphyteutic leases, and hybrid legal models.">
+                  <rect x="44" y="203" width="208" height="151" stroke="#181816" stroke-width="2"/>
+                  <rect x="44" y="203" width="208" height="34" fill="#E2A83E" stroke="#181816" stroke-width="1.5"/>
+                  <text x="54" y="225" fill="#181816" font-family="IBM Plex Mono, monospace" font-size="11" font-weight="700" data-fr="[03] DROIT &amp; FIDUCIE" data-en="[03] LAW &amp; TRUSTS">[03] DROIT &amp; FIDUCIE</text>
+                  <text x="54" y="265" fill="#181816" font-family="Fraunces, Georgia, serif" font-size="15" font-weight="700" data-fr="Propriété hors marché" data-en="Non-market ownership">Propriété hors marché</text>
+                  <text x="54" y="289" fill="#4A4843" font-family="IBM Plex Mono, monospace" font-size="10" data-fr="FUS &amp; emphytéose" data-en="Land trusts &amp; ground leases">FUS &amp; emphytéose</text>
+                  <text x="54" y="305" fill="#4A4843" font-family="IBM Plex Mono, monospace" font-size="10" data-fr="Coop / OBNL / Copropriété" data-en="Co-op / Non-profit / Condo">Coop / OBNL / Copropriété</text>
                 </g>
               </a>
 
-              <!-- Aile 04 : Assurances & Risques (Bas Droite) -->
-              <a href="#chantiers">
-                <g class="plan-zone" data-zone-fr="CHANTIER 04 — ASSURANCES : Couverture adaptée aux cuisines collectives, ateliers partagés et baux multiples." data-zone-en="TRACK 04 — INSURANCE: Tailored underwriting for shared kitchens, workshops, and multi-household buildings." fill="rgba(255,255,255,0.04)">
-                  <rect x="268" y="203" width="208" height="151" stroke="#F4F6F9" stroke-width="1.5"/>
-                  <line x1="268" y1="241" x2="476" y2="241" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
-                  <text x="280" y="226" fill="#C88A1E" font-family="IBM Plex Mono, monospace" font-size="11" font-weight="600">[04] ASSURANCES</text>
-                  <text x="280" y="269" fill="#F4F6F9" font-family="Space Grotesk, sans-serif" font-size="14" font-weight="700">Mutualisation &amp; risques</text>
-                  <text x="280" y="291" fill="rgba(244,246,249,0.75)" font-family="IBM Plex Mono, monospace" font-size="10">Polices collectives</text>
-                  <text x="280" y="307" fill="rgba(244,246,249,0.75)" font-family="IBM Plex Mono, monospace" font-size="10">Espaces &amp; outils partagés</text>
+              <!-- Aile 04 : Assurances & Risques (Bas Droite — Ruelle Verte) -->
+              <a href="#track-04" class="plan-link" data-track-checkbox="int-assurance">
+                <g class="plan-zone plan-zone--ruelle" data-zone-fr="CHANTIER 04 — ASSURANCES : Couverture adaptée aux cuisines collectives, ateliers partagés et baux multiples." data-zone-en="TRACK 04 — INSURANCE: Tailored underwriting for shared kitchens, workshops, and multi-household buildings.">
+                  <rect x="268" y="203" width="208" height="151" stroke="#181816" stroke-width="2"/>
+                  <rect x="268" y="203" width="208" height="34" fill="#181816" stroke="#181816" stroke-width="1.5"/>
+                  <text x="278" y="225" fill="#E2A83E" font-family="IBM Plex Mono, monospace" font-size="11" font-weight="700" data-fr="[04] ASSURANCES" data-en="[04] INSURANCE">[04] ASSURANCES</text>
+                  <text x="278" y="265" fill="#181816" font-family="Fraunces, Georgia, serif" font-size="15" font-weight="700" data-fr="Mutualisation &amp; risques" data-en="Shared risk coverage">Mutualisation &amp; risques</text>
+                  <text x="278" y="289" fill="#4A4843" font-family="IBM Plex Mono, monospace" font-size="10" data-fr="Polices collectives" data-en="Collective policies">Polices collectives</text>
+                  <text x="278" y="305" fill="#4A4843" font-family="IBM Plex Mono, monospace" font-size="10" data-fr="Espaces &amp; outils partagés" data-en="Shared spaces &amp; tools">Espaces &amp; outils partagés</text>
                 </g>
               </a>
 
-              <!-- Atrium central : Forum Habiter Ensemble -->
-              <rect x="182" y="148" width="156" height="94" fill="#D6361F" stroke="#F4F6F9" stroke-width="2"/>
-              <text x="260" y="185" text-anchor="middle" fill="#FFFFFF" font-family="IBM Plex Mono, monospace" font-size="10" font-weight="600" letter-spacing="1">COEUR COMMUN</text>
-              <text x="260" y="206" text-anchor="middle" fill="#FFFFFF" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="700">FORUM OUVERT</text>
-              <text x="260" y="224" text-anchor="middle" fill="rgba(255,255,255,0.88)" font-family="IBM Plex Mono, monospace" font-size="9">PRATIQUE &amp; ALLIANCES</text>
+              <!-- Atrium central : Tampon Risographique Forum Habiter Ensemble -->
+              <rect x="184" y="150" width="156" height="94" fill="#181816"/>
+              <rect x="180" y="146" width="156" height="94" fill="#C24B32" stroke="#181816" stroke-width="2.5"/>
+              <text x="258" y="182" text-anchor="middle" fill="#E2A83E" font-family="IBM Plex Mono, monospace" font-size="10" font-weight="700" letter-spacing="1" data-fr="COUR COMMUNE" data-en="COMMON COURTYARD">COUR COMMUNE</text>
+              <text x="258" y="204" text-anchor="middle" fill="#F3EFE6" font-family="Fraunces, Georgia, serif" font-size="15" font-weight="800" data-fr="FORUM OUVERT" data-en="OPEN FORUM">FORUM OUVERT</text>
+              <text x="258" y="223" text-anchor="middle" fill="#F3EFE6" font-family="IBM Plex Mono, monospace" font-size="9" font-weight="600" data-fr="PRATIQUE &amp; ALLIANCES" data-en="PRACTICE &amp; ALLIANCES">PRATIQUE &amp; ALLIANCES</text>
 
               <!-- Cotes architecturales -->
-              <text x="260" y="20" text-anchor="middle" fill="rgba(244,246,249,0.65)" font-family="IBM Plex Mono, monospace" font-size="9">← 4 ENTITÉS INITIATRICES × ÉCOSYSTÈME QUÉBÉCOIS →</text>
+              <text x="260" y="14" text-anchor="middle" fill="#181816" font-family="IBM Plex Mono, monospace" font-size="9" font-weight="700" data-fr="← 4 ENTITÉS INITIATRICES × ÉCOSYSTÈME QUÉBÉCOIS →" data-en="← 4 INITIATING ENTITIES × QUEBEC ECOSYSTEM →">← 4 ENTITÉS INITIATRICES × ÉCOSYSTÈME QUÉBÉCOIS →</text>
             </svg>
           </div>
 
@@ -245,7 +270,7 @@
             <span id="blueprint-status" data-fr="Survolez ou sélectionnez une aile du plan pour inspecter les 4 chantiers du Forum." data-en="Hover or select a wing of the floorplan to inspect the Forum's 4 working tracks.">
               Survolez ou sélectionnez une aile du plan pour inspecter les 4 chantiers du Forum.
             </span>
-            <span>FIG. 01</span>
+            <span class="fig-stamp">FIG. 01</span>
           </div>
         </div>
       </div>
@@ -360,7 +385,7 @@
 
         <div class="chapter-body chapter-body--flush">
           <div class="tracks-table">
-            <article class="track-box">
+            <article id="track-01" class="track-box">
               <div>
                 <div class="track-header">
                   <span class="track-code">CHANTIER [01]</span>
@@ -376,7 +401,7 @@
               </div>
             </article>
 
-            <article class="track-box">
+            <article id="track-02" class="track-box">
               <div>
                 <div class="track-header">
                   <span class="track-code">CHANTIER [02]</span>
@@ -392,7 +417,7 @@
               </div>
             </article>
 
-            <article class="track-box">
+            <article id="track-03" class="track-box">
               <div>
                 <div class="track-header">
                   <span class="track-code">CHANTIER [03]</span>
@@ -408,7 +433,7 @@
               </div>
             </article>
 
-            <article class="track-box">
+            <article id="track-04" class="track-box">
               <div>
                 <div class="track-header">
                   <span class="track-code">CHANTIER [04]</span>
@@ -688,7 +713,7 @@
         <div class="chapter-body chapter-body--flush">
           <div class="dossier-header">
             <span data-fr="FORMULAIRE DE MOBILISATION // RÉF. FHE-2027-MTL" data-en="MOBILIZATION DOSSIER // REF. FHE-2027-MTL">FORMULAIRE DE MOBILISATION // RÉF. FHE-2027-MTL</span>
-            <span data-fr="STATUT : APPEL À MANIFESTATION D'INTÉRÊT OUVERT" data-en="STATUS: OPEN CALL FOR EXPRESSIONS OF INTEREST">STATUT : APPEL À MANIFESTATION D'INTÉRÊT OUVERT</span>
+            <span class="dossier-status-stamp" data-fr="STATUT : APPEL À MANIFESTATION D'INTÉRÊT OUVERT" data-en="STATUS: OPEN CALL FOR EXPRESSIONS OF INTEREST">STATUT : APPEL À MANIFESTATION D'INTÉRÊT OUVERT</span>
           </div>
 
           <div class="dossier-grid">
@@ -970,12 +995,20 @@
     <div class="footer-grid">
       <div class="footer-col">
         <p class="footer-brand">Forum Habiter Ensemble</p>
-        <p style="margin: 0 0 1rem; font-size: 0.9rem; color: rgba(242, 239, 233, 0.8);" data-fr="Coliving, habitat partagé et communautés intentionnelles. Événement indépendant en co-construction — Avril 2027, Montréal &amp; en ligne." data-en="Coliving, shared housing, and intentional communities. Independent co-constructed gathering — April 2027, Montreal &amp; online.">
+        <p style="margin: 0 0 1rem; font-size: 0.9rem; color: rgba(243, 239, 230, 0.85);" data-fr="Coliving, habitat partagé et communautés intentionnelles. Événement indépendant en co-construction — Avril 2027, Montréal &amp; en ligne." data-en="Coliving, shared housing, and intentional communities. Independent co-constructed gathering — April 2027, Montreal &amp; online.">
           Coliving, habitat partagé et communautés intentionnelles. Événement indépendant en co-construction — Avril 2027, Montréal &amp; en ligne.
         </p>
-        <p style="margin: 0; font-family: var(--font-mono); font-size: 0.76rem; color: var(--ochre);">
-          DOMAINE // FORUM.COHABITAT.CC
-        </p>
+        <div class="footer-motif-box">
+          <svg width="46" height="36" viewBox="0 0 46 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M2 4H44M5 8H41" stroke="#E2A83E" stroke-width="1.5"/>
+            <path d="M8 33C8 22 20 21 23 14C26 8 38 9 38 9" stroke="#F3EFE6" stroke-width="1.75"/>
+            <path d="M6 29H15M10 24H19M15 19H24M20 14H29M27 10H37" stroke="#C24B32" stroke-width="1.5"/>
+            <line x1="23" y1="8" x2="23" y2="34" stroke="#F3EFE6" stroke-width="1.5"/>
+          </svg>
+          <p style="margin: 0; font-family: var(--font-mono); font-size: 0.74rem; color: var(--depanneur-yellow);">
+            DOMAINE // FORUM.COHABITAT.CC<br>IMPRIMÉ CIVIQUE MONTRÉALAIS
+          </p>
+        </div>
       </div>
 
       <div class="footer-col">

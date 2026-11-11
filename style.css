@@ -1,6 +1,7 @@
 /* ==========================================================================
-   FORUM HABITER ENSEMBLE — Identité éditoriale & architecturale (Montréal 2027)
-   Direction artistique : Cahier d'urbanisme / Plan d'architecte / Convergence
+   FORUM HABITER ENSEMBLE — Édition Montréal, Avril 2027
+   Direction artistique : « Tactile Print Zine & Neighborhood Bulletin »
+   Imprimé communautaire, risographie montréalaise & bulletin de quartier
    ========================================================================== */
 
 *,
@@ -10,26 +11,31 @@
 }
 
 :root {
-  --paper: #F2EFE9;
-  --paper-light: #F9F7F3;
-  --paper-deep: #E6E1D6;
-  --ink: #141413;
-  --ink-muted: #52504C;
-  --vermilion: #D6361F;
-  --vermilion-dark: #AD2612;
-  --vermilion-tint: #FBEAE7;
-  --blueprint: #1B3B5F;
-  --blueprint-tint: #E7EEF6;
-  --ochre: #C88A1E;
-  --valid: #1B6E38;
-  --focus: #1B3B5F;
+  /* Paper & Ink Palette — Tactile Print Zine (Montréal) */
+  --paper: #F3EFE6;            /* Unbleached newsprint / wheatpaste poster paper */
+  --paper-secondary: #E8E2D5;  /* Aged Montreal limestone grey-beige */
+  --paper-sheet: #F8F5EE;      /* Crisp zine inner sheet (never sterile #FFF) */
+  --ink: #181816;              /* Heavy risograph charcoal-black (wrought-iron) */
+  --ink-muted: #4A4843;        /* Overprinted secondary charcoal ink */
 
-  --rule-strong: 1.5px solid var(--ink);
-  --rule-thin: 1px solid rgba(20, 20, 19, 0.22);
+  /* Risograph & Urban Accents */
+  --terracotta: #C24B32;       /* St-Laurent red-brick / terracotta orange */
+  --terracotta-dark: #9E3822;  /* Deep overprinted brick ink */
+  --terracotta-tint: #F5E1DC;  /* Light terracotta riso wash */
+  --ruelle-green: #2B5B44;     /* Ruelle verte forest green */
+  --ruelle-tint: #DCE8E1;      /* Soft ruelle verte riso wash */
+  --depanneur-yellow: #E2A83E; /* Hand-painted dépanneur sign yellow */
+  --depanneur-tint: #F7EBD2;   /* Warm yellow notice paper */
 
-  --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-Editorial: 'Instrument Serif', Georgia, serif;
-  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  /* Structural Rules & Tear-Off Borders (0px to 3px radius strictly) */
+  --rule-strong: 2px solid #181816;
+  --rule-thin: 1px solid #181816;
+  --rule-dashed: 1.5px dashed #181816;
+  --radius-zine: 2px;
+
+  /* Typography — Fraunces + Public Sans + IBM Plex Mono */
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-sans: 'Public Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
 
   --container-max: 1320px;
@@ -55,8 +61,20 @@ body {
   color: var(--ink);
   font-family: var(--font-sans);
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: 1.62;
+  position: relative;
   -webkit-font-smoothing: antialiased;
+}
+
+/* Subtle SVG Paper Grain / Risograph Fiber Overlay (No CSS Gradients) */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  pointer-events: none;
+  opacity: 0.26;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.09 0 0 0 0 0.09 0 0 0 0 0.08 0 0 0 0.16 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
 img,
@@ -68,17 +86,17 @@ svg {
 
 a {
   color: var(--ink);
-  text-decoration-thickness: 1px;
+  text-decoration-thickness: 1.5px;
   text-underline-offset: 0.22em;
   transition: color 0.15s ease, background-color 0.15s ease;
 }
 
 a:hover {
-  color: var(--vermilion);
+  color: var(--terracotta);
 }
 
 :focus-visible {
-  outline: 3px solid var(--vermilion);
+  outline: 3px solid var(--terracotta);
   outline-offset: 3px;
 }
 
@@ -101,11 +119,13 @@ a:hover {
   z-index: 300;
   padding: 0.75rem 1.25rem;
   background: var(--ink);
-  color: var(--paper-light);
+  color: var(--paper);
   font-family: var(--font-mono);
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 600;
   text-decoration: none;
+  border: var(--rule-strong);
+  border-radius: var(--radius-zine);
 }
 
 .skip-link:focus {
@@ -116,7 +136,40 @@ a:hover {
   inline-size: 100%;
   max-inline-size: var(--container-max);
   margin-inline: auto;
-  border-inline: var(--rule-thin);
+  border-inline: var(--rule-strong);
+  background-color: var(--paper);
+}
+
+/* ==========================================================================
+   Rubber Stamps & Rotated Zine Badges (-1deg)
+   ========================================================================== */
+
+.zine-stamp {
+  display: inline-block;
+  padding: 0.18rem 0.55rem;
+  background-color: var(--depanneur-yellow);
+  color: var(--ink);
+  border: 1.5px solid var(--ink);
+  border-radius: var(--radius-zine);
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  transform: rotate(-1deg);
+  box-shadow: 2px 2px 0 var(--ink);
+}
+
+.zine-stamp--terracotta {
+  background-color: var(--terracotta);
+  color: var(--paper);
+  transform: rotate(-1deg);
+}
+
+.zine-stamp--ruelle {
+  background-color: var(--ruelle-green);
+  color: var(--paper);
+  transform: rotate(-1deg);
 }
 
 /* ==========================================================================
@@ -125,36 +178,41 @@ a:hover {
 
 .tech-bar {
   border-block-end: var(--rule-thin);
-  background: var(--paper-deep);
+  background-color: var(--paper-secondary);
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: 0.74rem;
   letter-spacing: 0.03em;
-  color: var(--ink-muted);
+  text-transform: uppercase;
+  color: var(--ink);
 }
 
 .tech-bar-inner {
   max-inline-size: var(--container-max);
   margin-inline: auto;
-  padding: 0.45rem 1.25rem;
+  padding: 0.5rem 1.25rem;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: space-between;
   gap: 0.5rem 1.5rem;
-  border-inline: var(--rule-thin);
+  border-inline: var(--rule-strong);
 }
 
 .tech-bar strong {
   color: var(--ink);
-  font-weight: 600;
+  font-weight: 700;
+  background-color: var(--depanneur-yellow);
+  padding: 0.08rem 0.38rem;
+  border: 1px solid var(--ink);
+  display: inline-block;
+  transform: rotate(-1deg);
 }
 
 .site-header {
   position: sticky;
   inset-block-start: 0;
   z-index: 100;
-  background: rgba(242, 239, 233, 0.95);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background-color: var(--paper-secondary);
   border-block-end: var(--rule-strong);
 }
 
@@ -162,12 +220,12 @@ a:hover {
   max-inline-size: var(--container-max);
   margin-inline: auto;
   padding-inline: 1.25rem;
-  min-block-size: 68px;
+  min-block-size: 74px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  border-inline: var(--rule-thin);
+  border-inline: var(--rule-strong);
 }
 
 .brand-link {
@@ -180,13 +238,16 @@ a:hover {
 }
 
 .brand-mark {
-  inline-size: 38px;
-  block-size: 38px;
+  inline-size: 40px;
+  block-size: 40px;
   border: var(--rule-strong);
+  border-radius: var(--radius-zine);
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  background: var(--paper-light);
+  background-color: var(--paper);
+  box-shadow: 2px 2px 0 var(--ink);
+  flex-shrink: 0;
 }
 
 .brand-mark span {
@@ -194,45 +255,66 @@ a:hover {
 }
 
 .brand-mark span:nth-child(1) {
-  background: var(--vermilion);
+  background-color: var(--terracotta);
   border-inline-end: 1px solid var(--ink);
   border-block-end: 1px solid var(--ink);
 }
 
 .brand-mark span:nth-child(2) {
-  background: var(--paper-light);
+  background-color: var(--paper);
   border-block-end: 1px solid var(--ink);
 }
 
 .brand-mark span:nth-child(3) {
-  background: var(--blueprint);
+  background-color: var(--ruelle-green);
   border-inline-end: 1px solid var(--ink);
 }
 
 .brand-mark span:nth-child(4) {
-  background: var(--ochre);
+  background-color: var(--depanneur-yellow);
 }
 
 .brand-text {
   display: flex;
   flex-direction: column;
-  line-height: 1.05;
+  line-height: 1.08;
 }
 
 .brand-title {
   font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 1.05rem;
+  font-weight: 800;
+  font-size: 1.18rem;
   letter-spacing: -0.02em;
-  text-transform: uppercase;
+  color: var(--ink);
 }
 
 .brand-sub {
   font-family: var(--font-mono);
-  font-size: 0.68rem;
+  font-size: 0.66rem;
   color: var(--ink-muted);
   letter-spacing: 0.04em;
+  text-transform: uppercase;
   margin-block-start: 2px;
+}
+
+/* Montreal Triplex Wrought-Iron Spiral Staircase Motif in Header */
+.mtl-stair-motif {
+  display: none;
+  align-items: center;
+  gap: 0.45rem;
+  padding-inline: 0.65rem;
+  border-inline: var(--rule-dashed);
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+@media (min-width: 1180px) {
+  .mtl-stair-motif {
+    display: inline-flex;
+  }
 }
 
 .header-controls {
@@ -244,13 +326,13 @@ a:hover {
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1.25rem;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 1.25rem;
+  gap: 1.1rem;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -261,44 +343,51 @@ a:hover {
   align-items: center;
   min-block-size: 44px;
   font-family: var(--font-mono);
-  font-size: 0.8rem;
-  font-weight: 500;
+  font-size: 0.76rem;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.03em;
   text-decoration: none;
   color: var(--ink);
 }
 
 .nav-links a:hover {
-  color: var(--vermilion);
+  color: var(--terracotta);
+  text-decoration: underline;
 }
 
+/* Physical Ink Stamp Switch for FR / EN */
 .lang-switch {
   display: inline-flex;
   border: var(--rule-strong);
-  background: var(--paper-light);
+  border-radius: var(--radius-zine);
+  background-color: var(--paper);
+  padding: 2px;
+  gap: 2px;
+  box-shadow: 2px 2px 0 var(--ink);
+  transform: rotate(-1deg);
 }
 
 .lang-btn {
-  border: 0;
-  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 1px;
+  background-color: transparent;
   color: var(--ink);
   font-family: var(--font-mono);
-  font-size: 0.75rem;
-  font-weight: 600;
-  min-inline-size: 40px;
-  min-block-size: 38px;
-  padding: 0 0.55rem;
+  font-size: 0.74rem;
+  font-weight: 700;
+  min-inline-size: 38px;
+  min-block-size: 34px;
+  padding: 0 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
   cursor: pointer;
 }
 
-.lang-btn + .lang-btn {
-  border-inline-start: 1px solid var(--ink);
-}
-
 .lang-btn[aria-pressed="true"] {
-  background: var(--ink);
-  color: var(--paper-light);
+  background-color: var(--terracotta);
+  color: var(--paper);
+  border-color: var(--ink);
 }
 
 .nav-toggle {
@@ -308,22 +397,24 @@ a:hover {
   min-inline-size: 44px;
   min-block-size: 44px;
   padding: 0.5rem 0.75rem;
-  background: var(--paper-light);
+  background-color: var(--paper);
   color: var(--ink);
   border: var(--rule-strong);
+  border-radius: var(--radius-zine);
+  box-shadow: 2px 2px 0 var(--ink);
   font-family: var(--font-mono);
-  font-size: 0.78rem;
-  font-weight: 600;
+  font-size: 0.76rem;
+  font-weight: 700;
   text-transform: uppercase;
   cursor: pointer;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 980px) {
   .nav-menu {
     position: fixed;
-    inset-block-start: 69px;
+    inset-block-start: 74px;
     inset-inline: 0;
-    background: var(--paper-light);
+    background-color: var(--paper-secondary);
     border-block-end: var(--rule-strong);
     flex-direction: column;
     align-items: stretch;
@@ -346,7 +437,7 @@ a:hover {
   }
 }
 
-@media (min-width: 961px) {
+@media (min-width: 981px) {
   .nav-toggle {
     display: none;
   }
@@ -357,74 +448,75 @@ a:hover {
 }
 
 /* ==========================================================================
-   Buttons (Sharp Architectural Style)
+   Buttons (Tactile Print Stamp Style — 0px to 3px radius, Zero Pill)
    ========================================================================== */
 
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.65rem;
+  gap: 0.6rem;
   min-block-size: 48px;
-  padding: 0.75rem 1.35rem;
+  padding: 0.75rem 1.3rem;
   font-family: var(--font-mono);
-  font-size: 0.82rem;
-  font-weight: 600;
+  font-size: 0.8rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.04em;
   text-decoration: none;
   cursor: pointer;
   border: var(--rule-strong);
-  background: var(--paper-light);
+  border-radius: var(--radius-zine);
+  background-color: var(--paper);
   color: var(--ink);
   transition: background-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
 }
 
 .btn-sm {
   min-block-size: 40px;
-  padding: 0.45rem 0.9rem;
-  font-size: 0.75rem;
+  padding: 0.45rem 0.85rem;
+  font-size: 0.74rem;
 }
 
 .btn-primary {
-  background: var(--vermilion);
-  color: #FFFFFF;
+  background-color: var(--terracotta);
+  color: var(--paper);
   border-color: var(--ink);
-  box-shadow: 4px 4px 0 var(--ink);
+  box-shadow: 3px 3px 0 var(--ink);
 }
 
 .btn-primary:hover {
-  background: var(--vermilion-dark);
-  color: #FFFFFF;
+  background-color: var(--terracotta-dark);
+  color: var(--paper);
 }
 
 .btn-outline {
-  background: var(--paper-light);
+  background-color: var(--paper);
   color: var(--ink);
-  box-shadow: 4px 4px 0 var(--ink);
+  box-shadow: 3px 3px 0 var(--ink);
 }
 
 .btn-outline:hover {
-  background: var(--ink);
-  color: var(--paper-light);
+  background-color: var(--ruelle-green);
+  color: var(--paper);
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .btn-primary:hover,
   .btn-outline:hover {
     transform: translate(-1px, -1px);
-    box-shadow: 5px 5px 0 var(--ink);
+    box-shadow: 4px 4px 0 var(--ink);
   }
 
   .btn-primary:active,
   .btn-outline:active {
     transform: translate(2px, 2px);
-    box-shadow: 2px 2px 0 var(--ink);
+    box-shadow: 1px 1px 0 var(--ink);
   }
 }
 
 /* ==========================================================================
-   Hero Poster / Architectural Blueprint
+   Hero Poster / Risograph Print Block (FIG. 01)
    ========================================================================== */
 
 .hero {
@@ -438,16 +530,17 @@ a:hover {
 
 @media (min-width: 980px) {
   .hero-top-grid {
-    grid-template-columns: 1.15fr 0.85fr;
+    grid-template-columns: 1.12fr 0.88fr;
   }
 }
 
 .hero-editorial {
-  padding: clamp(2rem, 4.5vw, 3.75rem) clamp(1.25rem, 3.5vw, 3rem);
+  padding: clamp(2rem, 4.5vw, 3.5rem) clamp(1.25rem, 3.5vw, 2.75rem);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border-block-end: var(--rule-thin);
+  border-block-end: var(--rule-strong);
+  background-color: var(--paper);
 }
 
 @media (min-width: 980px) {
@@ -458,57 +551,55 @@ a:hover {
 }
 
 .hero-kicker {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.75rem;
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--vermilion);
-  font-weight: 600;
-  margin-block-end: 1.25rem;
-}
-
-.hero-kicker::before {
-  content: "";
   display: inline-block;
-  inline-size: 28px;
-  block-size: 2px;
-  background: var(--vermilion);
+  align-self: flex-start;
+  padding: 0.25rem 0.65rem;
+  background-color: var(--depanneur-yellow);
+  border: 1.5px solid var(--ink);
+  border-radius: var(--radius-zine);
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ink);
+  font-weight: 700;
+  margin-block-end: 1.35rem;
+  transform: rotate(-1deg);
+  box-shadow: 2px 2px 0 var(--ink);
 }
 
 h1 {
   font-family: var(--font-display);
-  font-size: clamp(2.5rem, 5.6vw, 4.65rem);
-  font-weight: 700;
-  line-height: 0.96;
-  letter-spacing: -0.035em;
-  text-transform: uppercase;
-  margin: 0 0 1rem;
+  font-size: clamp(2.65rem, 5.5vw, 4.5rem);
+  font-weight: 800;
+  line-height: 0.98;
+  letter-spacing: -0.025em;
+  margin: 0 0 1.1rem;
   color: var(--ink);
 }
 
 h1 em {
-  font-family: var(--font-Editorial);
+  font-family: var(--font-display);
   font-style: italic;
-  font-weight: 400;
-  text-transform: none;
-  color: var(--vermilion);
-  font-size: 1.08em;
+  font-weight: 600;
+  color: var(--terracotta);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.12em;
 }
 
 .hero-subtitle {
-  font-family: var(--font-Editorial);
-  font-size: clamp(1.35rem, 2.3vw, 1.85rem);
-  line-height: 1.25;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.25rem, 2.1vw, 1.65rem);
+  line-height: 1.3;
   margin: 0 0 1.25rem;
-  color: var(--ink);
+  color: var(--ruelle-green);
 }
 
 .hero-description {
   font-size: 1.02rem;
-  color: var(--ink-muted);
+  color: var(--ink);
   max-inline-size: 62ch;
   margin: 0 0 2rem;
 }
@@ -519,39 +610,40 @@ h1 em {
   gap: 1rem;
 }
 
-/* Right Column: Interactive Architectural Plan */
+/* Right Column: Hand-Inked Architectural Stamp / Risograph Print on Warm Paper */
 .hero-blueprint {
-  background: var(--blueprint);
-  color: #F4F6F9;
-  padding: clamp(1.5rem, 3vw, 2.5rem);
+  background-color: var(--paper-secondary);
+  color: var(--ink);
+  padding: clamp(1.5rem, 3vw, 2.25rem);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   position: relative;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
-  background-size: 24px 24px;
 }
 
 .blueprint-header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   gap: 1rem;
   font-family: var(--font-mono);
   font-size: 0.72rem;
-  letter-spacing: 0.05em;
+  font-weight: 700;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: rgba(244, 246, 249, 0.78);
-  border-block-end: 1px solid rgba(255, 255, 255, 0.22);
+  color: var(--ink);
+  border-block-end: var(--rule-dashed);
   padding-block-end: 0.75rem;
-  margin-block-end: 1.25rem;
+  margin-block-end: 1.1rem;
 }
 
 .blueprint-svg-wrap {
   margin-block: auto;
-  padding-block: 0.5rem;
+  padding: 0.5rem;
+  background-color: var(--paper);
+  border: var(--rule-strong);
+  border-radius: var(--radius-zine);
+  box-shadow: 4px 4px 0 var(--ink);
 }
 
 .blueprint-svg {
@@ -562,37 +654,59 @@ h1 em {
 
 .blueprint-svg .plan-zone {
   cursor: pointer;
-  transition: fill 0.2s ease, stroke-width 0.2s ease;
+  fill: var(--paper-sheet);
+  transition: fill 0.15s ease;
 }
 
-.blueprint-svg .plan-zone:hover,
-.blueprint-svg .plan-zone:focus {
-  fill: rgba(214, 54, 31, 0.35);
+.blueprint-svg .plan-zone--terracotta:hover,
+.blueprint-svg .plan-link:focus .plan-zone--terracotta {
+  fill: var(--terracotta-tint);
+}
+
+.blueprint-svg .plan-zone--ruelle:hover,
+.blueprint-svg .plan-link:focus .plan-zone--ruelle {
+  fill: var(--ruelle-tint);
+}
+
+.blueprint-svg .plan-zone--yellow:hover,
+.blueprint-svg .plan-link:focus .plan-zone--yellow {
+  fill: var(--depanneur-tint);
 }
 
 .blueprint-caption {
-  margin-block-start: 1.25rem;
+  margin-block-start: 1.15rem;
   padding-block-start: 0.85rem;
-  border-block-start: 1px solid rgba(255, 255, 255, 0.22);
+  border-block-start: var(--rule-dashed);
   font-family: var(--font-mono);
-  font-size: 0.76rem;
+  font-size: 0.75rem;
   line-height: 1.5;
-  color: rgba(244, 246, 249, 0.9);
+  color: var(--ink);
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 1rem;
+}
+
+.fig-stamp {
+  background-color: var(--ink);
+  color: var(--paper);
+  padding: 0.15rem 0.45rem;
+  font-weight: 700;
+  border-radius: var(--radius-zine);
+  flex-shrink: 0;
 }
 
 /* Hero Bottom Metadata Strip */
 .hero-specs {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin: 0;
   border-block-start: var(--rule-strong);
-  background: var(--paper-light);
+  background-color: var(--paper-secondary);
 }
 
 .spec-cell {
-  padding: 1.1rem 1.5rem;
+  padding: 1.1rem 1.4rem;
   border-block-end: var(--rule-thin);
   border-inline-end: var(--rule-thin);
 }
@@ -601,7 +715,7 @@ h1 em {
   font-family: var(--font-mono);
   font-size: 0.7rem;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   color: var(--ink-muted);
   margin-block-end: 0.25rem;
 }
@@ -610,16 +724,16 @@ h1 em {
   margin: 0;
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.02rem;
   color: var(--ink);
 }
 
 /* Convergence Ribbon */
 .convergence-bar {
-  background: var(--ink);
-  color: var(--paper-light);
+  background-color: var(--ink);
+  color: var(--paper);
   border-block-end: var(--rule-strong);
-  padding: 0.9rem 1.5rem;
+  padding: 0.85rem 1.5rem;
 }
 
 .convergence-inner {
@@ -629,14 +743,18 @@ h1 em {
   justify-content: space-between;
   gap: 0.75rem 1.5rem;
   font-family: var(--font-mono);
-  font-size: 0.78rem;
-  letter-spacing: 0.05em;
+  font-size: 0.76rem;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
 }
 
 .convergence-label {
-  color: var(--ochre);
-  font-weight: 600;
+  background-color: var(--depanneur-yellow);
+  color: var(--ink);
+  padding: 0.15rem 0.5rem;
+  font-weight: 700;
+  border-radius: var(--radius-zine);
+  transform: rotate(-1deg);
 }
 
 .convergence-orgs {
@@ -652,12 +770,12 @@ h1 em {
 .convergence-orgs li + li::before {
   content: "×";
   margin-inline-end: 1.25rem;
-  color: var(--vermilion);
+  color: var(--terracotta);
   font-weight: 700;
 }
 
 /* ==========================================================================
-   Architectural Split Layout (Index Rail + Content Column)
+   Zine Split Layout (Index Rail + Content Column)
    ========================================================================== */
 
 .chapter {
@@ -676,9 +794,9 @@ h1 em {
 }
 
 .chapter-rail {
-  padding: clamp(1.75rem, 3.5vw, 3rem) 1.5rem;
+  padding: clamp(1.75rem, 3.5vw, 2.75rem) 1.5rem;
   border-block-end: var(--rule-thin);
-  background: var(--paper-deep);
+  background-color: var(--paper-secondary);
 }
 
 @media (min-width: 960px) {
@@ -689,39 +807,44 @@ h1 em {
 
   .chapter-rail-sticky {
     position: sticky;
-    inset-block-start: 92px;
+    inset-block-start: 96px;
   }
 }
 
 .chapter-num {
-  display: block;
+  display: inline-block;
   font-family: var(--font-mono);
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--vermilion);
-  margin-block-end: 0.6rem;
+  background-color: var(--terracotta);
+  color: var(--paper);
+  padding: 0.15rem 0.5rem;
+  border: 1px solid var(--ink);
+  border-radius: var(--radius-zine);
+  margin-block-end: 0.75rem;
+  transform: rotate(-1deg);
 }
 
 .chapter-title {
   font-family: var(--font-display);
-  font-size: clamp(1.5rem, 2.4vw, 2rem);
+  font-size: clamp(1.5rem, 2.3vw, 1.95rem);
   font-weight: 700;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
+  line-height: 1.12;
+  letter-spacing: -0.015em;
   margin: 0 0 0.85rem;
   color: var(--ink);
 }
 
 .chapter-lead {
-  font-size: 0.92rem;
+  font-size: 0.93rem;
   color: var(--ink-muted);
   margin: 0;
 }
 
 .chapter-body {
-  padding: clamp(1.75rem, 4vw, 3.25rem);
+  padding: clamp(1.75rem, 4vw, 3rem);
 }
 
 .chapter-body--flush {
@@ -733,16 +856,20 @@ h1 em {
    ========================================================================== */
 
 .manifesto-lead {
-  padding: clamp(1.75rem, 4vw, 3rem);
+  padding: clamp(1.75rem, 4vw, 2.75rem);
   border-block-end: var(--rule-strong);
-  background: var(--paper-light);
+  background-color: var(--paper-sheet);
 }
 
 .manifesto-quote {
   margin: 0;
-  font-family: var(--font-Editorial);
-  font-size: clamp(1.5rem, 2.8vw, 2.25rem);
-  line-height: 1.25;
+  padding-inline-start: 1.25rem;
+  border-inline-start: 4px solid var(--terracotta);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 600;
+  font-size: clamp(1.35rem, 2.4vw, 1.95rem);
+  line-height: 1.3;
   color: var(--ink);
 }
 
@@ -759,9 +886,10 @@ h1 em {
 }
 
 .matrix-cell {
-  padding: 2rem 1.75rem;
+  padding: 1.85rem 1.65rem;
   border-block-end: var(--rule-thin);
   border-inline-end: var(--rule-thin);
+  background-color: var(--paper);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -770,19 +898,20 @@ h1 em {
 
 .cell-index {
   font-family: var(--font-mono);
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--vermilion);
-  letter-spacing: 0.06em;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--terracotta);
+  letter-spacing: 0.05em;
   text-transform: uppercase;
-  border-block-end: var(--rule-thin);
-  padding-block-end: 0.5rem;
+  border-block-end: var(--rule-dashed);
+  padding-block-end: 0.45rem;
 }
 
 .matrix-cell h3 {
   font-family: var(--font-display);
   font-size: 1.25rem;
-  margin: 0 0 0.5rem;
+  font-weight: 700;
+  margin: 0.6rem 0 0.5rem;
 }
 
 .matrix-cell p {
@@ -792,12 +921,17 @@ h1 em {
 }
 
 .cell-tag {
+  align-self: flex-start;
   font-family: var(--font-mono);
-  font-size: 0.74rem;
+  font-size: 0.72rem;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  color: var(--blueprint);
-  font-weight: 600;
+  background-color: var(--ruelle-tint);
+  color: var(--ruelle-green);
+  border: 1px solid var(--ruelle-green);
+  border-radius: var(--radius-zine);
+  padding: 0.15rem 0.45rem;
+  font-weight: 700;
 }
 
 /* ==========================================================================
@@ -816,65 +950,78 @@ h1 em {
 }
 
 .track-box {
-  padding: clamp(1.5rem, 3vw, 2.5rem);
+  padding: clamp(1.5rem, 3vw, 2.35rem);
   border-block-end: var(--rule-thin);
   border-inline-end: var(--rule-thin);
-  background: var(--paper-light);
+  background-color: var(--paper);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 1.25rem;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.15s ease;
 }
 
 .track-box:hover {
-  background: #FFFFFF;
+  background-color: var(--paper-sheet);
 }
 
 .track-header {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
   border-block-end: var(--rule-strong);
   padding-block-end: 0.75rem;
 }
 
 .track-code {
   font-family: var(--font-mono);
-  font-size: 0.85rem;
+  font-size: 0.78rem;
   font-weight: 700;
-  color: var(--vermilion);
+  background-color: var(--ink);
+  color: var(--paper);
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-zine);
+}
+
+#track-02 .track-code,
+#track-04 .track-code {
+  background-color: var(--ruelle-green);
 }
 
 .track-stakeholders {
   font-family: var(--font-mono);
   font-size: 0.72rem;
+  font-weight: 600;
   text-transform: uppercase;
   color: var(--ink-muted);
 }
 
 .track-box h3 {
   font-family: var(--font-display);
-  font-size: 1.4rem;
-  margin: 0 0 0.6rem;
+  font-size: 1.38rem;
+  font-weight: 700;
+  margin: 0.75rem 0 0.55rem;
 }
 
 .track-box p {
   margin: 0;
   color: var(--ink-muted);
-  font-size: 0.96rem;
+  font-size: 0.95rem;
 }
 
 .track-deliverable {
   padding-block-start: 0.75rem;
-  border-block-start: var(--rule-thin);
+  border-block-start: var(--rule-dashed);
   font-family: var(--font-mono);
-  font-size: 0.76rem;
-  color: var(--ink);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--terracotta);
 }
 
 /* ==========================================================================
-   Chapter 03: Programme sur 2 Jours (Symposium + Unconference)
+   Chapter 03: Programme sur 2 Jours (Symposium + Unconference Ruelle Verte)
    ========================================================================== */
 
 .schedule-split {
@@ -890,6 +1037,7 @@ h1 em {
 
 .day-column {
   border-block-end: var(--rule-thin);
+  background-color: var(--paper);
 }
 
 @media (min-width: 820px) {
@@ -899,31 +1047,39 @@ h1 em {
 }
 
 .day-banner {
-  padding: 1.5rem 2rem;
-  background: var(--ink);
-  color: var(--paper-light);
+  padding: 1.45rem 1.85rem;
+  background-color: var(--ink);
+  color: var(--paper);
   border-block-end: var(--rule-strong);
 }
 
 .day-column--alt .day-banner {
-  background: var(--blueprint);
+  background-color: var(--ruelle-green);
+  color: var(--paper);
 }
 
 .day-tag {
   font-family: var(--font-mono);
-  font-size: 0.74rem;
+  font-size: 0.72rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--ochre);
-  display: block;
-  margin-block-end: 0.3rem;
+  letter-spacing: 0.06em;
+  background-color: var(--depanneur-yellow);
+  color: var(--ink);
+  border: 1px solid var(--ink);
+  border-radius: var(--radius-zine);
+  padding: 0.12rem 0.45rem;
+  display: inline-block;
+  margin-block-end: 0.45rem;
+  transform: rotate(-1deg);
 }
 
 .day-banner h3 {
   font-family: var(--font-display);
-  font-size: 1.45rem;
+  font-size: 1.42rem;
+  font-weight: 700;
   margin: 0;
-  color: #FFFFFF;
+  color: var(--paper);
 }
 
 .slot-list {
@@ -933,7 +1089,7 @@ h1 em {
 }
 
 .slot-item {
-  padding: 1.35rem 2rem;
+  padding: 1.35rem 1.85rem;
   border-block-end: var(--rule-thin);
   display: grid;
   gap: 0.35rem;
@@ -941,15 +1097,19 @@ h1 em {
 
 .slot-time {
   font-family: var(--font-mono);
-  font-size: 0.78rem;
-  font-weight: 600;
-  color: var(--vermilion);
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--terracotta);
+}
+
+.day-column--alt .slot-time {
+  color: var(--ruelle-green);
 }
 
 .slot-title {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 1.05rem;
+  font-size: 1.08rem;
   color: var(--ink);
 }
 
@@ -959,16 +1119,30 @@ h1 em {
   color: var(--ink-muted);
 }
 
+/* Tear-Off Flyer Callout for Lieux en évaluation */
 .venue-strip {
-  padding: 1.5rem 2rem;
-  background: var(--paper-deep);
+  margin: 1.25rem;
+  padding: 1.25rem 1.5rem;
+  background-color: var(--paper-secondary);
+  border: var(--rule-dashed);
+  border-radius: var(--radius-zine);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
   font-family: var(--font-mono);
-  font-size: 0.8rem;
+  font-size: 0.78rem;
+}
+
+.venue-strip strong {
+  background-color: var(--depanneur-yellow);
+  color: var(--ink);
+  padding: 0.1rem 0.4rem;
+  border: 1px solid var(--ink);
+  display: inline-block;
+  transform: rotate(-1deg);
+  margin-inline-end: 0.35rem;
 }
 
 /* ==========================================================================
@@ -978,7 +1152,7 @@ h1 em {
 .coalition-intro {
   padding: 1.75rem 2rem;
   border-block-end: var(--rule-strong);
-  background: var(--paper-light);
+  background-color: var(--paper-sheet);
 }
 
 .coalition-intro p {
@@ -997,6 +1171,7 @@ h1 em {
   padding: 1.75rem;
   border-inline-end: var(--rule-thin);
   border-block-end: var(--rule-thin);
+  background-color: var(--paper);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1005,16 +1180,18 @@ h1 em {
 
 .org-role {
   font-family: var(--font-mono);
-  font-size: 0.7rem;
+  font-size: 0.68rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--ink-muted);
+  letter-spacing: 0.05em;
+  color: var(--ruelle-green);
 }
 
 .org-tile h3 {
   font-family: var(--font-display);
-  font-size: 1.3rem;
-  margin: 0.25rem 0 0.5rem;
+  font-size: 1.32rem;
+  font-weight: 700;
+  margin: 0.3rem 0 0.5rem;
 }
 
 .org-tile p {
@@ -1025,13 +1202,18 @@ h1 em {
 
 .org-link {
   font-family: var(--font-mono);
-  font-size: 0.78rem;
-  font-weight: 600;
+  font-size: 0.76rem;
+  font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
-  border-block-end: 1px solid currentColor;
+  border-block-end: 1.5px solid var(--ink);
   align-self: flex-start;
   padding-block-end: 2px;
+}
+
+.org-link:hover {
+  color: var(--terracotta);
+  border-color: var(--terracotta);
 }
 
 .people-roster {
@@ -1041,10 +1223,10 @@ h1 em {
 }
 
 .person-cell {
-  padding: 1.5rem 1.75rem;
+  padding: 1.5rem 1.65rem;
   border-inline-end: var(--rule-thin);
   border-block-end: var(--rule-thin);
-  background: var(--paper-light);
+  background-color: var(--paper-sheet);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1061,9 +1243,11 @@ h1 em {
   inline-size: 46px;
   block-size: 46px;
   border: var(--rule-strong);
-  background: var(--paper);
+  border-radius: var(--radius-zine);
+  background-color: var(--paper-secondary);
+  box-shadow: 2px 2px 0 var(--ink);
   font-family: var(--font-mono);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 0.85rem;
   display: inline-flex;
   align-items: center;
@@ -1074,7 +1258,7 @@ h1 em {
 .person-name {
   margin: 0;
   font-family: var(--font-display);
-  font-size: 1.05rem;
+  font-size: 1.08rem;
   font-weight: 700;
 }
 
@@ -1082,7 +1266,8 @@ h1 em {
   margin: 0.15rem 0 0;
   font-family: var(--font-mono);
   font-size: 0.72rem;
-  color: var(--vermilion);
+  font-weight: 600;
+  color: var(--terracotta);
 }
 
 .person-bio {
@@ -1093,16 +1278,17 @@ h1 em {
 
 .ecosystem-ledger {
   padding: 1.75rem 2rem;
-  background: var(--paper);
+  background-color: var(--paper-secondary);
 }
 
 .ecosystem-ledger h3 {
   font-family: var(--font-mono);
-  font-size: 0.8rem;
+  font-size: 0.78rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
-  margin: 0 0 0.85rem;
-  color: var(--ink-muted);
+  letter-spacing: 0.05em;
+  margin: 0 0 0.9rem;
+  color: var(--ink);
 }
 
 .tag-cloud {
@@ -1117,27 +1303,40 @@ h1 em {
 
 .tag-cloud li {
   border: var(--rule-thin);
-  background: var(--paper-light);
-  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-zine);
+  background-color: var(--paper);
+  padding: 0.32rem 0.7rem;
   font-family: var(--font-mono);
-  font-size: 0.76rem;
+  font-size: 0.75rem;
+  font-weight: 500;
 }
 
 /* ==========================================================================
-   Chapter 05: Dossier d'Intérêt & Partenariat (Accessible Form)
+   Chapter 05: Fiche d'Intérêt & Partenariat (Tear-Off Bulletin Form)
    ========================================================================== */
 
 .dossier-header {
-  padding: 1.25rem 2rem;
-  background: var(--ink);
-  color: var(--paper-light);
+  padding: 1.15rem 2rem;
+  background-color: var(--ink);
+  color: var(--paper);
   font-family: var(--font-mono);
-  font-size: 0.78rem;
+  font-size: 0.76rem;
+  border-block-end: var(--rule-strong);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
+}
+
+.dossier-status-stamp {
+  background-color: var(--depanneur-yellow);
+  color: var(--ink);
+  padding: 0.2rem 0.6rem;
+  border: 1.5px solid var(--paper);
+  border-radius: var(--radius-zine);
+  font-weight: 700;
+  transform: rotate(-1deg);
 }
 
 .dossier-grid {
@@ -1152,21 +1351,21 @@ h1 em {
 }
 
 .interest-form {
-  padding: clamp(1.5rem, 3.5vw, 2.75rem);
-  background: var(--paper-light);
-  border-block-end: var(--rule-thin);
+  padding: clamp(1.5rem, 3.5vw, 2.5rem);
+  background-color: var(--paper-secondary);
+  border-block-end: var(--rule-dashed);
 }
 
 @media (min-width: 920px) {
   .interest-form {
     border-block-end: 0;
-    border-inline-end: var(--rule-strong);
+    border-inline-end: var(--rule-dashed);
   }
 }
 
 .form-aside {
-  padding: clamp(1.5rem, 3vw, 2.5rem);
-  background: var(--paper);
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  background-color: var(--paper);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1175,7 +1374,8 @@ h1 em {
 
 .aside-block h3 {
   font-family: var(--font-display);
-  font-size: 1.15rem;
+  font-size: 1.2rem;
+  font-weight: 700;
   margin: 0 0 0.75rem;
 }
 
@@ -1192,10 +1392,12 @@ h1 em {
   color: var(--ink);
 }
 
+/* Tear-Off Coupon Box for External Google Form */
 .gform-callout {
   padding: 1.25rem;
-  border: var(--rule-strong);
-  background: var(--paper-light);
+  border: var(--rule-dashed);
+  border-radius: var(--radius-zine);
+  background-color: var(--paper-secondary);
 }
 
 .gform-callout p {
@@ -1206,12 +1408,13 @@ h1 em {
 .form-error-summary {
   padding: 1rem 1.25rem;
   margin-block-end: 1.5rem;
-  background: var(--vermilion-tint);
-  border: 2px solid var(--vermilion);
-  color: var(--vermilion-dark);
+  background-color: var(--terracotta-tint);
+  border: 2px solid var(--terracotta);
+  border-radius: var(--radius-zine);
+  color: var(--terracotta-dark);
   font-family: var(--font-mono);
-  font-size: 0.85rem;
-  font-weight: 600;
+  font-size: 0.82rem;
+  font-weight: 700;
 }
 
 .form-error-summary[hidden] {
@@ -1235,20 +1438,20 @@ h1 em {
   flex-direction: column;
   align-items: stretch;
   gap: 0.3rem;
-  margin-block-end: 1.4rem;
+  margin-block-end: 1.35rem;
 }
 
 .form-group label {
   font-family: var(--font-mono);
-  font-size: 0.8rem;
-  font-weight: 600;
+  font-size: 0.78rem;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.04em;
   color: var(--ink);
 }
 
 .required-mark {
-  color: var(--vermilion);
+  color: var(--terracotta);
 }
 
 .field-hint {
@@ -1264,9 +1467,9 @@ h1 em {
   min-block-size: 48px;
   padding: 0.7rem 0.85rem;
   color: var(--ink);
-  background: #FFFFFF;
+  background-color: var(--paper);
   border: var(--rule-strong);
-  border-radius: 0;
+  border-radius: var(--radius-zine);
   transition: border-color 0.15s ease, background-color 0.15s ease;
 }
 
@@ -1276,20 +1479,20 @@ textarea.form-control {
 }
 
 .form-control:is(:user-invalid, [aria-invalid="true"]) {
-  border-color: var(--vermilion);
-  background-color: var(--vermilion-tint);
+  border-color: var(--terracotta);
+  background-color: var(--terracotta-tint);
 }
 
 .form-control:user-valid {
-  border-color: var(--valid);
+  border-color: var(--ruelle-green);
 }
 
 .field-error {
   display: none;
   font-family: var(--font-mono);
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--vermilion-dark);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--terracotta-dark);
   margin-block-start: 0.25rem;
 }
 
@@ -1299,22 +1502,26 @@ textarea.form-control {
 }
 
 .form-fieldset {
-  border: var(--rule-strong);
+  border: var(--rule-dashed);
+  border-radius: var(--radius-zine);
   padding: 1.15rem;
   margin-inline: 0;
-  margin-block: 0 1.5rem;
-  background: var(--paper);
+  margin-block: 0 1.45rem;
+  background-color: var(--paper);
 }
 
 .form-fieldset legend {
   font-family: var(--font-mono);
-  font-size: 0.78rem;
-  font-weight: 600;
+  font-size: 0.76rem;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.04em;
   color: var(--ink);
-  padding-inline: 0.45rem;
-  background: var(--paper);
+  padding: 0.1rem 0.5rem;
+  background-color: var(--depanneur-yellow);
+  border: 1px solid var(--ink);
+  border-radius: var(--radius-zine);
+  transform: rotate(-1deg);
 }
 
 .choice-grid {
@@ -1336,20 +1543,21 @@ textarea.form-control {
   gap: 0.65rem;
   min-block-size: 48px;
   padding: 0.65rem 0.75rem;
-  background: var(--paper-light);
+  background-color: var(--paper-sheet);
   border: var(--rule-thin);
+  border-radius: var(--radius-zine);
   cursor: pointer;
 }
 
 .choice-item:has(input:checked) {
   border: var(--rule-strong);
-  background: #FFFFFF;
-  box-shadow: 3px 3px 0 var(--ink);
+  background-color: var(--depanneur-tint);
+  box-shadow: 2px 2px 0 var(--ink);
 }
 
 .choice-item input[type="radio"],
 .choice-item input[type="checkbox"] {
-  accent-color: var(--vermilion);
+  accent-color: var(--terracotta);
   inline-size: 18px;
   block-size: 18px;
   margin-block-start: 2px;
@@ -1372,11 +1580,13 @@ textarea.form-control {
   justify-content: space-between;
   gap: 1rem;
   margin-block-start: 1rem;
+  padding-block-start: 1rem;
+  border-block-start: var(--rule-dashed);
 }
 
 .form-note {
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: 0.74rem;
   color: var(--ink-muted);
   margin: 0;
 }
@@ -1384,8 +1594,9 @@ textarea.form-control {
 .submission-panel {
   margin-block-start: 1.75rem;
   padding: 1.5rem;
-  background: var(--blueprint-tint);
-  border: 2px solid var(--blueprint);
+  background-color: var(--ruelle-tint);
+  border: var(--rule-dashed);
+  border-radius: var(--radius-zine);
 }
 
 .submission-panel[hidden] {
@@ -1395,11 +1606,13 @@ textarea.form-control {
 .submission-panel h3 {
   font-family: var(--font-display);
   margin: 0 0 0.5rem;
+  color: var(--ink);
 }
 
 .submission-summary {
-  background: #FFFFFF;
+  background-color: var(--paper);
   border: var(--rule-thin);
+  border-radius: var(--radius-zine);
   padding: 1rem;
   font-family: var(--font-mono);
   font-size: 0.8rem;
@@ -1424,11 +1637,11 @@ textarea.form-control {
 
 .faq-item {
   border-block-end: var(--rule-thin);
-  background: var(--paper-light);
+  background-color: var(--paper);
 }
 
 .faq-item[open] {
-  background: #FFFFFF;
+  background-color: var(--paper-sheet);
 }
 
 .faq-item summary {
@@ -1437,11 +1650,11 @@ textarea.form-control {
   align-items: center;
   justify-content: space-between;
   gap: 1.5rem;
-  min-block-size: 60px;
+  min-block-size: 62px;
   padding: 1.15rem 2rem;
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 1.08rem;
+  font-size: 1.12rem;
   color: var(--ink);
   cursor: pointer;
 }
@@ -1454,13 +1667,14 @@ textarea.form-control {
   content: "[+]";
   font-family: var(--font-mono);
   font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--vermilion);
+  font-weight: 700;
+  color: var(--terracotta);
   flex-shrink: 0;
 }
 
 .faq-item[open] summary::after {
   content: "[−]";
+  color: var(--ruelle-green);
 }
 
 .faq-answer {
@@ -1474,12 +1688,13 @@ textarea.form-control {
 }
 
 /* ==========================================================================
-   Footer Colophon
+   Footer Colophon & Montreal Cornice / Escalier Line-Art
    ========================================================================== */
 
 .site-footer {
-  background: var(--ink);
+  background-color: var(--ink);
   color: var(--paper);
+  border-block-start: var(--rule-strong);
 }
 
 .footer-grid {
@@ -1487,7 +1702,7 @@ textarea.form-control {
   margin-inline: auto;
   display: grid;
   grid-template-columns: 1fr;
-  border-inline: 1px solid rgba(255, 255, 255, 0.15);
+  border-inline: 1px solid rgba(243, 239, 230, 0.22);
 }
 
 @media (min-width: 780px) {
@@ -1498,17 +1713,25 @@ textarea.form-control {
 
 .footer-col {
   padding: 2.5rem 2rem;
-  border-block-end: 1px solid rgba(255, 255, 255, 0.15);
-  border-inline-end: 1px solid rgba(255, 255, 255, 0.15);
+  border-block-end: 1px solid rgba(243, 239, 230, 0.22);
+  border-inline-end: 1px solid rgba(243, 239, 230, 0.22);
 }
 
 .footer-brand {
   font-family: var(--font-display);
-  font-size: 1.35rem;
-  font-weight: 700;
-  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 800;
   margin: 0 0 0.65rem;
-  color: #FFFFFF;
+  color: var(--paper);
+}
+
+.footer-motif-box {
+  margin-block-top: 1.1rem;
+  padding-block-top: 0.85rem;
+  border-block-start: 1px dashed rgba(243, 239, 230, 0.35);
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
 }
 
 .footer-col h4 {
@@ -1516,7 +1739,7 @@ textarea.form-control {
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--ochre);
+  color: var(--depanneur-yellow);
   margin: 0 0 1rem;
 }
 
@@ -1536,7 +1759,7 @@ textarea.form-control {
 }
 
 .footer-links a:hover {
-  color: var(--ochre);
+  color: var(--depanneur-yellow);
   text-decoration: underline;
 }
 
@@ -1550,7 +1773,7 @@ textarea.form-control {
   gap: 0.75rem;
   font-family: var(--font-mono);
   font-size: 0.75rem;
-  color: rgba(242, 239, 233, 0.65);
+  color: rgba(243, 239, 230, 0.75);
 }
 
 @media (pointer: coarse) {

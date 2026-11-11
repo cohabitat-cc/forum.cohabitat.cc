@@ -1,9 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Forum Habiter Ensemble">
-  <rect x="2" y="2" width="60" height="60" fill="#F9F7F3" stroke="#141413" stroke-width="4"/>
-  <rect x="4" y="4" width="28" height="28" fill="#D6361F"/>
-  <rect x="32" y="4" width="28" height="28" fill="#F9F7F3"/>
-  <rect x="4" y="32" width="28" height="28" fill="#1B3B5F"/>
-  <rect x="32" y="32" width="28" height="28" fill="#C88A1E"/>
-  <line x1="32" y1="2" x2="32" y2="62" stroke="#141413" stroke-width="4"/>
-  <line x1="2" y1="32" x2="62" y2="32" stroke="#141413" stroke-width="4"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Forum Habiter Ensemble — Avril 2027">
+  <rect width="64" height="64" rx="2" fill="#F3EFE6" stroke="#181816" stroke-width="4" />
+  <rect x="7" y="7" width="50" height="50" fill="#E8E2D5" stroke="#181816" stroke-width="2" />
+  <!-- Riso accents -->
+  <rect x="7" y="7" width="16" height="16" fill="#C24B32" />
+  <rect x="41" y="41" width="16" height="16" fill="#2B5B44" />
+  <rect x="41" y="7" width="16" height="16" fill="#E2A83E" />
+  <!-- Architectural crosshairs -->
+  <line x1="23" y1="7" x2="23" y2="57" stroke="#181816" stroke-width="2" />
+  <line x1="41" y1="7" x2="41" y2="57" stroke="#181816" stroke-width="2" />
+  <line x1="7" y1="23" x2="57" y2="23" stroke="#181816" stroke-width="2" />
+  <line x1="7" y1="41" x2="57" y2="41" stroke="#181816" stroke-width="2" />
+  <!-- Center hub stamp -->
+  <rect x="21" y="21" width="22" height="22" fill="#181816" />
+  <text x="32" y="36" text-anchor="middle" fill="#F3EFE6" font-family="monospace" font-size="11" font-weight="700">27</text>
 </svg>
