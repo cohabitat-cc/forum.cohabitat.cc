@@ -1,0 +1,832 @@
+/* ==========================================================================
+   Oasis Coliving Montréal — Charte graphique propre (issue du document PDF)
+   Palette : Vert Oasis (#7AD882), Or Manifeste (#E5C243), Bleu-gris (#7AA0AD),
+             Anthracite (#243038), Blanc pur (#FFFFFF)
+   Typographie : Montserrat (titres géométriques) + DM Sans (corps fluide)
+   ========================================================================== */
+
+:root {
+  --oasis-green: #7ad882;
+  --oasis-green-dark: #4fb358;
+  --oasis-green-tint: #f2fbf3;
+  --oasis-gold: #e5c243;
+  --oasis-teal: #7aa0ad;
+  --oasis-ink: #243038;
+  --oasis-muted: #4b5a64;
+  --oasis-white: #ffffff;
+  --oasis-border: #e2ebe3;
+
+  --font-display: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --container-max: 1120px;
+  --radius-card: 16px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--oasis-ink);
+  background-color: var(--oasis-white);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--oasis-green-dark);
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+}
+
+.skip-link:focus {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1000;
+  background: var(--oasis-ink);
+  color: var(--oasis-white);
+  padding: 0.65rem 1rem;
+  border-radius: 8px;
+}
+
+.container {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: clamp(1.25rem, 4vw, 2.5rem);
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+.oasis-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--oasis-border);
+}
+
+.oasis-header-inner {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding: 0.85rem clamp(1.25rem, 4vw, 2.5rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.oasis-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: var(--oasis-ink);
+}
+
+.oasis-brand-logo {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.oasis-brand-logo-full {
+  height: 38px;
+  width: auto;
+  object-fit: contain;
+}
+
+.oasis-brand-wordmark {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.oasis-brand-wordmark span {
+  color: var(--oasis-green-dark);
+  font-weight: 600;
+}
+
+.oasis-nav-wrap {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.oasis-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.oasis-nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1.25rem;
+}
+
+.oasis-nav-links a {
+  text-decoration: none;
+  color: var(--oasis-muted);
+  font-weight: 500;
+  font-size: 0.92rem;
+  transition: color 0.15s ease;
+}
+
+.oasis-nav-links a:hover {
+  color: var(--oasis-green-dark);
+}
+
+.lang-switch {
+  display: inline-flex;
+  border: 1px solid var(--oasis-border);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.lang-btn {
+  border: 0;
+  background: transparent;
+  padding: 0.3rem 0.65rem;
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--oasis-muted);
+  cursor: pointer;
+}
+
+.lang-btn[aria-pressed='true'] {
+  background: var(--oasis-green);
+  color: var(--oasis-white);
+}
+
+.nav-toggle {
+  display: none;
+  border: 1px solid var(--oasis-border);
+  background: var(--oasis-white);
+  color: var(--oasis-ink);
+  padding: 0.4rem 0.85rem;
+  border-radius: 8px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+@media (max-width: 860px) {
+  .nav-toggle {
+    display: inline-flex;
+  }
+
+  .oasis-nav[hidden] {
+    display: none;
+  }
+
+  .oasis-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--oasis-white);
+    border-bottom: 1px solid var(--oasis-border);
+    padding: 1.25rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .oasis-nav-links {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+.oasis-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.45rem;
+  border-radius: 999px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: transform 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
+  cursor: pointer;
+}
+
+.oasis-btn-sm {
+  padding: 0.5rem 1.05rem;
+  font-size: 0.82rem;
+}
+
+.oasis-btn-primary {
+  background: var(--oasis-green);
+  color: var(--oasis-white);
+  box-shadow: 0 4px 14px rgba(122, 216, 130, 0.35);
+}
+
+.oasis-btn-primary:hover {
+  background: var(--oasis-green-dark);
+  transform: translateY(-1px);
+}
+
+.oasis-btn-outline {
+  border: 2px solid var(--oasis-green);
+  color: var(--oasis-green-dark);
+  background: var(--oasis-white);
+}
+
+.oasis-btn-outline:hover {
+  background: var(--oasis-green-tint);
+}
+
+/* ==========================================================================
+   Hero (White slide + clean brand lockup)
+   ========================================================================== */
+
+.oasis-hero {
+  padding-block: clamp(3rem, 7vw, 5.5rem);
+  background: linear-gradient(180deg, var(--oasis-green-tint) 0%, var(--oasis-white) 100%);
+  border-bottom: 1px solid var(--oasis-border);
+}
+
+.oasis-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+@media (min-width: 860px) {
+  .oasis-hero-grid {
+    grid-template-columns: 1.35fr 0.65fr;
+  }
+}
+
+.oasis-hero-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--oasis-green-dark);
+  margin-bottom: 1rem;
+}
+
+.oasis-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 1.5rem + 2.8vw, 3.6rem);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  margin: 0 0 1.25rem;
+  color: var(--oasis-ink);
+}
+
+.oasis-hero h1 span {
+  color: var(--oasis-green-dark);
+}
+
+.oasis-hero-lead {
+  font-size: clamp(1.1rem, 1rem + 0.4vw, 1.3rem);
+  color: var(--oasis-ink);
+  font-weight: 500;
+  margin: 0 0 1rem;
+  max-width: 58ch;
+}
+
+.oasis-hero-sub {
+  font-size: 1rem;
+  color: var(--oasis-muted);
+  margin: 0 0 2rem;
+  max-width: 60ch;
+}
+
+.oasis-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.oasis-hero-emblem-card {
+  background: var(--oasis-white);
+  border: 1px solid var(--oasis-border);
+  border-radius: var(--radius-card);
+  padding: 2.25rem 1.75rem;
+  text-align: center;
+  box-shadow: 0 12px 32px rgba(36, 48, 56, 0.06);
+  display: grid;
+  gap: 1rem;
+  justify-items: center;
+}
+
+.oasis-hero-emblem-card img {
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+}
+
+.oasis-hero-emblem-card img.oasis-hero-logo {
+  width: min(220px, 100%);
+  height: auto;
+}
+
+.oasis-lykka-badge {
+  padding-top: 1rem;
+  border-top: 1px solid var(--oasis-border);
+  width: 100%;
+  font-size: 0.88rem;
+  color: var(--oasis-muted);
+}
+
+.oasis-lykka-badge strong {
+  display: block;
+  margin-top: 0.25rem;
+  font-family: var(--font-display);
+  color: var(--oasis-ink);
+}
+
+/* ==========================================================================
+   Green Section Divider Banner (Signature PDF Slide Style)
+   ========================================================================== */
+
+.oasis-section-banner {
+  background: var(--oasis-green);
+  color: var(--oasis-white);
+  text-align: center;
+  padding-block: clamp(2.25rem, 4.5vw, 3.25rem);
+  padding-inline: 1.25rem;
+}
+
+.oasis-section-banner h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 1.3rem + 1.5vw, 2.5rem);
+  font-weight: 700;
+  margin: 0.5rem 0 0;
+  letter-spacing: -0.02em;
+}
+
+.oasis-section-banner p {
+  margin: 0.5rem auto 0;
+  max-width: 56ch;
+  font-size: 1rem;
+  opacity: 0.95;
+}
+
+.oasis-section-icon {
+  width: 44px;
+  height: 44px;
+  margin-inline: auto;
+  background: var(--oasis-white);
+  border-radius: 10px;
+  padding: 6px;
+  object-fit: contain;
+}
+
+.oasis-section-body {
+  padding-block: clamp(2.5rem, 5vw, 4rem);
+}
+
+/* ==========================================================================
+   Vision & Lykka Quote Block
+   ========================================================================== */
+
+.oasis-vision-card {
+  background: var(--oasis-white);
+  border: 1px solid var(--oasis-border);
+  border-radius: var(--radius-card);
+  padding: clamp(1.75rem, 4vw, 2.75rem);
+  max-width: 820px;
+  margin-inline: auto;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(36, 48, 56, 0.04);
+}
+
+.oasis-vision-card p {
+  font-size: 1.08rem;
+  color: var(--oasis-ink);
+  margin: 0 0 1.25rem;
+}
+
+.oasis-vision-card p:last-child {
+  margin-bottom: 0;
+  color: var(--oasis-muted);
+  font-style: italic;
+}
+
+.oasis-lykka-box {
+  margin-top: 2.25rem;
+  background: var(--oasis-green-tint);
+  border-left: 5px solid var(--oasis-gold);
+  border-radius: 0 var(--radius-card) var(--radius-card) 0;
+  padding: 1.75rem 2rem;
+  max-width: 820px;
+  margin-inline: auto;
+}
+
+.oasis-lykka-box h3 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: var(--oasis-ink);
+  margin: 0 0 0.65rem;
+}
+
+.oasis-lykka-box p {
+  margin: 0 0 0.75rem;
+  color: var(--oasis-ink);
+  font-size: 0.98rem;
+}
+
+.oasis-lykka-box p:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   Manifeste des Oasis (Gold Header + 5 Teal-Hexagon Principle Cards)
+   ========================================================================== */
+
+.manifeste-gold-bar {
+  background: var(--oasis-gold);
+  color: var(--oasis-white);
+  padding-block: clamp(2.25rem, 4.5vw, 3.25rem);
+}
+
+.manifeste-gold-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+@media (min-width: 780px) {
+  .manifeste-gold-grid {
+    grid-template-columns: 0.9fr 1.1fr;
+  }
+}
+
+.manifeste-gold-bar h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem, 1.4rem + 1.8vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0;
+  color: var(--oasis-white);
+}
+
+.manifeste-gold-bar p {
+  margin: 0;
+  font-size: 1.08rem;
+  color: var(--oasis-ink);
+  font-weight: 500;
+}
+
+.principles-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 760px) {
+  .principles-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.principle-card {
+  background: var(--oasis-white);
+  border: 1px solid var(--oasis-border);
+  border-radius: var(--radius-card);
+  padding: 1.75rem;
+  box-shadow: 0 6px 20px rgba(36, 48, 56, 0.04);
+}
+
+.principle-card--wide {
+  grid-column: 1 / -1;
+}
+
+.principle-head {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.85rem;
+}
+
+.hex-badge {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  background: var(--oasis-teal);
+  color: var(--oasis-white);
+  clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+  display: grid;
+  place-items: center;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+
+.principle-head h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--oasis-teal);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  margin: 0;
+}
+
+.principle-tagline {
+  font-style: italic;
+  font-weight: 600;
+  color: var(--oasis-teal);
+  margin: 0 0 0.75rem;
+  font-size: 0.95rem;
+}
+
+.principle-card p:last-child {
+  margin: 0;
+  color: var(--oasis-muted);
+  font-size: 0.96rem;
+}
+
+/* ==========================================================================
+   Team Cards (Signature PDF Green Left Panel + White Right Bio)
+   ========================================================================== */
+
+.team-stack {
+  display: grid;
+  gap: 1.75rem;
+}
+
+.team-slide-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  border: 1px solid var(--oasis-border);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  background: var(--oasis-white);
+  box-shadow: 0 8px 24px rgba(36, 48, 56, 0.05);
+}
+
+@media (min-width: 780px) {
+  .team-slide-card {
+    grid-template-columns: 300px 1fr;
+  }
+}
+
+.team-left-panel {
+  background: var(--oasis-green);
+  color: var(--oasis-ink);
+  padding: 1.75rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+
+.team-photo {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  object-position: center 20%;
+  border-top-left-radius: 68px;
+  border-bottom-right-radius: 68px;
+  border: 3px solid var(--oasis-white);
+  background: var(--oasis-white);
+}
+
+.team-monogram {
+  width: 110px;
+  height: 110px;
+  border-top-left-radius: 48px;
+  border-bottom-right-radius: 48px;
+  background: var(--oasis-white);
+  color: var(--oasis-green-dark);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.8rem;
+  display: grid;
+  place-items: center;
+}
+
+.team-meta h3 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--oasis-white);
+  margin: 0 0 0.35rem;
+}
+
+.team-meta-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.88rem;
+  font-style: italic;
+  color: var(--oasis-white);
+  display: grid;
+  gap: 0.2rem;
+}
+
+.team-skills {
+  margin-top: auto;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.35);
+  font-size: 0.85rem;
+  font-style: italic;
+  font-weight: 600;
+  color: var(--oasis-ink);
+}
+
+.team-right-panel {
+  padding: clamp(1.5rem, 3.5vw, 2.25rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.9rem;
+}
+
+.team-right-panel p {
+  margin: 0;
+  color: var(--oasis-ink);
+  font-size: 0.98rem;
+}
+
+/* ==========================================================================
+   Real Estate Needs Grid
+   ========================================================================== */
+
+.specs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: 1.25rem;
+}
+
+.spec-card {
+  background: var(--oasis-white);
+  border: 1px solid var(--oasis-border);
+  border-top: 4px solid var(--oasis-green);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.spec-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--oasis-green-dark);
+  margin: 0 0 0.5rem;
+}
+
+.spec-card p {
+  margin: 0;
+  color: var(--oasis-muted);
+  font-size: 0.95rem;
+}
+
+.orange-line-highlight {
+  color: #e67e22;
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   Inspirations Grid
+   ========================================================================== */
+
+.inspirations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+  gap: 1.25rem;
+}
+
+.inspiration-card {
+  background: var(--oasis-white);
+  border: 1px solid var(--oasis-border);
+  border-radius: 12px;
+  padding: 1.35rem 1.5rem;
+}
+
+.inspiration-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: var(--oasis-green-dark);
+  margin: 0 0 0.5rem;
+}
+
+.inspiration-card ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.9rem;
+  color: var(--oasis-muted);
+}
+
+.inspiration-card strong {
+  color: var(--oasis-ink);
+}
+
+/* ==========================================================================
+   Contact & Footer
+   ========================================================================== */
+
+.oasis-contact-box {
+  background: var(--oasis-green);
+  color: var(--oasis-white);
+  text-align: center;
+  padding-block: clamp(3rem, 6vw, 4.5rem);
+  padding-inline: 1.25rem;
+}
+
+.oasis-contact-box h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.85rem, 1.4rem + 1.5vw, 2.5rem);
+  margin: 0.75rem 0 0.5rem;
+}
+
+.oasis-contact-details {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 0 0 1.75rem;
+}
+
+.oasis-contact-details a {
+  color: var(--oasis-white);
+  text-decoration: underline;
+}
+
+.oasis-contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.oasis-btn-white {
+  background: var(--oasis-white);
+  color: var(--oasis-green-dark);
+}
+
+.oasis-btn-white:hover {
+  background: var(--oasis-green-tint);
+}
+
+.oasis-footer {
+  background: var(--oasis-ink);
+  color: rgba(255, 255, 255, 0.85);
+  padding-block: 2rem;
+  font-size: 0.88rem;
+}
+
+.oasis-footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.oasis-footer a {
+  color: var(--oasis-green);
+  text-decoration: none;
+}
+
+.oasis-footer a:hover {
+  text-decoration: underline;
+}
