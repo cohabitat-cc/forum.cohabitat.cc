@@ -1,7 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Oasis Coliving">
-  <rect width="64" height="64" fill="#E8E2D5" stroke="#181816" stroke-width="3"/>
-  <circle cx="32" cy="30" r="16" fill="#2B5B44" stroke="#181816" stroke-width="2.5"/>
-  <path d="M22 33C26 26 30 22 32 18C34 22 38 26 42 33" fill="none" stroke="#E2A83E" stroke-width="3" stroke-linecap="square"/>
-  <line x1="16" y1="50" x2="48" y2="50" stroke="#C24B32" stroke-width="3"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 236" role="img" aria-label="Oasis Coliving">
+  <!-- Emblème Oasis Coliving reconstruit à partir de logo-oasis.png (#84D882) -->
+  <!-- Lobe supérieur gauche + bordure gauche et base droite -->
+  <path fill="#84D882" d="M 76 5
+    C 48 18, 13 38, 13 62
+    L 13 174
+    C 13 196, 48 214, 79.5 231
+    C 111 214, 146 196, 146 174
+    L 146 122
+    C 108 130, 83 150, 83 182
+    L 83 221
+    C 81 222, 78 222, 76 221
+    C 46 205, 21 190, 21 172
+    L 21 124
+    C 21 107, 36 96, 52 90
+    C 68 84, 76 74, 76 52
+    Z"/>
 
+  <!-- Lobe supérieur droit -->
+  <path fill="#84D882" d="M 83 5
+    L 83 52
+    C 83 84, 108 104, 146 112
+    L 146 62
+    C 146 38, 111 18, 83 5
+    Z"/>
+
+  <!-- Fenêtre à 4 carreaux en perspective -->
+  <path fill="#84D882" d="M 35 145 L 48 152 L 48 165 L 35 158 Z"/>
+  <path fill="#84D882" d="M 55 155 L 68 162 L 68 175 L 55 168 Z"/>
+  <path fill="#84D882" d="M 35 167 L 48 174 L 48 190 L 38 184 C 36 183, 35 180, 35 177 Z"/>
+  <path fill="#84D882" d="M 55 178 L 68 185 L 68 198 L 55 191 Z"/>
+</svg>
