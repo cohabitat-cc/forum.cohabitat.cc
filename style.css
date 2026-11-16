@@ -1216,6 +1216,23 @@ h1 em {
   border-block-end: var(--rule-strong);
 }
 
+.org-person-pair {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  border-inline-end: var(--rule-thin);
+  border-block-end: var(--rule-thin);
+}
+
+.org-person-pair .org-tile {
+  border-inline-end: 0;
+  border-block-end: var(--rule-thin);
+}
+
+.org-person-pair .person-cell {
+  border-inline-end: 0;
+  border-block-end: 0;
+}
+
 .org-tile {
   padding: 1.75rem;
   border-inline-end: var(--rule-thin);
@@ -1872,4 +1889,102 @@ textarea.form-control {
   .choice-item {
     min-block-size: 52px;
   }
+}
+
+/* ==========================================================================
+   Simplified Landing & Persona Sub-Pages Utilities
+   ========================================================================== */
+
+.hero-top-grid--single {
+  grid-template-columns: 1fr;
+}
+
+.hero-top-grid--single .hero-editorial {
+  border-inline-end: 0;
+  border-block-end: 0;
+}
+
+.hero-top-grid--single .hero-description {
+  max-inline-size: 70ch;
+}
+
+.breadcrumb-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem clamp(1.25rem, 3.5vw, 2.75rem);
+  background-color: var(--paper-secondary);
+  border-block-end: var(--rule-thin);
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--ink-muted);
+}
+
+.breadcrumb-bar a {
+  color: var(--ink);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.breadcrumb-bar a:hover {
+  color: var(--terracotta);
+  text-decoration: underline;
+}
+
+.cta-panel {
+  padding: clamp(2rem, 4.5vw, 3.5rem);
+  background-color: var(--paper-sheet);
+  display: grid;
+  gap: 1.5rem;
+  justify-items: start;
+}
+
+.cta-panel h3 {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 1.15rem + 1.3vw, 2.1rem);
+  font-weight: 700;
+  margin: 0;
+  color: var(--ink);
+  line-height: 1.2;
+}
+
+.cta-panel p {
+  margin: 0;
+  font-size: 1.02rem;
+  color: var(--ink-muted);
+  max-inline-size: 64ch;
+}
+
+.cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn-lg {
+  padding: 1.05rem 1.85rem;
+  font-size: 0.94rem;
+}
+
+.persona-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--terracotta);
+  text-decoration: none;
+  margin-block-start: 0.25rem;
+}
+
+.persona-card-link:hover {
+  color: var(--ink);
+  text-decoration: underline;
 }

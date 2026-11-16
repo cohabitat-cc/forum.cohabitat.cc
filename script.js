@@ -83,10 +83,12 @@
 
   function setLanguage(lang) {
     document.documentElement.lang = lang;
+    const customTitle = document.documentElement.getAttribute(`data-title-${lang}`);
     document.title =
-      lang === 'en'
+      customTitle ||
+      (lang === 'en'
         ? 'Living Together Forum — Coliving, Shared Housing, and Intentional Communities (Montreal, April 2027)'
-        : 'Forum Habiter Ensemble — Coliving, habitat partagé et communautés intentionnelles (Montréal, Avril 2027)';
+        : 'Forum Habiter Ensemble — Coliving, habitat partagé et communautés intentionnelles (Montréal, Avril 2027)');
 
     langButtons.forEach((btn) => {
       const isActive = btn.dataset.lang === lang;
