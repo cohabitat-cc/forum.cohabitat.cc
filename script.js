@@ -112,6 +112,8 @@
     } catch (e) {
       /* ignore storage restrictions */
     }
+
+    document.dispatchEvent(new CustomEvent('forum:langchange', { detail: { lang } }));
   }
 
   langButtons.forEach((btn) => {

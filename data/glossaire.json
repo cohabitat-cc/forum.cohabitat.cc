@@ -1,0 +1,50 @@
+{
+  "habitat-partage": {
+    "termeFr": "Habitat partagé",
+    "equivalentEn": "Shared housing",
+    "definitionFr": "Forme d’habitation fondée sur la volonté intentionnelle de vivre en communauté, en partageant des espaces communs, des ressources et une vie collective, quel que soit le statut juridique ou le modèle économique.",
+    "definitionEn": "A form of housing founded on an intentional desire to live in community, sharing common spaces, resources, and collective life, regardless of legal status or economic model."
+  },
+  "coliving": {
+    "termeFr": "Coliving",
+    "equivalentEn": "Coliving",
+    "definitionFr": "Modèle d’habitat partagé combinant des espaces privatifs (chambres ou studios) et des aires communes aménagées, souvent accompagné de services mutualisés et d’une animation de la vie communautaire.",
+    "definitionEn": "A shared housing model combining private living quarters (bedrooms or studios) with furnished communal areas, often paired with pooled services and active community stewardship."
+  },
+  "colocation-intentionnelle": {
+    "termeFr": "Colocation intentionnelle (ou collaborative)",
+    "equivalentEn": "Intentional co-living",
+    "definitionFr": "Cohabitation choisie entre plusieurs adultes qui partagent un même logement autour de valeurs, d’ententes de vivre-ensemble et de ressources communes, au-delà du simple partage du loyer.",
+    "definitionEn": "Chosen cohabitation among adults sharing a home around common values, living charters, and pooled resources, going well beyond simply splitting rent."
+  },
+  "cohabitat": {
+    "termeFr": "Cohabitat (cohousing)",
+    "equivalentEn": "Cohousing",
+    "definitionFr": "Ensemble résidentiel conçu et géré de manière participative par ses cohabitant·es, combinant des logements privés complets et d’importants espaces communs (cuisine collective, ateliers, jardin) pour favoriser l’entraide.",
+    "definitionEn": "A residential community designed and managed participatively by its cohabitants, combining full private homes with extensive shared facilities (communal kitchen, workshops, garden) to foster mutual aid."
+  },
+  "communaute-intentionnelle": {
+    "termeFr": "Communauté intentionnelle",
+    "equivalentEn": "Intentional community",
+    "definitionFr": "Groupe de personnes choisissant de vivre ensemble autour d’un projet commun, de valeurs partagées (écologie, solidarité, gouvernance participative) et d’une organisation collective structurée.",
+    "definitionEn": "A group of people choosing to live together around a shared purpose, common values (ecology, solidarity, participatory governance), and a structured collective organization."
+  },
+  "maison-de-chambres": {
+    "termeFr": "Maison de chambres",
+    "equivalentEn": "Rooming house",
+    "definitionFr": "Catégorie réglementaire municipale encadrant la location individuelle de chambres dans un immeuble. Appliquée par défaut à l’habitat partagé, elle peut entraîner des restrictions de zonage ou des normes inadaptées à la vie communautaire choisie.",
+    "definitionEn": "A municipal zoning category regulating individual room rentals in a building. When applied by default to shared housing, it can trigger zoning bans or code requirements ill-suited to intentional community living."
+  },
+  "fiducie-utilite-sociale": {
+    "termeFr": "Fiducie d’utilité sociale (FUS)",
+    "equivalentEn": "Community Land Trust (CLT)",
+    "definitionFr": "Patrimoine d’affectation sans but lucratif qui retire définitivement un terrain ou un immeuble du marché spéculatif afin d’en préserver la vocation sociale, communautaire ou abordable à perpétuité.",
+    "definitionEn": "A non-profit asset trust that permanently removes land or buildings from the speculative market to preserve their social, community, or affordable housing mission in perpetuity."
+  },
+  "obligation-communautaire": {
+    "termeFr": "Obligation communautaire",
+    "equivalentEn": "Community bond",
+    "definitionFr": "Titre d’emprunt émis par un OBNL ou une coopérative permettant à des citoyen·nes et organisations d’investir dans un projet immobilier hors marché ou à impact social, avec un rendement modéré défini à l’avance.",
+    "definitionEn": "A debt instrument issued by a non-profit or cooperative allowing citizens and organizations to invest in non-market housing or social-impact projects for a modest, predetermined financial return."
+  }
+}
