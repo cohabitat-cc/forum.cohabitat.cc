@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="ODD 17 — Partenariats pour la réalisation des objectifs">
+  <rect width="64" height="64" fill="#19486A"/>
+  <text x="7" y="19" fill="#FFFFFF" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="13" font-weight="700">17</text>
+  <!-- 5 interlocking rings -->
+  <g fill="none" stroke="#FFFFFF" stroke-width="2.4">
+    <circle cx="34" cy="30.5" r="7.2"/>
+    <circle cx="42.5" cy="36.8" r="7.2"/>
+    <circle cx="39.2" cy="46.5" r="7.2"/>
+    <circle cx="28.8" cy="46.5" r="7.2"/>
+    <circle cx="25.5" cy="36.8" r="7.2"/>
+  </g>
+</svg>

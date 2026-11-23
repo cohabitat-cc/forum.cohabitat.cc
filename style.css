@@ -973,6 +973,59 @@ h1 em {
   font-weight: 700;
 }
 
+/* Iconographie ODD (Objectifs de développement durable — ONU) */
+.odd-rail-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-block-start: 1.25rem;
+  padding-block-start: 1rem;
+  border-block-start: var(--rule-dashed);
+}
+
+.odd-rail-icon {
+  inline-size: 40px;
+  block-size: 40px;
+  border: var(--rule-strong);
+  border-radius: var(--radius-zine);
+  box-shadow: 2px 2px 0 var(--ink);
+  flex-shrink: 0;
+}
+
+.odd-card-head {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-block: 0.75rem 0.65rem;
+}
+
+.odd-badges {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-shrink: 0;
+}
+
+.odd-icon {
+  inline-size: 56px;
+  block-size: 56px;
+  border: var(--rule-strong);
+  border-radius: var(--radius-zine);
+  box-shadow: 2px 2px 0 var(--ink);
+  flex-shrink: 0;
+}
+
+.odd-card-head h3 {
+  margin: 0;
+}
+
+@media (max-width: 620px) {
+  .odd-icon {
+    inline-size: 48px;
+    block-size: 48px;
+  }
+}
+
 /* ==========================================================================
    Chapter 02: Les 4 Chantiers Institutionnels
    ========================================================================== */

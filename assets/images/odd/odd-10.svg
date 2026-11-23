@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="ODD 10 — Inégalités réduites">
+  <rect width="64" height="64" fill="#DD1367"/>
+  <text x="7" y="19" fill="#FFFFFF" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="13" font-weight="700">10</text>
+  <!-- Central circle with equals sign -->
+  <circle cx="34" cy="39" r="10.5" fill="#FFFFFF"/>
+  <rect x="28.5" y="35" width="11" height="2.8" rx="0.8" fill="#DD1367"/>
+  <rect x="28.5" y="40.2" width="11" height="2.8" rx="0.8" fill="#DD1367"/>
+  <!-- Four directional arrows -->
+  <path d="M34 21 L38 26 H30 Z" fill="#FFFFFF"/>
+  <path d="M34 57 L38 52 H30 Z" fill="#FFFFFF"/>
+  <path d="M16 39 L21 35 V43 Z" fill="#FFFFFF"/>
+  <path d="M52 39 L47 35 V43 Z" fill="#FFFFFF"/>
+</svg>

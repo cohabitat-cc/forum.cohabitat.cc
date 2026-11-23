@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="ODD 4 — Éducation de qualité">
+  <rect width="64" height="64" fill="#C5192D"/>
+  <text x="8" y="19" fill="#FFFFFF" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="14" font-weight="700">4</text>
+  <!-- Open book -->
+  <path d="M13 28 L29 32 L29 51 L13 47 Z" fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linejoin="round"/>
+  <path d="M45 28 L29 32 L29 51 L45 47 Z" fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linejoin="round"/>
+  <line x1="17" y1="34" x2="25" y2="36" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round"/>
+  <line x1="17" y1="39" x2="25" y2="41" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round"/>
+  <line x1="41" y1="34" x2="33" y2="36" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round"/>
+  <line x1="41" y1="39" x2="33" y2="41" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round"/>
+  <!-- Pencil -->
+  <path d="M51 25 H55 V45 L53 51 L51 45 Z" fill="#FFFFFF"/>
+  <line x1="51" y1="29" x2="55" y2="29" stroke="#C5192D" stroke-width="1.6"/>
+</svg>
