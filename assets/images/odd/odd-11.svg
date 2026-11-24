@@ -1,24 +1,25 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="ODD 11 — Villes et communautés durables">
   <rect width="64" height="64" fill="#FD9D24"/>
-  <text x="7" y="19" fill="#FFFFFF" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="13" font-weight="700">11</text>
+  <rect x="3.5" y="3.5" width="57" height="57" fill="none" stroke="#181816" stroke-width="1" opacity="0.28"/>
+  <text x="8" y="18.5" fill="#F3EFE6" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="13.5" font-weight="700">11</text>
   <!-- House (left) -->
-  <path d="M11 40 L18 33 L25 40 V54 H11 Z" fill="#FFFFFF"/>
-  <rect x="16" y="46" width="4" height="8" fill="#FD9D24"/>
+  <polygon points="10.5,40 17.5,33 24.5,40 24.5,53.5 10.5,53.5" fill="#F3EFE6"/>
+  <rect x="15.5" y="45.5" width="4" height="8" fill="#FD9D24"/>
   <!-- Mid-rise apartment (center) -->
-  <rect x="28" y="29" width="13" height="25" fill="#FFFFFF"/>
-  <rect x="30.5" y="32.5" width="3" height="3" fill="#FD9D24"/>
-  <rect x="35.5" y="32.5" width="3" height="3" fill="#FD9D24"/>
-  <rect x="30.5" y="38.5" width="3" height="3" fill="#FD9D24"/>
-  <rect x="35.5" y="38.5" width="3" height="3" fill="#FD9D24"/>
-  <rect x="30.5" y="44.5" width="3" height="3" fill="#FD9D24"/>
-  <rect x="35.5" y="44.5" width="3" height="3" fill="#FD9D24"/>
-  <!-- Tall tower (right) -->
-  <rect x="44" y="21" width="11" height="33" fill="#FFFFFF"/>
-  <rect x="46.5" y="25" width="6" height="2.4" fill="#FD9D24"/>
-  <rect x="46.5" y="30" width="6" height="2.4" fill="#FD9D24"/>
-  <rect x="46.5" y="35" width="6" height="2.4" fill="#FD9D24"/>
-  <rect x="46.5" y="40" width="6" height="2.4" fill="#FD9D24"/>
-  <rect x="46.5" y="45" width="6" height="2.4" fill="#FD9D24"/>
+  <rect x="27.5" y="29" width="13" height="24.5" fill="#F3EFE6"/>
+  <rect x="30" y="32.5" width="3" height="3" fill="#FD9D24"/>
+  <rect x="35" y="32.5" width="3" height="3" fill="#FD9D24"/>
+  <rect x="30" y="38.5" width="3" height="3" fill="#FD9D24"/>
+  <rect x="35" y="38.5" width="3" height="3" fill="#FD9D24"/>
+  <rect x="30" y="44.5" width="3" height="3" fill="#FD9D24"/>
+  <rect x="35" y="44.5" width="3" height="3" fill="#FD9D24"/>
+  <!-- Tall building (right) -->
+  <rect x="43.5" y="21" width="11.5" height="32.5" fill="#F3EFE6"/>
+  <rect x="46" y="25" width="6.5" height="2.4" fill="#FD9D24"/>
+  <rect x="46" y="30" width="6.5" height="2.4" fill="#FD9D24"/>
+  <rect x="46" y="35" width="6.5" height="2.4" fill="#FD9D24"/>
+  <rect x="46" y="40" width="6.5" height="2.4" fill="#FD9D24"/>
+  <rect x="46" y="45" width="6.5" height="2.4" fill="#FD9D24"/>
   <!-- Ground baseline -->
-  <line x1="9" y1="54" x2="57" y2="54" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+  <line x1="8.5" y1="53.5" x2="56.5" y2="53.5" stroke="#F3EFE6" stroke-width="2" stroke-linecap="square"/>
 </svg>

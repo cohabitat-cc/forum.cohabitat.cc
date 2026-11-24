@@ -1,13 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="ODD 16 — Paix, justice et institutions efficaces">
   <rect width="64" height="64" fill="#00689D"/>
-  <text x="7" y="19" fill="#FFFFFF" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="13" font-weight="700">16</text>
+  <rect x="3.5" y="3.5" width="57" height="57" fill="none" stroke="#F3EFE6" stroke-width="1" opacity="0.45"/>
+  <text x="8" y="18.5" fill="#F3EFE6" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="13.5" font-weight="700">16</text>
   <!-- Peace dove -->
-  <path d="M21 41 C21 34 26 29 33 29 C35 29 37 28 38.5 26 C39 29 38 31 36.5 32.5 C40 31.5 44 27.5 47 23 C46.5 29 44 34 39.5 37.5 C36 40.2 31.5 42 25 42 L19 45 L21 41 Z" fill="#FFFFFF"/>
+  <path d="M21 41 C21 34 26 29 33 29 C35 29 37 28 38.5 26 C39 29 38 31 36.5 32.5 C40 31.5 44 27.5 47 23 C46.5 29 44 34 39.5 37.5 C36 40.2 31.5 42 25 42 L19 45 L21 41 Z" fill="#F3EFE6"/>
   <!-- Olive branch -->
-  <path d="M39 25 C41.5 22.5 44.5 21 48 21" fill="none" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round"/>
-  <circle cx="44" cy="20.5" r="1.3" fill="#FFFFFF"/>
-  <circle cx="47.5" cy="22.5" r="1.3" fill="#FFFFFF"/>
-  <!-- Justice base / gavel block -->
-  <rect x="19" y="49" width="26" height="3.2" rx="1" fill="#FFFFFF"/>
-  <rect x="24" y="45.5" width="16" height="2.4" rx="0.8" fill="#FFFFFF"/>
+  <path d="M39 25 C41.5 22.5 44.5 21 48 21" fill="none" stroke="#F3EFE6" stroke-width="1.6" stroke-linecap="square"/>
+  <circle cx="44" cy="20.5" r="1.3" fill="#F3EFE6"/>
+  <circle cx="47.5" cy="22.5" r="1.3" fill="#F3EFE6"/>
+  <!-- Justice base -->
+  <rect x="19" y="49" width="26" height="3.2" fill="#F3EFE6"/>
+  <rect x="24" y="45.2" width="16" height="2.4" fill="#F3EFE6"/>
 </svg>

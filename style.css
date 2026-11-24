@@ -242,36 +242,31 @@ a:hover {
   block-size: 40px;
   border: var(--rule-strong);
   border-radius: var(--radius-zine);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
   background-color: var(--paper);
   box-shadow: 2px 2px 0 var(--ink);
   flex-shrink: 0;
 }
 
-.brand-mark span {
-  display: block;
+.brand-mark svg {
+  inline-size: 100%;
+  block-size: 100%;
 }
 
-.brand-mark span:nth-child(1) {
-  background-color: var(--terracotta);
-  border-inline-end: 1px solid var(--ink);
-  border-block-end: 1px solid var(--ink);
+.stair-icon {
+  --icon-ink: var(--ink);
+  --icon-accent: var(--terracotta);
+  --icon-highlight: var(--ink);
+  flex-shrink: 0;
 }
 
-.brand-mark span:nth-child(2) {
-  background-color: var(--paper);
-  border-block-end: 1px solid var(--ink);
-}
-
-.brand-mark span:nth-child(3) {
-  background-color: var(--ruelle-green);
-  border-inline-end: 1px solid var(--ink);
-}
-
-.brand-mark span:nth-child(4) {
-  background-color: var(--depanneur-yellow);
+.stair-icon--inverse {
+  --icon-ink: var(--paper);
+  --icon-accent: var(--terracotta);
+  --icon-highlight: var(--depanneur-yellow);
 }
 
 .brand-text {
@@ -971,6 +966,98 @@ h1 em {
   border-radius: var(--radius-zine);
   padding: 0.15rem 0.45rem;
   font-weight: 700;
+}
+
+/* Iconographie risographique bicolore (assets/icons.svg) */
+.riso-badge {
+  inline-size: 40px;
+  block-size: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--paper-sheet);
+  border: var(--rule-strong);
+  border-radius: var(--radius-zine);
+  box-shadow: 2px 2px 0 var(--ink);
+  flex-shrink: 0;
+  --icon-ink: var(--ink);
+  --icon-accent: var(--terracotta);
+  --icon-tint: var(--paper-sheet);
+}
+
+.riso-badge--terracotta {
+  background-color: var(--terracotta-tint);
+  --icon-accent: var(--terracotta);
+}
+
+.riso-badge--ruelle {
+  background-color: var(--ruelle-tint);
+  --icon-accent: var(--ruelle-green);
+}
+
+.riso-badge--yellow {
+  background-color: var(--depanneur-tint);
+  --icon-accent: var(--depanneur-yellow);
+}
+
+.riso-badge--inverse {
+  background-color: var(--paper);
+  border-color: var(--paper);
+  box-shadow: 2px 2px 0 var(--depanneur-yellow);
+  --icon-ink: var(--ink);
+  --icon-accent: var(--terracotta);
+  --icon-tint: var(--paper-sheet);
+}
+
+.riso-icon {
+  inline-size: 24px;
+  block-size: 24px;
+  flex-shrink: 0;
+}
+
+.cell-head,
+.track-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-block: 0.75rem 0.6rem;
+}
+
+.cell-head h3,
+.track-title-row h3 {
+  margin: 0;
+}
+
+.day-banner-head {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.spec-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.spec-icon {
+  inline-size: 18px;
+  block-size: 18px;
+  flex-shrink: 0;
+  --icon-ink: var(--ink);
+  --icon-accent: var(--terracotta);
+  --icon-tint: var(--paper-sheet);
+}
+
+@media (forced-colors: active) {
+  .riso-badge,
+  .spec-icon,
+  .stair-icon {
+    --icon-ink: CanvasText;
+    --icon-accent: Highlight;
+    --icon-highlight: CanvasText;
+    --icon-tint: Canvas;
+  }
 }
 
 /* Iconographie ODD (Objectifs de développement durable — ONU) */

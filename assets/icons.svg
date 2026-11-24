@@ -1,0 +1,225 @@
+<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <defs>
+    <pattern id="icon-hatch" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="var(--icon-ink, #181816)" stroke-width="0.9" opacity="0.22"/>
+    </pattern>
+  </defs>
+
+  <!-- Brand Emblem: Shared Montreal Triplex & Central Courtyard -->
+  <symbol id="icon-brand" viewBox="0 0 40 40">
+    <rect x="1" y="1" width="38" height="38" fill="#F3EFE6"/>
+    <!-- 4 dwelling quadrants -->
+    <rect x="2" y="12" width="18" height="13" fill="#C24B32"/>
+    <rect x="20" y="12" width="18" height="13" fill="#E2A83E"/>
+    <rect x="2" y="25" width="18" height="13" fill="#2B5B44"/>
+    <rect x="20" y="25" width="18" height="13" fill="#E8E2D5"/>
+    <!-- Montreal triplex cornice & roofline -->
+    <rect x="2" y="2" width="36" height="10" fill="#181816"/>
+    <line x1="6" y1="6" x2="34" y2="6" stroke="#E2A83E" stroke-width="1.5"/>
+    <line x1="6" y1="9" x2="34" y2="9" stroke="#F3EFE6" stroke-width="1.2"/>
+    <!-- Structural grid -->
+    <line x1="20" y1="12" x2="20" y2="38" stroke="#181816" stroke-width="1.8"/>
+    <line x1="2" y1="25" x2="38" y2="25" stroke="#181816" stroke-width="1.8"/>
+    <!-- Shared central courtyard / hearth -->
+    <rect x="14" y="19" width="12" height="12" fill="#F3EFE6" stroke="#181816" stroke-width="2"/>
+    <rect x="17.5" y="22.5" width="5" height="5" fill="#C24B32"/>
+  </symbol>
+
+  <!-- Montreal Wrought-Iron Spiral Staircase & Triplex Cornice -->
+  <symbol id="icon-stair" viewBox="0 0 44 36">
+    <!-- Cornice & lintel -->
+    <path d="M3 4H41M6 7.5H38" stroke="var(--icon-highlight, #181816)" stroke-width="1.6" stroke-linecap="square"/>
+    <!-- Vertical newel post -->
+    <line x1="22" y1="7.5" x2="22" y2="33" stroke="var(--icon-ink, #181816)" stroke-width="1.75"/>
+    <!-- Balcony landing top right -->
+    <path d="M22 10H38V14" fill="none" stroke="var(--icon-ink, #181816)" stroke-width="1.5"/>
+    <line x1="27" y1="10" x2="27" y2="14" stroke="var(--icon-ink, #181816)" stroke-width="1.2"/>
+    <line x1="32.5" y1="10" x2="32.5" y2="14" stroke="var(--icon-ink, #181816)" stroke-width="1.2"/>
+    <!-- Risograph terracotta steps -->
+    <path d="M7 31H17M10 26.5H20M14 22H24M18 17.5H28M23 13.5H34" stroke="var(--icon-accent, #C24B32)" stroke-width="1.9" stroke-linecap="square"/>
+    <!-- Sweeping wrought-iron handrail -->
+    <path d="M8 33C8 22.5 19 21.5 22 15C24.5 9.5 34 10 37 10" fill="none" stroke="var(--icon-ink, #181816)" stroke-width="1.85" stroke-linecap="square"/>
+    <!-- Ground baseline -->
+    <line x1="4" y1="33.5" x2="32" y2="33.5" stroke="var(--icon-ink, #181816)" stroke-width="1.4"/>
+  </symbol>
+
+  <!-- Institutions & Civic Roundtable -->
+  <symbol id="icon-institutions" viewBox="0 0 32 32">
+    <!-- Risograph offset ink wash -->
+    <polygon points="5,12 17,5 29,12" fill="var(--icon-accent, #C24B32)" opacity="0.28"/>
+    <rect x="6" y="24" width="21" height="3.5" fill="var(--icon-accent, #C24B32)"/>
+    <!-- Pediment -->
+    <polygon points="4,11 16,4.5 28,11" fill="none" stroke="var(--icon-ink, #181816)" stroke-width="1.85" stroke-linejoin="miter"/>
+    <line x1="4" y1="11" x2="28" y2="11" stroke="var(--icon-ink, #181816)" stroke-width="1.85"/>
+    <!-- Columns -->
+    <line x1="8.5" y1="11" x2="8.5" y2="23.5" stroke="var(--icon-ink, #181816)" stroke-width="2"/>
+    <line x1="13.5" y1="11" x2="13.5" y2="23.5" stroke="var(--icon-ink, #181816)" stroke-width="2"/>
+    <line x1="18.5" y1="11" x2="18.5" y2="23.5" stroke="var(--icon-ink, #181816)" stroke-width="2"/>
+    <line x1="23.5" y1="11" x2="23.5" y2="23.5" stroke="var(--icon-ink, #181816)" stroke-width="2"/>
+    <!-- Base steps -->
+    <rect x="5" y="23.5" width="22" height="4" fill="none" stroke="var(--icon-ink, #181816)" stroke-width="1.85"/>
+  </symbol>
+
+  <!-- Dialogue & Co-Construction -->
+  <symbol id="icon-dialogue" viewBox="0 0 32 32">
+    <!-- Back bubble accent -->
+    <path d="M13 12H27V23H22L19 26.5V23H13Z" fill="var(--icon-accent, #2B5B44)" opacity="0.28"/>
+    <!-- Front bubble -->
+    <path d="M4.5 5.5H19.5V17H11L7.5 20.5V17H4.5Z" fill="var(--icon-tint, #F8F5EE)" stroke="var(--icon-ink, #181816)" stroke-width="1.85" stroke-linejoin="miter"/>
+    <line x1="8" y1="9.5" x2="16" y2="9.5" stroke="var(--icon-accent, #C24B32)" stroke-width="1.85"/>
+    <line x1="8" y1="13" x2="14" y2="13" stroke="var(--icon-ink, #181816)" stroke-width="1.6"/>
+    <!-- Second bubble outline -->
+    <path d="M19.5 11.5H27.5V22.5H23.5V26L19.5 22.5H12.5V17" fill="none" stroke="var(--icon-ink, #181816)" stroke-width="1.85" stroke-linejoin="miter"/>
+    <line x1="16" y1="16" x2="24" y2="16" stroke="var(--icon-ink, #181816)" stroke-width="1.6"/>
+    <line x1="16" y1="19.2" x2="22" y2="19.2" stroke="var(--icon-accent, #C24B32)" stroke-width="1.85"/>
+  </symbol>
+
+  <!-- Zoning & Municipal Regulation -->
+  <symbol id="icon-zoning" viewBox="0 0 32 32">
+    <!-- Highlighted urban lot -->
+    <rect x="6" y="13" width="12" height="13" fill="var(--icon-accent, #C24B32)" opacity="0.25"/>
+    <!-- Parcel grid -->
+    <rect x="4.5" y="5.5" width="23" height="21" fill="none" stroke="var(--icon-ink, #181816)" stroke-width="1.85"/>
+    <line x1="17.5" y1="5.5" x2="17.5" y2="26.5" stroke="var(--icon-ink, #181816)" stroke-width="1.4" stroke-dasharray="2.5 2"/>
+    <line x1="4.5" y1="13" x2="27.5" y2="13" stroke="var(--icon-ink, #181816)" stroke-width="1.4" stroke-dasharray="2.5 2"/>
+    <!-- Shared triplex roof inside lot -->
+    <path d="M7.5 18.5L11 15L14.5 18.5V24H7.5Z" fill="var(--icon-accent, #C24B32)" stroke="var(--icon-ink, #181816)" stroke-width="1.6" stroke-linejoin="miter"/>
+    <!-- Set-square / rule mark -->
+    <path d="M20.5 16H24.5V23.5" fill="none" stroke="var(--icon-ink, #181816)" stroke-width="1.8"/>
+    <rect x="20.5" y="8" width="4" height="2.8" fill="var(--icon-ink, #181816)"/>
+  </symbol>
+
+  <!-- Solidarity Finance & Patient Capital -->
+  <symbol id="icon-finance" viewBox="0 0 32 32">
+    <!-- Risograph accent bond seal -->
+    <rect x="5" y="9" width="22" height="15" fill="var(--icon-accent, #2B5B44)" opacity="0.22"/>
+    <!-- Community bond certificate -->
+    <rect x="4" y="7.5" width="24" height="17" fill="none" stroke="var(--icon-ink, #181816)" stroke-width="1.85"/>
+    <!-- Corner notches -->
+    <line x1="7.5" y1="10.5" x2="10.5" y2="10.5" stroke="var(--icon-ink, #181816)" stroke-width="1.5"/>
+    <line x1="21.5" y1="21.5" x2="24.5" y2="21.5" stroke="var(--icon-ink, #181816)" stroke-width="1.5"/>
+    <!-- Central circular seal -->
+    <circle cx="16" cy="16" r="5" fill="var(--icon-accent, #2B5B44)" stroke="var(--icon-ink, #181816)" stroke-width="1.8"/>
+    <!-- Upward solidarity bar -->
+    <path d="M16 13.3V18.7M13.6 16H18.4" stroke="#F3EFE6" stroke-width="1.8" stroke-linecap="square"/>
+  </symbol>
+
+  <!-- Law, Land Trusts (FUS) & Notarial Charter -->
+  <symbol id="icon-law" viewBox="0 0 32 32">
+    <!-- Charter document -->
+    <rect x="6" y="4.5" width="17" height="22" fill="var(--icon-accent, #E2A83E)" opacity="0.32"/>
+    <rect x="5" y="4" width="17" height="22" fill="none" stroke="var(--icon-ink, #181816)" stroke-width="1.85"/>
+    <!-- Text lines -->
+    <line x1="8.5" y1="9" x2="18.5" y2="9" stroke="var(--icon-ink, #181816)" stroke-width="1.75"/>
+    <line x1="8.5" y1="13" x2="18.5" y2="13" stroke="var(--icon-ink, #181816)" stroke-width="1.5"/>
+    <line x1="8.5" y1="17" x2="14.5" y2="17" stroke="var(--icon-ink, #181816)" stroke-width="1.5"/>
+    <!-- Notarial wax seal / land-trust lock -->
+    <circle cx="22" cy="22" r="5.5" fill="var(--icon-accent, #E2A83E)" stroke="var(--icon-ink, #181816)" stroke-width="1.85"/>
+    <path d="M20 22L21.5 23.5L24.3 20.5" fill="none" stroke="var(--icon-ink, #181816)" stroke-width="1.8" stroke-linecap="square"/>
+  </symbol>
+
+  <!-- Insurance & Mutualized Risk -->
+  <symbol id="icon-insurance" viewBox="0 0 32 32">
+    <!-- Shield riso fill -->
+    <path d="M16.5 4.5L26.5 8.5V16C26.5 22 22 26 16.5 28C11 26 6.5 22 6.5 16V8.5Z" fill="var(--icon-accent, #2B5B44)" opacity="0.24"/>
+    <!-- Shield ink outline -->
+    <path d="M16 4L26 8V15.5C26 21.5 21.5 25.5 16 27.5C10.5 25.5 6 21.5 6 15.5V8Z" fill="none" stroke="var(--icon-ink, #181816)" stroke-width="1.85" stroke-linejoin="miter"/>
+    <!-- Shared roof inside shield -->
+    <path d="M10.5 16L16 11L21.5 16" fill="none" stroke="var(--icon-accent, #C24B32)" stroke-width="2" stroke-linecap="square"/>
+    <path d="M12.5 15V21H19.5V15" fill="none" stroke="var(--icon-ink, #181816)" stroke-width="1.75"/>
+    <rect x="15" y="17.5" width="2" height="3.5" fill="var(--icon-ink, #181816)"/>
+  </symbol>
+
+  <!-- Project Development & Architectural Blueprint -->
+  <symbol id="icon-blueprint" viewBox="0 0 32 32">
+    <!-- Accent corner block -->
+    <rect x="6" y="6" width="11" height="10" fill="var(--icon-accent, #E2A83E)" opacity="0.38"/>
+    <!-- Outer architectural frame -->
+    <rect x="4.5" y="5" width="23" height="22" fill="none" stroke="var(--icon-ink, #181816)" stroke-width="1.85"/>
+    <!-- Room partitions -->
+    <line x1="16.5" y1="5" x2="16.5" y2="19" stroke="var(--icon-ink, #181816)" stroke-width="1.75"/>
+    <line x1="4.5" y1="16" x2="12" y2="16" stroke="var(--icon-ink, #181816)" stroke-width="1.75"/>
+    <line x1="16.5" y1="15" x2="27.5" y2="15" stroke="var(--icon-ink, #181816)" stroke-width="1.75"/>
+    <!-- Door swing arc -->
+    <path d="M12 16A4.5 4.5 0 0 1 16.5 20.5" fill="none" stroke="var(--icon-accent, #C24B32)" stroke-width="1.75"/>
+    <!-- Scale ticks -->
+    <line x1="8" y1="23.5" x2="24" y2="23.5" stroke="var(--icon-ink, #181816)" stroke-width="1.6"/>
+    <line x1="8" y1="21.8" x2="8" y2="25.2" stroke="var(--icon-ink, #181816)" stroke-width="1.6"/>
+    <line x1="24" y1="21.8" x2="24" y2="25.2" stroke="var(--icon-ink, #181816)" stroke-width="1.6"/>
+  </symbol>
+
+  <!-- Community, Living Together & Care -->
+  <symbol id="icon-community" viewBox="0 0 32 32">
+    <!-- Shared roof accent -->
+    <polygon points="4.5,14 16,5.5 27.5,14" fill="var(--icon-accent, #C24B32)" opacity="0.28"/>
+    <path d="M4 14L16 5L28 14" fill="none" stroke="var(--icon-ink, #181816)" stroke-width="1.9" stroke-linecap="square" stroke-linejoin="miter"/>
+    <!-- Three cohabitants under one roof -->
+    <circle cx="16" cy="14.5" r="2.6" fill="var(--icon-accent, #C24B32)" stroke="var(--icon-ink, #181816)" stroke-width="1.6"/>
+    <circle cx="9.5" cy="17" r="2.1" fill="var(--icon-tint, #F8F5EE)" stroke="var(--icon-ink, #181816)" stroke-width="1.6"/>
+    <circle cx="22.5" cy="17" r="2.1" fill="var(--icon-tint, #F8F5EE)" stroke="var(--icon-ink, #181816)" stroke-width="1.6"/>
+    <!-- Shoulders / shared table line -->
+    <path d="M12 26V21.5C12 19.8 13.6 19 16 19C18.4 19 20 19.8 20 21.5V26" fill="none" stroke="var(--icon-ink, #181816)" stroke-width="1.8"/>
+    <path d="M5.5 26V22.5C5.5 21.2 6.8 20.5 9.5 20.5" fill="none" stroke="var(--icon-ink, #181816)" stroke-width="1.75"/>
+    <path d="M26.5 26V22.5C26.5 21.2 25.2 20.5 22.5 20.5" fill="none" stroke="var(--icon-ink, #181816)" stroke-width="1.75"/>
+    <line x1="4" y1="26" x2="28" y2="26" stroke="var(--icon-ink, #181816)" stroke-width="1.85"/>
+  </symbol>
+
+  <!-- Regional Network & Open Commons -->
+  <symbol id="icon-network" viewBox="0 0 32 32">
+    <!-- Connecting lines -->
+    <line x1="9" y1="9" x2="23" y2="11" stroke="var(--icon-ink, #181816)" stroke-width="1.7"/>
+    <line x1="9" y1="9" x2="14" y2="23" stroke="var(--icon-ink, #181816)" stroke-width="1.7"/>
+    <line x1="23" y1="11" x2="14" y2="23" stroke="var(--icon-ink, #181816)" stroke-width="1.7"/>
+    <line x1="23" y1="11" x2="25" y2="24" stroke="var(--icon-ink, #181816)" stroke-width="1.7" stroke-dasharray="2.5 2"/>
+    <!-- Nodes -->
+    <rect x="5.5" y="5.5" width="7" height="7" fill="var(--icon-accent, #2B5B44)" stroke="var(--icon-ink, #181816)" stroke-width="1.8"/>
+    <rect x="19.5" y="7.5" width="7" height="7" fill="var(--icon-tint, #F8F5EE)" stroke="var(--icon-ink, #181816)" stroke-width="1.8"/>
+    <rect x="10.5" y="19.5" width="7" height="7" fill="#E2A83E" stroke="var(--icon-ink, #181816)" stroke-width="1.8"/>
+    <circle cx="25" cy="24" r="2.6" fill="#C24B32" stroke="var(--icon-ink, #181816)" stroke-width="1.6"/>
+  </symbol>
+
+  <!-- Calendar / Target Date -->
+  <symbol id="icon-calendar" viewBox="0 0 32 32">
+    <rect x="4.5" y="7" width="23" height="6" fill="var(--icon-accent, #C24B32)"/>
+    <rect x="4.5" y="7" width="23" height="20" fill="none" stroke="var(--icon-ink, #181816)" stroke-width="1.85"/>
+    <line x1="4.5" y1="13" x2="27.5" y2="13" stroke="var(--icon-ink, #181816)" stroke-width="1.85"/>
+    <line x1="10.5" y1="4" x2="10.5" y2="9.5" stroke="var(--icon-ink, #181816)" stroke-width="2"/>
+    <line x1="21.5" y1="4" x2="21.5" y2="9.5" stroke="var(--icon-ink, #181816)" stroke-width="2"/>
+    <!-- 2-day highlight -->
+    <rect x="9" y="16.5" width="5.5" height="6.5" fill="#E2A83E" stroke="var(--icon-ink, #181816)" stroke-width="1.4"/>
+    <rect x="17.5" y="16.5" width="5.5" height="6.5" fill="#2B5B44" stroke="var(--icon-ink, #181816)" stroke-width="1.4"/>
+  </symbol>
+
+  <!-- Venue / Montreal Location Pin -->
+  <symbol id="icon-venue" viewBox="0 0 32 32">
+    <path d="M16 4.5C11 4.5 7 8.4 7 13.3C7 19.4 16 27.5 16 27.5C16 27.5 25 19.4 25 13.3C25 8.4 21 4.5 16 4.5Z" fill="var(--icon-accent, #2B5B44)" opacity="0.24"/>
+    <path d="M16 4.5C11 4.5 7 8.4 7 13.3C7 19.4 16 27.5 16 27.5C16 27.5 25 19.4 25 13.3C25 8.4 21 4.5 16 4.5Z" fill="none" stroke="var(--icon-ink, #181816)" stroke-width="1.85" stroke-linejoin="miter"/>
+    <rect x="12.5" y="10" width="7" height="6.5" fill="var(--icon-accent, #C24B32)" stroke="var(--icon-ink, #181816)" stroke-width="1.6"/>
+  </symbol>
+
+  <!-- Open Space Unconference Board -->
+  <symbol id="icon-unconference" viewBox="0 0 32 32">
+    <rect x="4" y="5.5" width="24" height="19" fill="none" stroke="var(--icon-ink, #181816)" stroke-width="1.85"/>
+    <!-- Pinned workshop cards -->
+    <rect x="7" y="8.5" width="7.5" height="5.5" fill="#E2A83E" stroke="var(--icon-ink, #181816)" stroke-width="1.4"/>
+    <rect x="17.5" y="8.5" width="7.5" height="5.5" fill="#C24B32" stroke="var(--icon-ink, #181816)" stroke-width="1.4"/>
+    <rect x="7" y="16.5" width="7.5" height="5" fill="#2B5B44" stroke="var(--icon-ink, #181816)" stroke-width="1.4"/>
+    <rect x="17.5" y="16.5" width="7.5" height="5" fill="var(--icon-tint, #F8F5EE)" stroke="var(--icon-ink, #181816)" stroke-width="1.4"/>
+    <!-- Easel legs -->
+    <line x1="11" y1="24.5" x2="9" y2="28.5" stroke="var(--icon-ink, #181816)" stroke-width="1.85"/>
+    <line x1="21" y1="24.5" x2="23" y2="28.5" stroke="var(--icon-ink, #181816)" stroke-width="1.85"/>
+  </symbol>
+
+  <!-- Field Networking / 5-to-7 Mixer -->
+  <symbol id="icon-mixer" viewBox="0 0 32 32">
+    <!-- Warm mug / shared table -->
+    <rect x="6.5" y="13" width="13.5" height="12.5" fill="var(--icon-accent, #E2A83E)" opacity="0.38"/>
+    <rect x="5.5" y="12.5" width="14" height="13" fill="none" stroke="var(--icon-ink, #181816)" stroke-width="1.85"/>
+    <path d="M19.5 15H23.5C24.8 15 25.5 16 25.5 17.5V19.5C25.5 21 24.8 22 23.5 22H19.5" fill="none" stroke="var(--icon-ink, #181816)" stroke-width="1.85"/>
+    <!-- Steam / conviviality waves -->
+    <path d="M9.5 9.5C9.5 7.5 11.5 7.5 11.5 5.5" fill="none" stroke="var(--icon-accent, #C24B32)" stroke-width="1.8" stroke-linecap="square"/>
+    <path d="M14.5 9.5C14.5 7.5 16.5 7.5 16.5 5.5" fill="none" stroke="var(--icon-accent, #C24B32)" stroke-width="1.8" stroke-linecap="square"/>
+    <!-- Saucer -->
+    <line x1="4" y1="27.5" x2="22" y2="27.5" stroke="var(--icon-ink, #181816)" stroke-width="1.85"/>
+  </symbol>
+</svg>

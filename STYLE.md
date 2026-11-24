@@ -68,9 +68,13 @@ Le système repose sur trois familles complémentaires chargées depuis Google F
   * **Aile 03 (`[03] DROIT & FIDUCIE`)** : `.plan-zone--yellow` (`#E2A83E` / `--depanneur-tint`).
   * **Cour commune centrale (`FORUM OUVERT`)** : applat terracotta `#C24B32` avec ombre franche charbon `#181816`.
 
-### Micro-touches montréalaises
-* **Motif SVG d'escalier extérieur en colimaçon et corniche de triplex :**
-  * Intégré en dessin au trait vectoriel dans l'en-tête (`.mtl-stair-motif`) et dans le colophon du pied de page (`.footer-motif-box`).
+### Micro-touches montréalaises et système iconographique risographique
+* **Sprite SVG bicolore centralisé ([`assets/icons.svg`](assets/icons.svg)) :**
+  * Toutes les icônes éditoriales, thématiques et repères de chantier utilisent des `<symbol>` vectoriels (`viewBox="0 0 32 32"`) référencés via `<use href="assets/icons.svg#icon-...">` et paramétrés par variables CSS (`--icon-ink`, `--icon-accent`, `--icon-tint`).
+  * Chaque icône thématique est encadrée dans un tampon imprimé `.riso-badge` (`40 × 40 px`, bordure `2px solid #181816`, ombre franche `2px 2px 0 #181816`, lavis `--terracotta-tint`, `--ruelle-tint` ou `--depanneur-tint`) et supporte `@media (forced-colors: active)`.
+  * **Emblème & Favicon (`#icon-brand` / [`assets/favicon.svg`](assets/favicon.svg)) :** Triplex montréalais stylisé à corniche charbon, quatre quadrants d'encre risographique et cour commune centrale.
+  * **Motif d'escalier extérieur en colimaçon (`#icon-stair`) :** Réutilisé via le sprite dans l'en-tête (`.mtl-stair-motif`) et en version inversée dans le colophon du pied de page (`.footer-motif-box`).
+  * **Pictogrammes ODD de l'ONU (`assets/images/odd/odd-*.svg`) :** Couleurs officielles ONU préservées pour la reconnaissance institutionnelle, encrées en papier chaud `#F3EFE6` avec filet de cadrage intérieur.
 * **Commutateur de langue physique (`FR / EN`) :**
   * `.lang-switch` est stylisé comme un sélecteur mécanique à tampon d'encre avec bordure `2px solid #181816`, ombre `2px 2px 0 #181816` et état actif `.lang-btn[aria-pressed="true"]` en aplat `--terracotta`.
 

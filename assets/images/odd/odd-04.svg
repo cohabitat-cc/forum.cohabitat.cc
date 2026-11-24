@@ -1,14 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="ODD 4 — Éducation de qualité">
   <rect width="64" height="64" fill="#C5192D"/>
-  <text x="8" y="19" fill="#FFFFFF" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="14" font-weight="700">4</text>
+  <rect x="3.5" y="3.5" width="57" height="57" fill="none" stroke="#F3EFE6" stroke-width="1" opacity="0.45"/>
+  <text x="8" y="18.5" fill="#F3EFE6" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="13.5" font-weight="700">04</text>
   <!-- Open book -->
-  <path d="M13 28 L29 32 L29 51 L13 47 Z" fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linejoin="round"/>
-  <path d="M45 28 L29 32 L29 51 L45 47 Z" fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linejoin="round"/>
-  <line x1="17" y1="34" x2="25" y2="36" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round"/>
-  <line x1="17" y1="39" x2="25" y2="41" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round"/>
-  <line x1="41" y1="34" x2="33" y2="36" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round"/>
-  <line x1="41" y1="39" x2="33" y2="41" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round"/>
-  <!-- Pencil -->
-  <path d="M51 25 H55 V45 L53 51 L51 45 Z" fill="#FFFFFF"/>
-  <line x1="51" y1="29" x2="55" y2="29" stroke="#C5192D" stroke-width="1.6"/>
+  <path d="M12 27.5 L28.5 31.5 L28.5 51 L12 47 Z" fill="none" stroke="#F3EFE6" stroke-width="2.3" stroke-linejoin="miter"/>
+  <path d="M45 27.5 L28.5 31.5 L28.5 51 L45 47 Z" fill="none" stroke="#F3EFE6" stroke-width="2.3" stroke-linejoin="miter"/>
+  <line x1="16" y1="34" x2="24.5" y2="36" stroke="#F3EFE6" stroke-width="1.7" stroke-linecap="square"/>
+  <line x1="16" y1="39.5" x2="24.5" y2="41.5" stroke="#F3EFE6" stroke-width="1.7" stroke-linecap="square"/>
+  <line x1="41" y1="34" x2="32.5" y2="36" stroke="#F3EFE6" stroke-width="1.7" stroke-linecap="square"/>
+  <line x1="41" y1="39.5" x2="32.5" y2="41.5" stroke="#F3EFE6" stroke-width="1.7" stroke-linecap="square"/>
+  <!-- Drafting pencil -->
+  <path d="M50.5 24.5 H55 V45 L52.75 51.5 L50.5 45 Z" fill="#F3EFE6"/>
+  <line x1="50.5" y1="29" x2="55" y2="29" stroke="#C5192D" stroke-width="1.8"/>
 </svg>
