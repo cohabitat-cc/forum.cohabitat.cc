@@ -5,17 +5,11 @@
     "definitionFr": "Forme d’habitation fondée sur la volonté intentionnelle de vivre en communauté, en partageant des espaces communs, des ressources et une vie collective, quel que soit le statut juridique ou le modèle économique.",
     "definitionEn": "A form of housing founded on an intentional desire to live in community, sharing common spaces, resources, and collective life, regardless of legal status or economic model."
   },
-  "coliving": {
-    "termeFr": "Coliving",
-    "equivalentEn": "Coliving",
-    "definitionFr": "Modèle d’habitat partagé combinant des espaces privatifs (chambres ou studios) et des aires communes aménagées, souvent accompagné de services mutualisés et d’une animation de la vie communautaire.",
-    "definitionEn": "A shared housing model combining private living quarters (bedrooms or studios) with furnished communal areas, often paired with pooled services and active community stewardship."
-  },
   "colocation-intentionnelle": {
-    "termeFr": "Colocation intentionnelle (ou collaborative)",
-    "equivalentEn": "Intentional co-living",
-    "definitionFr": "Cohabitation choisie entre plusieurs adultes qui partagent un même logement autour de valeurs, d’ententes de vivre-ensemble et de ressources communes, au-delà du simple partage du loyer.",
-    "definitionEn": "Chosen cohabitation among adults sharing a home around common values, living charters, and pooled resources, going well beyond simply splitting rent."
+    "termeFr": "Colocation intentionnelle (coliving)",
+    "equivalentEn": "Coliving (intentional co-living)",
+    "definitionFr": "Cohabitation choisie combinant des espaces privatifs (chambres ou studios) et des aires communes aménagées autour de valeurs partagées, d’ententes de vivre-ensemble, de ressources mutualisées et d’une vie communautaire animée, au-delà du simple partage du loyer.",
+    "definitionEn": "Chosen cohabitation combining private living quarters (bedrooms or studios) with furnished communal areas around shared values, living charters, pooled resources, and active community stewardship, going well beyond simply splitting rent."
   },
   "cohabitat": {
     "termeFr": "Cohabitat (cohousing)",
